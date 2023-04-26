@@ -1,0 +1,9 @@
+jupyter-book
+sphinx
+matplotlib
+numpy
+pandas
+linkify
+linkify-it-py
+
+

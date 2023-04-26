@@ -1,5 +1,14 @@
-# 3D Druck Gruppe
+# MBSE Projekt Gimbal
 
+## MBSE
+-----------------
+
+* Qian Liu
+
+-----------------
+
+
+## 3D Druck
 -----------------
 
 * Atakan Baydogan
@@ -14,4 +23,11 @@ __Autodesk Fusion 360__ besitzt eine _kostenlose_ Studenten Version und unterst√
 | :----:     |      :----:|
 |         3MF|         OBJ| 
 
+## Elektronik
+-----------------
 
+* Xie Yang
+* Bola Poules
+* Xingpeng Chen
+
+------------------

@@ -1,0 +1,19 @@
+# Table of contents
+
+format: jb-book
+root: about/unsyllabus
+parts:
+- caption: MBSE Projekt Gimbal
+  chapters:
+    - file: class/01_prj
+      title: Einleitung
+    - file: class/02_prj
+      title: MBSE
+    - file: class/03_prj
+      title: 3D Druck
+    - file: class/04_prj
+      title: Elektronik
+- caption: Anhang
+  chapters:
+    - file: appendix/01_app
+      title: No Magic

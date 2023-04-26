@@ -1,0 +1,101 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: M 6.1/M 6.2 Projekt (PRJ2/PRJ3) Meiners SoSe 2023 
+author: M. Meiners et. al.
+copyright: ""
+logo: hsb-logo.png
+exclude_patterns: ["LICENSE.md", "README.md"]
+only_build_toc_files: true
+# Short description about the book
+# description: >-
+#  Elektronik-Experimente mit dem ASLK Pro.
+
+# execute:
+#  execute_notebooks: cache
+
+# HTML-specific settings
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  home_page_in_navbar: true
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  navbar_number_sections: false
+  baseurl: "https://mimeiners.github.io/gel2/"
+# google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
+  comments:
+    hypothesis: false
+    utterances:
+      repo: "soclab/hil/gimbal"
+    dokieli: true
+  extra_footer : |
+      <div>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+          All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+      </div>
+      
+# Launch button settings
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: "https://mybinder.org"
+  thebe: true
+  
+repository:
+  url: https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal
+  path_to_book: ""
+  branch: master
+
+
+# LaTeX settings
+bibtex_bibfiles:
+   - _bibliography/references.bib
+latex:
+  latex_engine: "xelatex"
+  latex_documents:
+    targetname: gimbal.tex
+
+sphinx:
+  config:
+    html_show_copyright: false
+    html_extra_path: ['files']
+    bibtex_reference_style: author_year
+    myst_enable_extensions: 
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_image
+    - linkify
+    - replacements
+    - substitution
+
+    myst_substitutions:
+      INSTRUCTOR: "Prof. Dr.-Ing. Mirco Meiners (he/his/him)"
+      PRONOUNCE: ""
+      OFFICE: "E 508"
+      PHONE: "N/A"
+      COURSE_CODE: "M 6.1/M 6.2"
+      SECTION: ""
+      CREDITS: "6"
+      TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
+      PREREQS: ""
+      COREQS: ""
+      TERM: "2023 Sommer"
+      ROOM: "E 509"
+      MEETING_TIMES: "Donnertags von 9:45 bis 13:00 Uhr"
+      GRACE_PERIOD: ""
+      W_DATE_1: ""
+      W_DATE_2: ""
+      W_DATE_3: ""
+      EXAM_PERIOD: ""
+      CANVAS_ID: ""
+      CANVAS_LINK: ""
+      ZOOM_LINK: ""
+      ANNOUNCEMENTS_LINK: ""
+      COURSE_LINK: ""
+      FORUM_LINK: ""
+      ANALYTICS_OPTOUT: ""
+      FORMAT: "Projekt"
+      ASSOCIATE_HEAD: "B.Eng. Casper Stubbemann [stubbemann@scope-engineering.de](mailto:stubbemann@scope-engineering.de)"
+      ANON_FEEDBACK: ""

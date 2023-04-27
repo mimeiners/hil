@@ -3,7 +3,7 @@
 ## MBSE
 -----------------
 
-* Qian Liu
+no magic
 
 -----------------
 
@@ -32,5 +32,5 @@ Link zum Gimbal: [_Link_](https://howtomechatronics.com/projects/diy-arduino-gim
 * Xie Yang
 * Bola Poules
 * Xingpeng Chen
-
+* Qian Liu
 ------------------

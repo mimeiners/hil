@@ -15,7 +15,7 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 Zur erstellung der selbst stabilisierenden Platform, werden die verschiedenen Bauteile des Gimbals mittels 3D Druck erstellt. Diese umfassen das Gehäuse des Microcontrollers, die Platform für die Kamera, sowie die Halter für die Servo-Motoren.
 
 <p align="center">
-<img src="3d_druck_gimbal\Gimbal_Platform.png"  alt="Gimbal_Platform+Gehäuse" width="30%" height="50%" title="Gimbal_Platform+Gehäuse" >
+<img src="3d_druck_gimbal\Gimbal_Platform.png" alt="Gimbal_Platform+Gehäuse" width="30%" height="50%" title="Gimbal_Platform+Gehäuse" >
 
 * Atakan Baydogan
 * Yolande Maeva Pokam Fotue

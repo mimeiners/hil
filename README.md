@@ -7,30 +7,15 @@ Link zur Homepage: [_Gimbal-Homepage_](https://howtomechatronics.com/projects/di
 Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welche auf der Systems Modeling Language - kurz SysML - basiert. 
 
 -----------------
-</br></br>
-
-
 ## 3D Druck
 -----------------
-Zur erstellung der selbst stabilisierenden Platform, werden die verschiedenen Bauteile des Gimbals mittels 3D Druck erstellt. Diese umfassen das Gehäuse des Microcontrollers, die Platform für die Kamera, sowie die Halter für die Servo-Motoren.
-
-<p align="center">
-<img src="3d_druck_gimbal/Gimbal_Platform.png" alt="Gimbal_Platform+Gehäuse" width="30%" height="50%" title="Gimbal_Platform+Gehäuse" >
 
 * Atakan Baydogan
 * Yolande Maeva Pokam Fotue
 * Yasincan Kahraman
-
+  </br></br>
+[Link 3D Druck](docs/class/03_prj.md)
 -----------------
-
-__Autodesk Fusion 360__ besitzt eine _kostenlose_ "Campus" Version, welche Kostenlos für Lehrende und Studenten ist. Sie unterstützt folgende 3D Druck formate:
-
-| STL(Binär) | STL(ASCII) | 
-| :----:     |      :----:|
-|         3MF|         OBJ| 
-
-Erhältlich über folgenden link: [_Fusion-Download_](https://www.autodesk.de/education/edu-software/overview?sorting=featured&filters=individual) 
-</br></br>
 
 ## Elektronik
 -----------------
@@ -39,5 +24,6 @@ Erhältlich über folgenden link: [_Fusion-Download_](https://www.autodesk.de/ed
 * Bola Poules
 * Xingpeng Chen
 * Qian Liu
+  
 ------------------
 

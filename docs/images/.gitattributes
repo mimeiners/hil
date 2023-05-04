@@ -1,0 +1,2 @@
+*.STL filter=lfs diff=lfs merge=lfs -text
+*.mdzip filter=lfs diff=lfs merge=lfs -text

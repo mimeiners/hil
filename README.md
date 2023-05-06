@@ -5,7 +5,8 @@ Link zur Homepage: [_Gimbal-Homepage_](https://howtomechatronics.com/projects/di
 ## MBSE
 -----------------
 Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welche auf der Systems Modeling Language - kurz SysML - basiert. 
-
+</br></br>
+-----------------
 -----------------
 ## 3D Druck
 -----------------
@@ -13,10 +14,9 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 * Atakan Baydogan
 * Yolande Maeva Pokam Fotue
 * Yasincan Kahraman
-  </br></br>
-[Link 3D Druck](docs/class/03_prj.md)
+</br></br>
+[Link zum 3D Druck Ordner](docs/class/03_prj.md)
 -----------------
-
 ## Elektronik
 -----------------
 
@@ -24,6 +24,7 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 * Bola Poules
 * Xingpeng Chen
 * Qian Liu
-  
+</br></br>
+[Link zum Elektronik Ordner](docs/class/04_prj.md)
 ------------------
 

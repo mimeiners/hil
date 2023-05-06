@@ -15,7 +15,7 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 * Yolande Maeva Pokam Fotue
 * Yasincan Kahraman
 </br></br>
-[Link zum 3D Druck Ordner](docs/class/03_prj.md)
+[_Link zum 3D Druck README_](docs/class/03_prj.md)
 -----------------
 ## Elektronik
 -----------------
@@ -25,6 +25,6 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 * Xingpeng Chen
 * Qian Liu
 </br></br>
-[Link zum Elektronik Ordner](docs/class/04_prj.md)
+[_Link zum Elektronik README_](docs/class/04_prj.md)
 ------------------
 

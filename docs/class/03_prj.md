@@ -10,6 +10,13 @@ Dadurch erhält man eine STL-Datei als erste Grundstruktur _(Base 01)_ für den 
 
 Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.
 
+![Gimbal](../images/Gimbal_Platform.png)
+
+
+<!---
+
+Dont know how to fix - yet
+
 ```{image} ../images/Gimbal_Platform.png
 :alt: Platform
 :class: bg-primary mb-1
@@ -17,17 +24,20 @@ Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, ein
 :align: center
 ```
 
+-->
 
 -------------
-Mit Fusion 360 können Sie diese 3D-Entwürfe erstellen. Fusion bietet außerdem die möglichkeit in teams zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.
+Mit Fusion 360 und Inventor kann man diese 3D-Entwürfe erstellen. Die Programme bieten außerdem die möglichkeit in teams zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.
 
-__Autodesk Fusion 360__ besitzt eine _kostenlose_ "Campus" Version, welche Kostenlos für Lehrende und Studenten ist. 
+In unserem Projekt verwenden wir Inventor als CAD-Programm, jedoch besteht die Möglichkeit, das bevorzugte CAD-Programm zur Bearbeitung zu nutzen. Die entsprechenden Inventor-Dateien befinden sich im Ordner _"3d_druck_gimbal"_ und können nach Belieben in andere Formate umgewandelt werden.
 
-Sie unterstützt folgende 3D Druck formate:
+__Autodesk Fusion 360__, sowie __Autodesk Inventor__ besitzten eine _kostenlose_ "Campus" Version, welche Kostenlos für Lehrende und Studenten ist. 
+
+Sie unterstützen folgende 3D Druck formate:
 
 | STL(Binär) | STL(ASCII) | 
 | :----:     |      :----:|
 |         3MF|         OBJ| 
 
-und ist erhältlich über folgenden link: [_Fusion-Download_](https://www.autodesk.de/education/edu-software/overview?sorting=featured&filters=individual) 
+und sind erhältlich über folgenden link: [_Fusion-Download/Inventor-Download_](https://www.autodesk.de/education/edu-software/overview?sorting=featured&filters=individual) 
 </br></br>

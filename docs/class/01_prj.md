@@ -1,2 +1,5 @@
 # Einleitung
+## Einführung
 
+In diesem Projekt geht es um die Konzeption und den Bau eines Gimbals, einer selbst stabilisierenden Plattform, die mithilfe von Sensoren und Motoren stabilisiert wird, um eine präzise und ruhige Kameraaufnahme zu ermöglichen. Im Gegensatz zu anderen Gimbals, die oft als fertige Produkte erhältlich sind, werden wir uns in diesem Projekt nicht nur auf die Montage der Bauteile beschränken, sondern uns auch mit der Programmierung und Entwicklung der elektronischen Komponenten befassen. Dazu kommen Aspekte der 3D-Modellierung mit CAD, die es ermöglichen ein 3D-Modell zu erstellen, um die einzelnen Bauteile im Hause zu drucken. Dadurch werden wir in der Lage sein, den Gimbal nach unseren individuellen Anforderungen und Bedürfnissen zu gestalten und anzupassen. Das Projekt basiert auf einem vorherigen Projekt von [_HowToMechatronics_](https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/?utm_content=cmp-true), das Ziel ist es auf Grundlage dieses Projektes den Gimbal weiterzuentwickeln und eigene Erfahrungen zu sammeln.
+## Theoretische Grundlagen

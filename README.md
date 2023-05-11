@@ -32,15 +32,18 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 ## SSH/GitLab/Tortoise
 ------------------
 Zur sicheren Kommunikation mit dem GitLab-Repo benötigt man ein SSH-Schlüsselpaar.
-Diese erzeugt man mittels Git-Bash. Zur Verwendung in Tortoise-Git muss SSH-Client bei der Installation
-gewählt werden. Im User-Home muss im Pfad ".ssh/" eine "config" mit nachfolgendem Inhalt angelegt werden:
+Dieses erzeugt man mittels
+[_Git-SSH-KeyGen_](https://medium.com/devops-with-valentine/2021-how-to-your-ssh-key-for-gitlab-on-windows-10-587579192be0).
+Zur Verwendung in 
+[_Tortoise-Git-SSH_](https://stackoverflow.com/questions/13516119/tortoisegit-with-openssh-key-not-authenticating-using-ssh-agent)
+muss im Pfad ".ssh/" eine "config" mit nachfolgendem Inhalt angelegt werden:
 
 ```shell
 Host gitlab.fk4.hs-bremen.de
     User gitlab
     Port 222
     PreferredAuthentications publickey
-    IdentityFile (Ihr private key)
+    IdentityFile ~/.ssh/id_rsa
 ```
 ------------------
 

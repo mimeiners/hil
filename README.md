@@ -4,7 +4,7 @@ Link zur Homepage: [_Gimbal-Homepage_](https://howtomechatronics.com/projects/di
 
 ## MBSE
 -----------------
-Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welche auf der Systems Modeling Language - kurz SysML - basiert. 
+Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welche auf der Systems Modelling Language - kurz SysML - basiert. 
 </br></br>
 -----------------
 -----------------
@@ -28,5 +28,19 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 </br></br>
 
 [_Link zum Elektronik README_](docs/class/04_prj.md)
+------------------
+## SSH/GitLab/Tortoise
+------------------
+Zur sicheren Kommunikation mit dem GitLab-Repo benötigt man ein SSH-Schlüsselpaar.
+Diese erzeugt man mittels Git-Bash. Zur Verwendung in Tortoise-Git muss SSH-Client bei der Installation
+gewählt werden. Im User-Home muss im Pfad ".ssh/" eine "config" mit nachfolgendem Inhalt angelegt werden:
+
+```shell
+Host gitlab.fk4.hs-bremen.de
+    User gitlab
+    Port 222
+    PreferredAuthentications publickey
+    IdentityFile (Ihr private key)
+```
 ------------------
 

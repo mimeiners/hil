@@ -88,7 +88,7 @@ void setup() {
   while (!Serial); // wait for Leonardo enumeration, others continue immediately
 
   // initialize device
-  //Serial.println(F("Initializing I2C devices..."));
+  // Serial.println(F("Initializing I2C devices..."));
   mpu.initialize();
   pinMode(INTERRUPT_PIN, INPUT);
   devStatus = mpu.dmpInitialize();
@@ -171,7 +171,7 @@ void loop() {
     fifoCount -= packetSize;
 
     // Get Yaw, Pitch and Roll values
-#ifdef OUTPUT_READABLE_YAWPITCHROLL
+    #ifdef OUTPUT_READABLE_YAWPITCHROLL
     mpu.dmpGetQuaternion(&q, fifoBuffer);
     mpu.dmpGetGravity(&gravity, &q);
     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);

@@ -1,6 +1,8 @@
 # MBSE Projekt: Gimbal - self stabilizing platform
 
-Link zur Homepage: [_Gimbal-Homepage_](https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/?utm_content=cmp-true)
+[_Gimbal-Projektseite_](https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/?utm_content=cmp-true)
+
+[_MPU-6050 Tutorial_](https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/)
 
 ## MBSE
 -----------------

@@ -1,3 +1,6 @@
 # Elektronik des Gimbal
 
-hallo leute
+## Arduino Nano
+
+## ESP8266 NodeMCU
+

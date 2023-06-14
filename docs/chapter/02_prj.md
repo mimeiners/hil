@@ -1,6 +1,5 @@
 # Model-Based Systems Engineering
 
-#### Maeva
 Das modellbasierte System-Engineering (MBSE) ist eine formalisierte Methodik, die zur Unterstützung der Anforderungen, des Entwurfs, der  der Analyse, der Verifizierung und der Validierung im Zusammenhang mit der Entwicklung komplexer Systeme eingesetzt wird. Im Gegensatz zum dokumentenzentrierten Engineering stellt MBSE Modelle in den Mittelpunkt der Systementwicklung. 
 
 MBSE bringt drei Konzepte zusammen: Modell, Systemdenken und Systemtechnik:

@@ -29,9 +29,10 @@ Zur Modellbasierten Systementwicklung wird die Software "No Magic" genutzt, welc
 * Qian Liu
 </br></br>
 
-[_PIN-Belegung ESP8266_](https://unsinnsbasis.de/esp8266-pin-belegung/)
-[_PinOut ESP8266 NodeMCU_](https://edistechlab.com/esp8266-nodemcu-pin-out/?v=3a52f3c22ed6)
-[_Espressif 8266 Document Map_](https://bbs.espressif.com/viewtopic.php?f=67&t=225)
+* [_ESP8266 NodeMCU_](https://www.makershop.de/plattformen/esp8266/nodemcu-esp8266-dev-kit/)
+* [_PIN-Belegung ESP8266_](https://unsinnsbasis.de/esp8266-pin-belegung/)
+* [_PinOut ESP8266 NodeMCU_](https://edistechlab.com/esp8266-nodemcu-pin-out/?v=3a52f3c22ed6)
+* [_Espressif 8266 Document Map_](https://bbs.espressif.com/viewtopic.php?f=67&t=225)
 
 [_Link zum Elektronik README_](docs/chapter/04_prj.md)
 ------------------

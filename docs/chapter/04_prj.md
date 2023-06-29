@@ -1,4 +1,64 @@
 # Elektronik des Gimbal
+<<<<<<< HEAD
+=======
+test
+## Arduino Nano
+
+## Einführung
+
+### Arduino Code Beschreibung
+Um die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins definiert und die Servos an diese Pins angeschlossen. 
+</br>
+1,Der Interrupt-Pin wird auf Pin 2 festgelegt. 
+</br>
+2,Der Servo servo0 wird an Pin 10 angeschlossen.
+</br>
+3,Der Servo servo1 wird an Pin 9 angeschlossen.
+</br>
+4,Der Servo servo2 wird an Pin 8 angeschlossen.
+</br>
+```cpp
+#define OUTPUT_READABLE_YAWPITCHROLL
+#define INTERRUPT_PIN 2  
+  servo0.attach(10);
+  servo1.attach(9);
+  servo2.attach(8);
+```
+Die Aufgabe eines Interrupts ist es, dafür zu sorgen, dass der Prozessor schnell auf wichtige Ereignisse reagiert. Wenn ein bestimmtes Signal erkannt wird, unterbricht ein Interrupt die Arbeit des Prozessors und führt einen Code aus, der auf den externen Stimulus reagiert, der dem Arduino zugeführt wird. Das bedeutet, der Gimbal kann dann den Interrupt behandeln, die entsprechenden Servos steuern und die gewünschte, präzise, schnelle und reaktionsfähige Aktion ausführen.
+</br>
+Dann werden aus den Sensordaten die Quaternion und der Gravitationsvektor berechnet. Die Yaw-, Pitch- und Roll-Werte werden dann in Grad umgerechnet. Diese Werte werden dann zur Steuerung des Servos eingesetzt.
+```cpp
+    mpu.dmpGetQuaternion(&q, fifoBuffer);
+    mpu.dmpGetGravity(&gravity, &q);
+    mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
+```
+Wenn j kleiner oder gleich 300 ist, wird der aktuelle Wert der Yaw-Achse (ypr[0]) in der Variable correct gespeichert. Dadurch wird der aktuelle Yaw-Wert erfasst, solange j kleiner oder gleich 300 ist. Dieser Wert beginnt nicht bei 0 wie die Werte für Pitch und Roll, sondern ist immer ein Zufallswert.
+
+</br>
+
+```cpp
+    if (j <= 300) {
+      correct = ypr[0];
+      j++; 
+    }
+```
+Nach 300 Messungen wird der Yaw-Wert (ypr[0]) durch Subtraktion des zuvor gespeicherten Referenzwerts  angepasst. Dadurch wird der Yaw-winkel auf 0 Grad gesetzt. Die Werte für Yaw, Pitch und Roll von -90 bis +90 Grad werden dann auf Werte von 0 bis 180 für das Antriebsservo abgebildet. Mit der Schreibfunktion werden diese Werte schließlich als Steuersignale an das Servo gesendet.
+```cpp
+else {
+      ypr[0] = ypr[0] - correct;
+    
+    int servo0Value = map(ypr[0], -90, 90, 0, 180);
+    int servo1Value = map(ypr[1], -90, 90, 0, 180);
+    int servo2Value = map(ypr[2], -90, 90, 180, 0);
+
+    servo0.write(servo0Value);
+    servo1.write(servo1Value);
+    servo2.write(servo2Value);
+}
+```
+## ESP8266 NodeMCU
+
+>>>>>>> 0f2711b43a8483b02fea2e610a1512cbcc517fbf
 ## Einführung
 Um die Elektronik des Gimbals zu implementieren, d.h. der Servomotor lenkt in die entgegengesetzte Richtung aus, wenn sich die Position des Objekts ändert, um eine Position des Objekts zu erreichen, die sich nicht mit dem Gimbal verändert.
 

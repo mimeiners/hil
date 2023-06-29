@@ -31,7 +31,9 @@ Dann werden aus den Sensordaten die Quaternion und der Gravitationsvektor berech
     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
 ```
 Wenn j kleiner oder gleich 300 ist, wird der aktuelle Wert der Yaw-Achse (ypr[0]) in der Variable correct gespeichert. Dadurch wird der aktuelle Yaw-Wert erfasst, solange j kleiner oder gleich 300 ist. Dieser Wert beginnt nicht bei 0 wie die Werte für Pitch und Roll, sondern ist immer ein Zufallswert.
+
 </br>
+
 ```cpp
     if (j <= 300) {
       correct = ypr[0];

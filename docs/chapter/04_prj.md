@@ -54,6 +54,23 @@ else {
     servo2.write(servo2Value);
 }
 ```
+### Aufgetretene Probleme und Lösungen
+## Problem:
+Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.
+</br>
+Lösung:
+Um das Problem zu beheben, werden folgende Schritte durchgeführt:
+</br>
+Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken installiert sind. Der Pfad wurde unter C:\Users\cxp\AppData\Local\Arduino15\libraries gefunden.
+</br>
+Die erforderlichen Bibliotheken werden heruntergeladen:
+
+Die "I2Cdev.h"-Bibliothek kann von folgendem Link heruntergeladen werden: https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev
+</br>
+Die "MPU6050_6Axis_MotionApps20.h"-Bibliothek kann von folgendem Link heruntergeladen werden: https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
+Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner "I2Cdev" und "MPU6050" verwendet werden.
+
+Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.
 ## ESP8266 NodeMCU
 
 ## Einführung

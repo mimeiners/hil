@@ -80,7 +80,7 @@ else {
     servo2.write(servo2Value);
 }
 ```
-<<<<<<< HEAD
+
 =======
 ### Aufgetretene Probleme und Lösungen
 ## Problem:
@@ -99,8 +99,6 @@ Die "MPU6050_6Axis_MotionApps20.h"-Bibliothek kann von folgendem Link herunterge
 Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner "I2Cdev" und "MPU6050" verwendet werden.
 
 Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.
-## ESP8266 NodeMCU
->>>>>>> a2f7c8637009b2d8d9fc2991ee88afed025db2ca
 
 ## ESP8266 NodeMCU
 

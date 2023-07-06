@@ -23,7 +23,7 @@ Der spezifische Schaltplan sieht wie folgt aus:
 Der Arduino Nano ist ein Open-Source-Breadboard-Mikrocontroller-Board, das auf dem Microchip ATmega328P-Mikrocontroller basiert. Der Arduino Nano kann mit der integrierten Entwicklungsumgebung (IDE) der Arduino-Software programmiert werden, die für alle Arduino-Boards gleich ist und sowohl online als auch offline läuft. 
 
 
-### Arduino Code Beschreibung
+## Arduino Code Beschreibung
 
 Um die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins definiert und die Servos an diese Pins angeschlossen. 
 </br>
@@ -81,11 +81,11 @@ else {
 }
 ```
 
-### Aufgetretene Probleme und Lösungen
-## Problem:
-Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.
+## Aufgetretene Probleme und Lösungen inNano
+### Problem 1:
+Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden. 
 </br>
-Lösung:
+### Lösung 1:
 Um das Problem zu beheben, werden folgende Schritte durchgeführt:
 </br>
 Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken installiert sind. Der Pfad wurde unter C:\Users\cxp\AppData\Local\Arduino15\libraries gefunden.
@@ -99,6 +99,39 @@ Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliot
 
 Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.
 
+### Problem 2: Arduino-Code kann nicht auf den ATmega328p-Chip hochgeladen werden
+
+Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.
+
+### Lösung 2: Auswahl des ATmega328p-Bootloaders in der Arduino-Software
+
+1. Öffne die Arduino-Software auf deinem Computer.
+2. Gehe zum Menü "Tools" (Werkzeuge) und wähle "Board" (Platine) aus.
+3. Wähle aus der Liste der verfügbaren Boards die Option "Arduino Uno" oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.
+4. Gehe erneut zum Menü "Tools" (Werkzeuge) und wähle "Processor" (Prozessor) aus.
+5. Wähle im Dropdown-Menü die Option "ATmega328p (old Bootloader)" aus.
+6. Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.
+7. Klicke auf die Schaltfläche "Upload" (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.
+
+Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.
+
+Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfolgreich auf den ATmega328p-Chip hochladen.
+
+### Problem 2: Arduino-Code kann nicht auf den ATmega328p-Chip hochgeladen werden
+
+Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.
+
+### Lösung 2: Auswahl des ATmega328p-Bootloaders in der Arduino-Software
+
+1. Öffne die Arduino-Software auf deinem Computer.
+2. Gehe zum Menü "Tools" und wähle "Board" aus.
+3. Wähle aus der Liste der verfügbaren Boards die Option "Arduino Nano" oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.
+4. Gehe erneut zum Menü "Tools"  und wähle "Processor" aus.
+5. Wähle im Dropdown-Menü die Option "ATmega328p (old Bootloader)" aus.
+6. Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.
+7. Klicke auf die Schaltfläche "Upload" (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.
+
+Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.
 
 ## ESP8266 NodeMCU
 
@@ -107,41 +140,10 @@ Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet.
 Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.
 
 ## ESP8266 Steuerung des Servos
-Der Servo kann durch einen einfachen Code gesteuert werden, der hier zu finden ist:[_Servo-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino)
 
-`"#include <Servo.h>"`
-
-Die Bibliothek "Servo.h" wird eingebunden, um die Servo-Funktionalität nutzen zu können.
-
-In `setup()` werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Esp8266s zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.
-
-In `loop()` wird wiederholt ausgeführt und steuert die Servos.
-
-Es wird die loop verwendet, um die Servos in eine Richtung 180 Grad zu drehen.
-
-```cpp
- for (position = 0; position < 180; position++) 
-  { 
-    servo0.write(position); 
-    servo1.write(position); 
-    servo2.write(position); 
-    delay(waitTime); 
-  } 
-```
-
-Es wird die loop verwendet, um die Servos wieder zurückzudrehen.
-
-```cpp
-  for (position = 180; position >= 1; position--) 
-  { 
-    servo0.write(position); 
-    servo1.write(position); 
-    servo2.write(position); 
-    delay(waitTime); 
-  } 
-```
 
 ## ESP8266 Daten von der MPU6050 lesen
+
 Der entsprechende Code wurde in unsere Dateien hochgeladen. Link:[_MPU6050_Display-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/MPU6050_Display.ino)
 Dieser Code ist eine einfache OLED-Demonstration für die Beschleunigungsmesserwerte des Adafruit MPU6050-Sensors. Es werden die Bibliotheken `"Adafruit_MPU6050.h"`, `"Adafruit_SSD1306.h"` und `"Adafruit_Sensor.h"` verwendet.
 

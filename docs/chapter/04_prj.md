@@ -107,10 +107,41 @@ Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet.
 Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.
 
 ## ESP8266 Steuerung des Servos
+Der Servo kann durch einen einfachen Code gesteuert werden, der hier zu finden ist:[_Servo-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino)
 
+`"#include <Servo.h>"`
+
+Die Bibliothek "Servo.h" wird eingebunden, um die Servo-Funktionalität nutzen zu können.
+
+In `setup()` werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Esp8266s zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.
+
+In `loop()` wird wiederholt ausgeführt und steuert die Servos.
+
+Es wird die loop verwendet, um die Servos in eine Richtung 180 Grad zu drehen.
+
+```cpp
+ for (position = 0; position < 180; position++) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
+
+Es wird die loop verwendet, um die Servos wieder zurückzudrehen.
+
+```cpp
+  for (position = 180; position >= 1; position--) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
 
 ## ESP8266 Daten von der MPU6050 lesen
-
 Der entsprechende Code wurde in unsere Dateien hochgeladen. Link:[_MPU6050_Display-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/MPU6050_Display.ino)
 Dieser Code ist eine einfache OLED-Demonstration für die Beschleunigungsmesserwerte des Adafruit MPU6050-Sensors. Es werden die Bibliotheken `"Adafruit_MPU6050.h"`, `"Adafruit_SSD1306.h"` und `"Adafruit_Sensor.h"` verwendet.
 

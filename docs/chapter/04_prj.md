@@ -128,13 +128,13 @@ Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
 
 3-Programmierung: Der ESP8266 kann mit verschiedenen Programmiersprachen und Entwicklungsumgebungen programmiert werden. Die beliebteste Wahl ist die Arduino IDE, die eine einfache und einsteigerfreundliche Umgebung zum Schreiben und Hochladen von Code auf das Modul bietet. Darüber hinaus gibt es alternative Frameworks und Sprachen wie Micropython und Espressifs natives ESP-IDF (ESP8266 IoT Development Framework).
 
-4-Low Power Consumption: The module is designed to operate with low power consumption, making it suitable for battery-powered applications. It supports sleep modes and can be configured to wake up periodically or in response to external triggers.
+4-Geringer Stromverbrauch: Das Modul ist so konzipiert, dass es mit geringem Stromverbrauch arbeitet und sich daher für batteriebetriebene Anwendungen eignet. Es unterstützt Schlafmodi und kann so konfiguriert werden, dass es regelmäßig oder als Reaktion auf externe Auslöser aufwacht.
 
-5-Memory: The ESP8266 module typically comes with different memory options, including 512KB or 4MB of flash memory for storing program code and data.
+5-Speicher: Das ESP8266-Modul ist in der Regel mit verschiedenen Speicheroptionen erhältlich, darunter 512 KB oder 4 MB Flash-Speicher für die Speicherung von Programmcode und Daten.
 
-6-Community and Ecosystem: The ESP8266 has gained significant popularity due to its low cost, ease of use, and extensive community support. It has a large online community, which provides resources, tutorials, libraries, and examples to help users get started with their projects.
+6-Gemeinschaft und Ökosystem: Der ESP8266 hat aufgrund seiner geringen Kosten, der einfachen Handhabung und der umfangreichen Unterstützung durch die Community eine große Popularität erlangt. Es gibt eine große Online-Community, die Ressourcen, Tutorials, Bibliotheken und Beispiele zur Verfügung stellt, um Anwendern den Einstieg in ihre Projekte zu erleichtern.
 
-7-Applications: The ESP8266 is commonly used in various IoT applications, such as home automation, sensor networks, smart devices, and industrial monitoring systems. Its affordability, versatility, and ease of integration make it a popular choice among hobbyists, makers, and professionals alike.
+7-Anwendungen: Der ESP8266 wird häufig in verschiedenen IoT-Anwendungen eingesetzt, z. B. in der Heimautomatisierung, in Sensornetzwerken, intelligenten Geräten und industriellen Überwachungssystemen. Seine Erschwinglichkeit, Vielseitigkeit und einfache Integration machen ihn zu einer beliebten Wahl für Bastler, Macher und Profis gleichermaßen.
 ## Der Funktionierte Teil 
 
 Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.

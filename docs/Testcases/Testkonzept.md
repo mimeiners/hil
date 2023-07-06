@@ -5,7 +5,7 @@
 In diesem Test wird das Konzept 2 eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.
 
 # Testkonzept:
-Das Testkonzept besteht darin, die Spannungsquelle an den Eingang des Buck-Konverters anzuschließen und den Eingangs- sowie den Ausgangsspannungspegel mit einem Oszilloskop zu überwachen. Dabei wird die Konstanz der Spannungsquelle überprüft und gemessen, ob die Ausgangsspannung des Buck-Konverters über einen Zeitraum von 5 Minuten konstant bei 5V bleibt.
+Das Testkonzept besteht darin, eine Konstantspannungsquelle (Batterie) am Eingang des Buck-Konverters anzuschließen und mithilfe eines Multimeters den Ausgangsspannung zu messen. Es wird überprüft, ob der Buck-Konverter bei verschiedenen Eingangsspannungen eine Ausgangsspannung liefert. Die Messergebnisse des Multimeters werden analysiert, um sicherzustellen, dass der Buck-Konverter unabhängig von den variierenden Eingangsspannungen eine Ausgangsspannung aufweist.
 
 # Testanforderungen:
 1. Überprüfung, ob die Spannungsquelle konstant bleibt.

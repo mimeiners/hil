@@ -99,11 +99,11 @@ Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliot
 
 Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.
 
-### Problem 2: Arduino-Code kann nicht auf den ATmega328p-Chip hochgeladen werden
+### Problem 2:
 
 Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.
 
-### Lösung 2: Auswahl des ATmega328p-Bootloaders in der Arduino-Software
+### Lösung 2:
 
 1. Öffne die Arduino-Software auf deinem Computer.
 2. Gehe zum Menü "Tools" (Werkzeuge) und wähle "Board" (Platine) aus.
@@ -116,23 +116,6 @@ Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip h
 Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.
 
 Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfolgreich auf den ATmega328p-Chip hochladen.
-
-### Problem 2: Arduino-Code kann nicht auf den ATmega328p-Chip hochgeladen werden
-
-Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.
-
-### Lösung 2: Auswahl des ATmega328p-Bootloaders in der Arduino-Software
-
-1. Öffne die Arduino-Software auf deinem Computer.
-2. Gehe zum Menü "Tools" und wähle "Board" aus.
-3. Wähle aus der Liste der verfügbaren Boards die Option "Arduino Nano" oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.
-4. Gehe erneut zum Menü "Tools"  und wähle "Processor" aus.
-5. Wähle im Dropdown-Menü die Option "ATmega328p (old Bootloader)" aus.
-6. Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.
-7. Klicke auf die Schaltfläche "Upload" (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.
-
-Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.
-
 ## ESP8266 NodeMCU
 
 ## Der Funktionierte Teil 

@@ -140,7 +140,31 @@ Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
 Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.
 
 ## ESP8266 Steuerung des Servos
+Die Bibliothek `"Servo.h"` wird eingebunden, um die Servo-Funktionalität nutzen zu können.
+In der `Setup()` werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.
 
+In `loop()` wird wiederholt ausgeführt und steuert die Servos. 
+Es werden das loop verwendet, um die Servos in eine Richtung zu drehen und dann wieder zurückzudrehen.
+```cpp
+for (position = 0; position < 180; position++) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
+Es werden das loop verwendet, um die Servos wieder zurückzudrehen.
+```cpp
+  for (position = 180; position >= 1; position--) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
+Finden Sie Code hier:[_Servo-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino)
 
 ## ESP8266 Daten von der MPU6050 lesen
 

@@ -206,3 +206,5 @@ attachInterrupt(digitalPinToInterrupt(2), dmpDataReady, RISING);
 ```
 
 Wenn die steigende Flanke des InterruptPins der MPU6050 ausgelöst wird, wird die Funktion `dmpDataReady()` aufgerufen. In dieser Funktion wird die Variable `mpuInterrupt` auf true gesetzt, was anzeigt, dass neue Daten verfügbar sind.
+
+

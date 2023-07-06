@@ -5,7 +5,7 @@
 Schalten Sie die Eingangsspannungsquelle ein, um die festgelegte Eingangsspannung bereitzustellen.
 1. Überprüfen Sie visuell, ob eine Ausgangsspannung an den Ausgangsanschlüssen des Buck-Konverters vorhanden ist.
 2. Verwenden Sie ein Messinstrument zur Spannungsüberwachung, um die genaue Ausgangsspannung zu messen und sicherzustellen, dass sie den erwarteten Werten entspricht.
-3. Wiederholen Sie den Test mit verschiedenen Eingangsspannungen, um sicherzustellen, dass der Buck-Konverter bei verschiedenen Spannungspegeln konsistente und korrekte Ausgangsspannungen liefert.
+3. Wiederholen Sie den Test mit verschiedenen Eingangsspannungen, um sicherzustellen, dass der Buck-Konverter bei verschiedenen Eingangsspannungspegeln eine Ausgangsspannungen liefert.
 
 ## Ergebnisvergleich mit Anforderung:
 1. Wenn das Multimeter eine Spannung anzeigt (einige Volt), entspricht das Ergebnis den Anforderungen.

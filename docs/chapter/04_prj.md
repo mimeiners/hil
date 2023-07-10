@@ -23,7 +23,7 @@ Der spezifische Schaltplan sieht wie folgt aus:
 Der Arduino Nano ist ein Open-Source-Breadboard-Mikrocontroller-Board, das auf dem Microchip ATmega328P-Mikrocontroller basiert. Der Arduino Nano kann mit der integrierten Entwicklungsumgebung (IDE) der Arduino-Software programmiert werden, die für alle Arduino-Boards gleich ist und sowohl online als auch offline läuft. 
 
 
-### Arduino Code Beschreibung
+## Arduino Code Beschreibung
 
 Um die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins definiert und die Servos an diese Pins angeschlossen. 
 </br>
@@ -80,13 +80,12 @@ else {
     servo2.write(servo2Value);
 }
 ```
-<<<<<<< HEAD
-=======
-### Aufgetretene Probleme und Lösungen
-## Problem:
-Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.
+
+## Aufgetretene Probleme und Lösungen inNano
+### Problem 1:
+Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden. 
 </br>
-Lösung:
+### Lösung 1:
 Um das Problem zu beheben, werden folgende Schritte durchgeführt:
 </br>
 Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken installiert sind. Der Pfad wurde unter C:\Users\cxp\AppData\Local\Arduino15\libraries gefunden.
@@ -99,17 +98,73 @@ Die "MPU6050_6Axis_MotionApps20.h"-Bibliothek kann von folgendem Link herunterge
 Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner "I2Cdev" und "MPU6050" verwendet werden.
 
 Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.
-## ESP8266 NodeMCU
->>>>>>> a2f7c8637009b2d8d9fc2991ee88afed025db2ca
 
-## ESP8266 NodeMCU
+### Problem 2:
 
+Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.
+
+### Lösung 2:
+
+1. Öffne die Arduino-Software auf deinem Computer.
+2. Gehe zum Menü "Tools" (Werkzeuge) und wähle "Board" (Platine) aus.
+3. Wähle aus der Liste der verfügbaren Boards die Option "Arduino Uno" oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.
+4. Gehe erneut zum Menü "Tools" (Werkzeuge) und wähle "Processor" (Prozessor) aus.
+5. Wähle im Dropdown-Menü die Option "ATmega328p (old Bootloader)" aus.
+6. Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.
+7. Klicke auf die Schaltfläche "Upload" (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.
+
+Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.
+
+Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfolgreich auf den ATmega328p-Chip hochladen.
+## ESP8266 NodeMCU
+Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.
+
+![esp](../images/esp8266.jpg)
+Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
+
+1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle, einschließlich WEP, WPA und WPA2.
+
+2-Mikrocontroller-Einheit (MCU): Das Modul enthält eine 32-Bit-MCU vom Typ Tensilica Xtensa LX106, die mit einer Taktrate von 80 MHz arbeitet. Sie verfügt über GPIO-Pins (General Purpose Input/Output) zur Steuerung externer Geräte und unterstützt verschiedene Schnittstellen wie I2C, SPI, UART und andere.
+
+3-Programmierung: Der ESP8266 kann mit verschiedenen Programmiersprachen und Entwicklungsumgebungen programmiert werden. Die beliebteste Wahl ist die Arduino IDE, die eine einfache und einsteigerfreundliche Umgebung zum Schreiben und Hochladen von Code auf das Modul bietet. Darüber hinaus gibt es alternative Frameworks und Sprachen wie Micropython und Espressifs natives ESP-IDF (ESP8266 IoT Development Framework).
+
+4-Geringer Stromverbrauch: Das Modul ist so konzipiert, dass es mit geringem Stromverbrauch arbeitet und sich daher für batteriebetriebene Anwendungen eignet. Es unterstützt Schlafmodi und kann so konfiguriert werden, dass es regelmäßig oder als Reaktion auf externe Auslöser aufwacht.
+
+5-Speicher: Das ESP8266-Modul ist in der Regel mit verschiedenen Speicheroptionen erhältlich, darunter 512 KB oder 4 MB Flash-Speicher für die Speicherung von Programmcode und Daten.
+
+6-Gemeinschaft und Ökosystem: Der ESP8266 hat aufgrund seiner geringen Kosten, der einfachen Handhabung und der umfangreichen Unterstützung durch die Community eine große Popularität erlangt. Es gibt eine große Online-Community, die Ressourcen, Tutorials, Bibliotheken und Beispiele zur Verfügung stellt, um Anwendern den Einstieg in ihre Projekte zu erleichtern.
+
+7-Anwendungen: Der ESP8266 wird häufig in verschiedenen IoT-Anwendungen eingesetzt, z. B. in der Heimautomatisierung, in Sensornetzwerken, intelligenten Geräten und industriellen Überwachungssystemen. Seine Erschwinglichkeit, Vielseitigkeit und einfache Integration machen ihn zu einer beliebten Wahl für Bastler, Macher und Profis gleichermaßen.
 ## Der Funktionierte Teil 
 
 Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.
 
 ## ESP8266 Steuerung des Servos
+Die Bibliothek `"Servo.h"` wird eingebunden, um die Servo-Funktionalität nutzen zu können.
+In der `Setup()` werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.
 
+In `loop()` wird wiederholt ausgeführt und steuert die Servos. 
+Es werden das loop verwendet, um die Servos in eine Richtung zu drehen und dann wieder zurückzudrehen.
+```cpp
+for (position = 0; position < 180; position++) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
+Es werden das loop verwendet, um die Servos wieder zurückzudrehen.
+```cpp
+  for (position = 180; position >= 1; position--) 
+  { 
+    servo0.write(position); 
+    servo1.write(position); 
+    servo2.write(position); 
+    delay(waitTime); 
+  } 
+```
+Finden Sie Code hier:[_Servo-Code_](https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino)
 
 ## ESP8266 Daten von der MPU6050 lesen
 

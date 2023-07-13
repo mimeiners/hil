@@ -1,5 +1,7 @@
 # Überschrift: Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters
 
+# Cameo Testnummer:
+
 # Einleitung:
 
 In diesem Test wird das Konzept eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.

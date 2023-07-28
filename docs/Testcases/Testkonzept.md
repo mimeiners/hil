@@ -1,12 +1,28 @@
 # Überschrift: Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters
 
+# Cameo Testnummer:
+
 # Einleitung:
 
-In diesem Test wird das Konzept 2 eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.
+In diesem Test wird das Konzept eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.
 
 # Testkonzept:
-Das Testkonzept besteht darin, eine Konstantspannungsquelle (Batterie) am Eingang des Buck-Konverters anzuschließen und mithilfe eines Multimeters den Ausgangsspannung zu messen. Es wird überprüft, ob der Buck-Konverter bei verschiedenen Eingangsspannungen eine Ausgangsspannung liefert. Die Messergebnisse des Multimeters werden analysiert, um sicherzustellen, dass der Buck-Konverter unabhängig von den variierenden Eingangsspannungen eine Ausgangsspannung aufweist.
+Das Testkonzept besteht darin, die Spannungsquelle an den Eingang des Buck-Konverters anzuschließen und den Eingangs- sowie den Ausgangsspannungspegel mit einem Oszilloskop zu überwachen. Dabei wird die Konstanz der Spannungsquelle überprüft und gemessen, ob die Ausgangsspannung des Buck-Konverters über einen Zeitraum von 5 Minuten konstant bei 5V bleibt.
+# Zustand des Geräts:
+es liegt versorgungsspannung mit 5V an, Anschalter ist gedrückt.
 
+# Durchführung:
+1. Verbinden Sie die Spannungsquelle mit dem Eingang des Buck-Konverters.
+2. Schließen Sie den Eingangs- und Ausgangsanschluss des Buck-Konverters an
+ein Oszilloskop an.
+Testkonzept 4
+3. Überprüfen Sie, ob die Spannungsquelle eine konstante Spannung liefert.
+4. Nehmen Sie Messungen der Ausgangsspannung des Buck-Konverters bei einer
+bestimmten Eingangsspannung vor.
+5. Überwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten
+und stellen Sie sicher, dass sie konstant bei 5V bleibt.
+6. Berücksichtigen Sie eine Toleranz von +-5% und dokumentieren Sie jegliche
+Abweichungen von diesem Wert
 # Testanforderungen:
 1. Überprüfung, ob die Spannungsquelle konstant bleibt.
 2. Messung der Ausgangsspannung des Buck-Konverters bei einer bestimmten

@@ -252,9 +252,9 @@ Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen,
 Die Lösungen waren wie folgt:
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
-![Gimbal](../images/platine-min.png)
-![Gimbal](../images/lötten-min.png)
-![Gimbal](../images/löttetschaltung-min.png)
+![esp](../images/platine-min.png)
+![esp](../images/lötten-min.png)
+![esp](../images/löttetschaltung-min.png)
 
 
 

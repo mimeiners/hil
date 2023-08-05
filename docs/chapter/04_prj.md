@@ -252,7 +252,9 @@ Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen,
 Die Lösungen waren wie folgt:
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
-
+![Gimbal](../images/platine.png)
+![Gimbal](../images/lötten.png)
+![Gimbal](../images/löttetschaltung.png)
 
 Die andere Änderung betraf die Form der Schaltung, anstatt die Drähte direkt mit dem Arduino zu verbinden
 Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen, indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt

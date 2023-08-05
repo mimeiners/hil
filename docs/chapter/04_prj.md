@@ -256,6 +256,9 @@ Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung dir
 
 Die andere Änderung betraf die Form der Schaltung, anstatt die Drähte direkt mit dem Arduino zu verbinden
 Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen, indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt
+![Gimbal](../images/platine.png)
+![Gimbal](../images/lötten.png)
+![Gimbal](../images/löttetschaltung.png)
 
 
 Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten

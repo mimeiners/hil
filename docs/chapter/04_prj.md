@@ -120,6 +120,10 @@ Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfol
 Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.
 
 ![esp](../images/esp8266.jpg)
+
+
+
+
 Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
 
 1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle, einschließlich WEP, WPA und WPA2.

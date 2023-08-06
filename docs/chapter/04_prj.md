@@ -241,7 +241,7 @@ Am Anfang haben wir die traditionelle Arbeit gemacht, wie sie in dem uns vorgele
 Aber nach einigen Experimenten an der elektrischen Schaltung fanden wir mehrere Probleme, die wir lösen mussten
 Diese Probleme bestehen aus mehreren Punkten:
 
-**Erstens **die Instabilität der elektrischen Spannung, die von dem im Stromkreis vorgesehenen Tiefsetzsteller kommt, wie in der Referenz angegeben, was zu einer Schwäche des zu den Motoren fließenden Stroms und damit zu einer Schwäche der Motoren führte, was zu einer Verzögerung des Stroms führte Reaktion der Motoren und damit eine Verzögerung der Reaktionsgeschwindigkeit, was zu einem Mangel am gesamten Projektziel, nämlich der Aufrechterhaltung von Stabilität und Gleichgewicht, und der Reaktionsgeschwindigkeit führte
+Erstens die Instabilität der elektrischen Spannung, die von dem im Stromkreis vorgesehenen Tiefsetzsteller kommt, wie in der Referenz angegeben, was zu einer Schwäche des zu den Motoren fließenden Stroms und damit zu einer Schwäche der Motoren führte, was zu einer Verzögerung des Stroms führte Reaktion der Motoren und damit eine Verzögerung der Reaktionsgeschwindigkeit, was zu einem Mangel am gesamten Projektziel, nämlich der Aufrechterhaltung von Stabilität und Gleichgewicht, und der Reaktionsgeschwindigkeit führte
 
 
 Zweitens hat uns die große Anzahl von sich überlappenden Drähten bei der Durchführung von Leistungstests und deren Modifizierung sehr gestört. Die vielen sich überlappenden Drähte mit ähnlichen Farben verursachten Fehler in der Verbindung. Oft musste man die Drähte von vorne bis hinten demontieren und wieder einbauen, um den richtigen Anschluss zu erreichen, außerdem waren die Drähte teilweise zu kurz, was dazu führte, dass sie bei der Bewegung des Motors abgeschnitten wurden.
@@ -254,6 +254,7 @@ Viertens war die Anordnung der Drähte und die Reihenfolge ihres Anschlusses an 
 Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen, um die Effizienz der Schaltung zu erhöhen und so diese Probleme und Fehler zu vermeiden, die beim Testen und Experimentieren zu Fehlfunktionen führen.
 
 **Die Lösungen waren wie folgt:**
+
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
 

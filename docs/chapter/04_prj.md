@@ -257,7 +257,7 @@ Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen,
 
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
-
+![esp](../images/esp8266.jpg)
 
 
 

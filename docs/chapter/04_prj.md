@@ -119,8 +119,9 @@ Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfol
 ## ESP8266 NodeMCU
 Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.
 
-![esp](../images/esp8266.jpg)
-
+<p align="center">
+  <img src="../images/esp8266.jpg" alt="platine-min" width="400">
+</p>
 
 
 
@@ -243,8 +244,9 @@ Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfa
 
 
 
-Verbesserung der Schaltung:
+## Verbesserung der Schaltung:
 Am Anfang haben wir die traditionelle Arbeit gemacht, wie sie in dem uns vorgelegten Geschäftsmodell und der Referenz für das Projekt angegeben war.
+
 Aber nach einigen Experimenten an der elektrischen Schaltung fanden wir mehrere Probleme, die wir lösen mussten
 Diese Probleme bestehen aus mehreren Punkten:
 
@@ -257,18 +259,46 @@ Drittens, die Schwäche des Stromkreises, die sich aus der häufigen Trennung de
 Viertens war die Anordnung der Drähte und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt waren.
 Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen, um die Effizienz der Schaltung zu erhöhen und so diese Probleme und Fehler zu vermeiden, die beim Testen und Experimentieren zu Fehlfunktionen führen.
 
+## 
 Die Lösungen waren wie folgt:
 
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 
 Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
+
+
 Die andere Änderung betraf die Form der Schaltung, anstatt die Drähte direkt mit dem Arduino zu verbinden
 Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen, indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt
-Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten
+Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten. 
+
+<p align="center">
+  <img src="../images/platine-min.png" alt="platine-min" width="400">
+</p>
+
+<p align="center">
+  <img src="../images/lötten-min.png" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/löttetschaltung-min.png" alt="platine-min" width="400">
+</p>
+
+<p align="center">
+  <img src="../images/shaltung.jpeg" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/shaltungsplatine2.jpeg" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/shaltungsplatine.jpeg" alt="platine-min" width="400">
+</p>
+
+
+
 
 Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Drähte immer noch zu hoch und nicht ausreichend angeordnet ist
 
 Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle Spannungsdrähte zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.
+
 
 Wir haben auch die Grounddrähte gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.
 

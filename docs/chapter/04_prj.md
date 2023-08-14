@@ -283,13 +283,13 @@ Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem 
 </p>
 
 <p align="center">
-  <img src="../images/shaltung.jpeg" alt="platine-min" width="400">
+  <img src="../images/shaltung.png" alt="platine-min" width="400">
 </p>
 <p align="center">
-  <img src="../images/shaltungsplatine2.jpeg" alt="platine-min" width="400">
+  <img src="../images/shaltungsplatine2.png" alt="platine-min" width="400">
 </p>
 <p align="center">
-  <img src="../images/shaltungsplatine.jpeg" alt="platine-min" width="400">
+  <img src="../images/shaltungsplatine.png" alt="platine-min" width="400">
 </p>
 
 

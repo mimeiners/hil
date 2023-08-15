@@ -286,12 +286,23 @@ Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem 
   <img src="../images/shaltung.png" alt="platine-min" width="400">
 </p>
 <p align="center">
-  <img src="../images/shaltungsplatine2.png" alt="platine-min" width="400">
+  <img src="../images/bennenteversorgerungen.png" alt="platine-min" width="400">
 </p>
 <p align="center">
-  <img src="../images/shaltungsplatine.png" alt="platine-min" width="400">
+  <img src="../images/bennenteversorgerungen2.png" alt="platine-min" width="400">
 </p>
-
+<p align="center">
+  <img src="../images/klebedraht.png" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/letzte.png" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/organisiertekabel.png" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/organisiertekabel2.png" alt="platine-min" width="400">
+</p>
 
 
 

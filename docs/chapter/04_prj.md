@@ -254,6 +254,7 @@ Erstens die Instabilität der elektrischen Spannung, die von dem im Stromkreis v
 
 
 Zweitens hat uns die große Anzahl von sich überlappenden Drähten bei der Durchführung von Leistungstests und deren Modifizierung sehr gestört. Die vielen sich überlappenden Drähte mit ähnlichen Farben verursachten Fehler in der Verbindung. Oft musste man die Drähte von vorne bis hinten demontieren und wieder einbauen, um den richtigen Anschluss zu erreichen, außerdem waren die Drähte teilweise zu kurz, was dazu führte, dass sie bei der Bewegung des Motors abgeschnitten wurden.
+
 Drittens, die Schwäche des Stromkreises, die sich aus der häufigen Trennung der Drähte ergibt, weil sie schwach und oberflächlich verbunden waren, was zu wiederholten Dislokationen führte und damit zur Schwäche des Stromkreises und der Notwendigkeit, die dislozierten Drähte zu demontieren und erneut zu installieren.
 
 Viertens war die Anordnung der Drähte und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt waren.
@@ -302,12 +303,15 @@ Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu
 <p align="center">
   <img src="../images/shaltungsplatine.png" alt="platine-min" width="400">
 </p>
+Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Drähte immer noch zu hoch und nicht ausreichend angeordnet ist
+
+Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle Spannungsdrähte zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.
+
+
+Wir haben auch die Grounddrähte gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.
 
 <p align="center">
   <img src="../images/klebedraht.png" alt="platine-min" width="400">
-</p>
-<p align="center">
-  <img src="../images/letzte.png" alt="platine-min" width="400">
 </p>
 <p align="center">
   <img src="../images/organisiertekabel.png" alt="platine-min" width="400">
@@ -316,16 +320,11 @@ Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu
   <img src="../images/organisiertekabel2.png" alt="platine-min" width="400">
 </p>
 
-
-
-Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Drähte immer noch zu hoch und nicht ausreichend angeordnet ist
-
-Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle Spannungsdrähte zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.
-
-
-Wir haben auch die Grounddrähte gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.
-
 Wir klebten die Drähte, die wir mit anderen Drähten verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten.
+
+<p align="center">
+  <img src="../images/letzte.png" alt="platine-min" width="400">
+</p>
 
 Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.
 

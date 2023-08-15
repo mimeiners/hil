@@ -259,18 +259,21 @@ Drittens, die Schwäche des Stromkreises, die sich aus der häufigen Trennung de
 Viertens war die Anordnung der Drähte und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt waren.
 Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen, um die Effizienz der Schaltung zu erhöhen und so diese Probleme und Fehler zu vermeiden, die beim Testen und Experimentieren zu Fehlfunktionen führen.
 
-## 
-Die Lösungen waren wie folgt:
+## Die Lösungen waren wie folgt:
 
 Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.
 
-Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln
+Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Drähte bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln.
+<p align="center">
+  <img src="../images/bennenteversorgerungen.png" alt="platine-min" width="400">
+</p>
+<p align="center">
+  <img src="../images/bennenteversorgerungen2.png" alt="platine-min" width="400">
+</p>
 
 
 Die andere Änderung betraf die Form der Schaltung, anstatt die Drähte direkt mit dem Arduino zu verbinden
-Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen, indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt
-Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten. 
-
+Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen, 
 <p align="center">
   <img src="../images/platine-min.png" alt="platine-min" width="400">
 </p>
@@ -282,21 +285,24 @@ Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem 
   <img src="../images/löttetschaltung-min.png" alt="platine-min" width="400">
 </p>
 
+
+indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt
+Wir haben dann die Drähte installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten. 
+
+
 <p align="center">
   <img src="../images/shaltung.png" alt="platine-min" width="400">
 </p>
-<p align="center">
-  <img src="../images/shaltungsplatine.png" alt="platine-min" width="400">
-</p>
+
 <p align="center">
   <img src="../images/shaltungsplatine2.png" alt="platine-min" width="400">
 </p>
+Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und die Groundseingänge
+
 <p align="center">
-  <img src="../images/bennenteversorgerungen.png" alt="platine-min" width="400">
+  <img src="../images/shaltungsplatine.png" alt="platine-min" width="400">
 </p>
-<p align="center">
-  <img src="../images/bennenteversorgerungen2.png" alt="platine-min" width="400">
-</p>
+
 <p align="center">
   <img src="../images/klebedraht.png" alt="platine-min" width="400">
 </p>

@@ -25,6 +25,3 @@ Das Sub-Level-Verhalten spiegelt die einzelnen Schritte des High-Level-Verhalten
 
 Beim Startup Check werden vier Sub-Level-Verhalten dargestellt. In einem Verhalten wird der Batteriestatus überprüft, in einem anderen wird überprüft, ob eine externe Spannungsquelle angeschlossen ist. Für beide Fälle gibt es ein Sub-Level-Verhalten, das den Gimbal mit Strom versorgt, je nachdem, welcher der beiden Fälle vorliegt.
 
-
-
-

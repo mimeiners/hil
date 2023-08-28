@@ -22,8 +22,8 @@ html:
   use_repository_button: true
   use_edit_page_button: true
   navbar_number_sections: false
-  baseurl: "https://mimeiners.github.io/gel2/"
-# google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
+#  baseurl: "https://mimeiners.github.io/hil/"
+#  google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
   comments:
     hypothesis: false
     utterances:
@@ -71,18 +71,18 @@ sphinx:
     - substitution
 
     myst_substitutions:
-      INSTRUCTOR: "Prof. Dr.-Ing. Mirco Meiners (he/his/him)"
+      INSTRUCTOR: "Prof. Dr.-Ing. Mirco Meiners (er/ihm)"
       PRONOUNCE: ""
       OFFICE: "E 508"
       PHONE: "N/A"
       COURSE_CODE: "M 6.1/M 6.2"
       SECTION: ""
       CREDITS: "6"
-      TITLE: "Grundlagen der Elektrotechnik 2 (GEL2)"
+      TITLE: "Projekt 2/3 Informationselektronik"
       PREREQS: ""
       COREQS: ""
-      TERM: "2023 Sommer"
-      ROOM: "E 509"
+      TERM: "Sommer 2023"
+      ROOM: "E 506"
       MEETING_TIMES: "Donnertags von 9:45 bis 13:00 Uhr"
       GRACE_PERIOD: ""
       W_DATE_1: ""

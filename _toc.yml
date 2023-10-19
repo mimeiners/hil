@@ -15,9 +15,9 @@ parts:
       title: Elektronik
 - caption: Testkonzepte
   chapters:
-    - file: Testcases/01_test
+    - file: testcases/01_test
       title: Testkonzept 1
-    - file: Testcases/02_test
+    - file: testcases/02_test
       title: Testkonzept 2
 - caption: Anhang
   chapters:

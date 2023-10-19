@@ -1,15 +1,15 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: M 6.1/M 6.2 Projekt (PRJ2/PRJ3) Meiners SoSe 2023 
+title: Partnerprojekt Hardware-in-the-Loop (HiL) 
 author: M. Meiners et. al.
 copyright: ""
-logo: hsb-logo.png
+logo: ./images/hsb-logo.png
 exclude_patterns: ["LICENSE.md", "README.md"]
 only_build_toc_files: true
 # Short description about the book
 # description: >-
-#  Elektronik-Experimente mit dem ASLK Pro.
+#  MBSE HiL Partnerprojekt SCOPE und HSB.
 
 # execute:
 #  execute_notebooks: cache
@@ -75,15 +75,15 @@ sphinx:
       PRONOUNCE: ""
       OFFICE: "E 508"
       PHONE: "N/A"
-      COURSE_CODE: "M 6.1/M 6.2"
+      COURSE_CODE: "M 2.7 HiL-Verfahren (HILV)"
       SECTION: ""
       CREDITS: "6"
-      TITLE: "Projekt 2/3 Informationselektronik"
+      TITLE: "Partnerprojekt HiL"
       PREREQS: ""
       COREQS: ""
-      TERM: "Sommer 2023"
+      TERM: "WiSe 2023/24"
       ROOM: "E 506"
-      MEETING_TIMES: "Donnertags von 9:45 bis 13:00 Uhr"
+      MEETING_TIMES: "Freitags von 13:30 Uhr bis 16:45 Uhr"
       GRACE_PERIOD: ""
       W_DATE_1: ""
       W_DATE_2: ""

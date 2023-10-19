@@ -5,5 +5,3 @@ numpy
 pandas
 linkify
 linkify-it-py
-
-

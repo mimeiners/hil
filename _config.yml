@@ -22,7 +22,7 @@ html:
   use_repository_button: true
   use_edit_page_button: true
   navbar_number_sections: false
-#  baseurl: "https://mimeiners.github.io/hil/"
+  baseurl: "https://mimeiners.github.io/hil/"
 #  google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
   comments:
     hypothesis: false
@@ -42,7 +42,8 @@ launch_buttons:
   thebe: true
   
 repository:
-  url: https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal
+  url: https://github.com/mimeiners/hil
+  # url: https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal
   path_to_book: ""
   branch: master
 
@@ -53,7 +54,7 @@ bibtex_bibfiles:
 latex:
   latex_engine: "xelatex"
   latex_documents:
-    targetname: gimbal.tex
+    targetname: hil.tex
 
 sphinx:
   config:

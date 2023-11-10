@@ -3,6 +3,10 @@
 format: jb-book
 root: about/unsyllabus
 parts:
+- caption: HiL-Verfahren
+  chapters:
+    - file: chapter/01_syseng
+      title: Systems Engineering
 - caption: MBSE Projekt Gimbal
   chapters:
     - file: chapter/01_prj

@@ -11,12 +11,6 @@ parts:
   chapters:
     - file: projects/01_prj
       title: Gimbal
-- caption: Testkonzepte
-  chapters:
-    - file: testcases/01_test
-      title: Testkonzept 1
-    - file: testcases/02_test
-      title: Testkonzept 2
 - caption: Anhang
   chapters:
     - file: appendix/01_app

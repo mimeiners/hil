@@ -4,26 +4,26 @@ format: jb-book
 root: about/unsyllabus
 parts:
 - caption: HiL-Verfahren
-  chapters:
-    - file: chapter/01_syseng
+  projects:
+    - file: class/01_syseng
       title: Systems Engineering
-- caption: MBSE Projekt Gimbal
-  chapters:
-    - file: chapter/01_prj
+- caption: Projekte
+  projects:
+    - file: projects/01_prj
       title: Einleitung
-    - file: chapter/02_prj
+    - file: projects/02_prj
       title: MBSE
-    - file: chapter/03_prj
+    - file: projects/03_prj
       title: 3D Druck
-    - file: chapter/04_prj
+    - file: projects/04_prj
       title: Elektronik
 - caption: Testkonzepte
-  chapters:
+  projects:
     - file: testcases/01_test
       title: Testkonzept 1
     - file: testcases/02_test
       title: Testkonzept 2
 - caption: Anhang
-  chapters:
+  projects:
     - file: appendix/01_app
       title: No Magic

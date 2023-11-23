@@ -4,11 +4,11 @@ format: jb-book
 root: about/unsyllabus
 parts:
 - caption: HiL-Verfahren
-  projects:
+  chapters:
     - file: class/01_syseng
       title: Systems Engineering
 - caption: Projekte
-  projects:
+  chapters:
     - file: projects/01_prj
       title: Einleitung
     - file: projects/02_prj
@@ -18,12 +18,12 @@ parts:
     - file: projects/04_prj
       title: Elektronik
 - caption: Testkonzepte
-  projects:
+  chapters:
     - file: testcases/01_test
       title: Testkonzept 1
     - file: testcases/02_test
       title: Testkonzept 2
 - caption: Anhang
-  projects:
+  chapters:
     - file: appendix/01_app
       title: No Magic

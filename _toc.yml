@@ -5,8 +5,10 @@ root: about/unsyllabus
 parts:
 - caption: HiL-Verfahren
   chapters:
-    - file: class/01_syseng
-      title: Systems Engineering
+    - file: class/01_lec
+      title: Einleitung und Übersicht
+    - file: class/02_lec
+      title: Literaturverzeichnis
 - caption: Projekte
   chapters:
     - file: projects/01_prj

@@ -1,1 +1,0 @@
-# No Magic MBSE Software

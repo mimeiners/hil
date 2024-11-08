@@ -1,1311 +1,1101 @@
-
-
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<html lang="en" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
-    <title>Gimbal &#8212; Partnerprojekt Hardware-in-the-Loop (HiL)</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link media="all" rel="stylesheet" type="text/css" href="https://dokie.li/media/css/dokieli.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
-
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script async="async" kind="dokieli" src="https://dokie.li/scripts/dokieli.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
+<title>2&nbsp; Gimbal – M 2.7 HiL-Verfahren (HILV)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "soclab/hil/gimbal");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/01_prj';</script>
-    <link rel="canonical" href="https://mimeiners.github.io/hil/projects/01_prj.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="No Magic MBSE Software" href="../appendix/01_app.html" />
-    <link rel="prev" title="Literaturverzeichnis" href="../class/02_lec.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      <div class="bd-sidebar-primary bd-sidebar">
-        
 
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../appendix/01_app.html" rel="next">
+<link href="../class/01_lec.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8555de54821c8356f4a1cfa7fa0c8ce2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
 
-<a class="navbar-brand logo" href="../about/unsyllabus.html">
-  
-  
-  
-  
-    
-    
-      
-    
-    
-    <img src="../_static/hsb-logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/hsb-logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../about/unsyllabus.html">
-                    Unsyllabus
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">HiL-Verfahren</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../class/01_lec.html">Einleitung und Übersicht</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../class/02_lec.html">Literaturverzeichnis</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projekte</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Gimbal</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Anhang</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/01_app.html">No Magic</a></li>
-</ul>
 
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/01_prj.html">Projekte</a></li><li class="breadcrumb-item"><a href="../projects/01_prj.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-</nav></div>
-    </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">M 2.7 HiL-Verfahren (HILV)</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/mimeiners/hil/" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
   </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
+</a>
+</div>
+    </div>
       </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/hil" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/hil/edit/master/projects/01_prj.md" target="_blank"
-   class="btn btn-sm btn-source-edit-button dropdown-item"
-   title="Suggest edit"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="btn__text-container">Suggest edit</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/mimeiners/hil/issues/new?title=Issue%20on%20page%20%2Fprojects/01_prj.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/projects/01_prj.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-  </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
-  
-</div>
-</div>
-              
-              
-
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Gimbal</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretische-grundlagen">Theoretische Grundlagen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-based-systems-engineering">Model-Based Systems Engineering</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cameo-no-magic">Cameo - No Magic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-druck-des-gimbal">3D Druck des Gimbal</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cad-modellierung">CAD Modellierung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#erster-druck">Erster Druck</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zweiter-druck">Zweiter Druck</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finale-anpassungen">Finale Anpassungen</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammengebauter-gimbal">Zusammengebauter Gimbal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elektronik-des-gimbal">Elektronik des Gimbal</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arduino-nano">Arduino Nano</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arduino-code-beschreibung">Arduino Code Beschreibung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgetretene-probleme-und-losungen-in-nano">Aufgetretene Probleme und Lösungen in Nano</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-1">Lösung 1:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-2">Lösung 2:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-nodemcu">ESP8266 NodeMCU</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-funktionierte-teil">Der Funktionierte Teil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-steuerung-des-servos">ESP8266 Steuerung des Servos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-daten-von-der-mpu6050-lesen">ESP8266 Daten von der MPU6050 lesen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-nicht-funktionierte-teil">Der nicht Funktionierte Teil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotheks-kompatibilitat">Bibliotheks-Kompatibilität</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entwicklung-des-interruppt-pins">Entwicklung des Interruppt PINs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verbesserung-der-schaltung">Verbesserung der Schaltung:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-losungen-waren-wie-folgt">Die Lösungen waren wie folgt:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberprufung-der-spannungskonstanz-und-stabilitat-eines-buck-konverters">Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testkonzept">Testkonzept</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zustand-des-gerats">Zustand des Geräts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#durchfuhrung">Durchführung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testanforderungen">Testanforderungen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zustand-des-konzepts">Zustand des Konzepts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ergebnisvergleich-mit-anforderung">Ergebnisvergleich mit Anforderung</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberprufung-der-ausgangsspannungserzeugung-des-buck-konverters">Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Testkonzept</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Zustand des Geräts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testanforderung">Testanforderung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ergebnisvergleich mit Anforderung</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
         </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsyllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class/01_lec.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Projekte</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/01_prj.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Anhang</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/01_app.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">No Magic MBSE Software</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
     </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#theoretische-grundlagen" id="toc-theoretische-grundlagen" class="nav-link active" data-scroll-target="#theoretische-grundlagen"><span class="header-section-number">2.1</span> Theoretische Grundlagen</a></li>
+  <li><a href="#model-based-systems-engineering" id="toc-model-based-systems-engineering" class="nav-link" data-scroll-target="#model-based-systems-engineering"><span class="header-section-number">2.2</span> Model-Based Systems Engineering</a></li>
+  <li><a href="#cameo---no-magic" id="toc-cameo---no-magic" class="nav-link" data-scroll-target="#cameo---no-magic"><span class="header-section-number">2.3</span> Cameo - No Magic</a></li>
+  <li><a href="#d-druck-des-gimbal" id="toc-d-druck-des-gimbal" class="nav-link" data-scroll-target="#d-druck-des-gimbal"><span class="header-section-number">2.4</span> 3D Druck des Gimbal</a>
+  <ul class="collapse">
+  <li><a href="#cad-modellierung" id="toc-cad-modellierung" class="nav-link" data-scroll-target="#cad-modellierung"><span class="header-section-number">2.4.1</span> CAD Modellierung</a></li>
+  <li><a href="#erster-druck" id="toc-erster-druck" class="nav-link" data-scroll-target="#erster-druck"><span class="header-section-number">2.4.2</span> Erster Druck</a></li>
+  <li><a href="#zweiter-druck" id="toc-zweiter-druck" class="nav-link" data-scroll-target="#zweiter-druck"><span class="header-section-number">2.4.3</span> Zweiter Druck</a></li>
+  <li><a href="#finale-anpassungen" id="toc-finale-anpassungen" class="nav-link" data-scroll-target="#finale-anpassungen"><span class="header-section-number">2.4.4</span> Finale Anpassungen</a></li>
+  </ul></li>
+  <li><a href="#zusammengebauter-gimbal" id="toc-zusammengebauter-gimbal" class="nav-link" data-scroll-target="#zusammengebauter-gimbal"><span class="header-section-number">2.5</span> Zusammengebauter Gimbal</a></li>
+  <li><a href="#elektronik-des-gimbal" id="toc-elektronik-des-gimbal" class="nav-link" data-scroll-target="#elektronik-des-gimbal"><span class="header-section-number">2.6</span> Elektronik des Gimbal</a>
+  <ul class="collapse">
+  <li><a href="#arduino-nano" id="toc-arduino-nano" class="nav-link" data-scroll-target="#arduino-nano"><span class="header-section-number">2.6.1</span> Arduino Nano</a></li>
+  <li><a href="#arduino-code-beschreibung" id="toc-arduino-code-beschreibung" class="nav-link" data-scroll-target="#arduino-code-beschreibung"><span class="header-section-number">2.6.2</span> Arduino Code Beschreibung</a></li>
+  <li><a href="#aufgetretene-probleme-und-lösungen-in-nano" id="toc-aufgetretene-probleme-und-lösungen-in-nano" class="nav-link" data-scroll-target="#aufgetretene-probleme-und-lösungen-in-nano"><span class="header-section-number">2.6.3</span> Aufgetretene Probleme und Lösungen in Nano</a></li>
+  <li><a href="#esp8266-nodemcu" id="toc-esp8266-nodemcu" class="nav-link" data-scroll-target="#esp8266-nodemcu"><span class="header-section-number">2.6.4</span> ESP8266 NodeMCU</a></li>
+  <li><a href="#der-funktionierte-teil" id="toc-der-funktionierte-teil" class="nav-link" data-scroll-target="#der-funktionierte-teil"><span class="header-section-number">2.6.5</span> Der Funktionierte Teil</a></li>
+  <li><a href="#esp8266-steuerung-des-servos" id="toc-esp8266-steuerung-des-servos" class="nav-link" data-scroll-target="#esp8266-steuerung-des-servos"><span class="header-section-number">2.6.6</span> ESP8266 Steuerung des Servos</a></li>
+  <li><a href="#esp8266-daten-von-der-mpu6050-lesen" id="toc-esp8266-daten-von-der-mpu6050-lesen" class="nav-link" data-scroll-target="#esp8266-daten-von-der-mpu6050-lesen"><span class="header-section-number">2.6.7</span> ESP8266 Daten von der MPU6050 lesen</a></li>
+  <li><a href="#der-nicht-funktionierte-teil" id="toc-der-nicht-funktionierte-teil" class="nav-link" data-scroll-target="#der-nicht-funktionierte-teil"><span class="header-section-number">2.6.8</span> Der nicht Funktionierte Teil</a></li>
+  <li><a href="#bibliotheks-kompatibilität" id="toc-bibliotheks-kompatibilität" class="nav-link" data-scroll-target="#bibliotheks-kompatibilität"><span class="header-section-number">2.6.9</span> Bibliotheks-Kompatibilität</a></li>
+  <li><a href="#entwicklung-des-interruppt-pins" id="toc-entwicklung-des-interruppt-pins" class="nav-link" data-scroll-target="#entwicklung-des-interruppt-pins"><span class="header-section-number">2.6.10</span> Entwicklung des Interruppt PINs</a></li>
+  <li><a href="#verbesserung-der-schaltung" id="toc-verbesserung-der-schaltung" class="nav-link" data-scroll-target="#verbesserung-der-schaltung"><span class="header-section-number">2.6.11</span> Verbesserung der Schaltung:</a></li>
+  <li><a href="#die-lösungen-waren-wie-folgt" id="toc-die-lösungen-waren-wie-folgt" class="nav-link" data-scroll-target="#die-lösungen-waren-wie-folgt"><span class="header-section-number">2.6.12</span> Die Lösungen waren wie folgt:</a></li>
+  </ul></li>
+  <li><a href="#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters" id="toc-überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters" class="nav-link" data-scroll-target="#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters"><span class="header-section-number">2.7</span> Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters</a>
+  <ul class="collapse">
+  <li><a href="#testkonzept" id="toc-testkonzept" class="nav-link" data-scroll-target="#testkonzept"><span class="header-section-number">2.7.1</span> Testkonzept</a></li>
+  <li><a href="#zustand-des-geräts" id="toc-zustand-des-geräts" class="nav-link" data-scroll-target="#zustand-des-geräts"><span class="header-section-number">2.7.2</span> Zustand des Geräts</a></li>
+  <li><a href="#durchführung" id="toc-durchführung" class="nav-link" data-scroll-target="#durchführung"><span class="header-section-number">2.7.3</span> Durchführung</a></li>
+  <li><a href="#testanforderungen" id="toc-testanforderungen" class="nav-link" data-scroll-target="#testanforderungen"><span class="header-section-number">2.7.4</span> Testanforderungen</a></li>
+  <li><a href="#zustand-des-konzepts" id="toc-zustand-des-konzepts" class="nav-link" data-scroll-target="#zustand-des-konzepts"><span class="header-section-number">2.7.5</span> Zustand des Konzepts</a></li>
+  <li><a href="#ergebnisvergleich-mit-anforderung" id="toc-ergebnisvergleich-mit-anforderung" class="nav-link" data-scroll-target="#ergebnisvergleich-mit-anforderung"><span class="header-section-number">2.7.6</span> Ergebnisvergleich mit Anforderung</a></li>
+  </ul></li>
+  <li><a href="#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters" id="toc-überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters" class="nav-link" data-scroll-target="#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters"><span class="header-section-number">2.8</span> Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters</a>
+  <ul class="collapse">
+  <li><a href="#testkonzept-1" id="toc-testkonzept-1" class="nav-link" data-scroll-target="#testkonzept-1"><span class="header-section-number">2.8.1</span> Testkonzept</a></li>
+  <li><a href="#zustand-des-geräts-1" id="toc-zustand-des-geräts-1" class="nav-link" data-scroll-target="#zustand-des-geräts-1"><span class="header-section-number">2.8.2</span> Zustand des Geräts</a></li>
+  <li><a href="#testanforderung" id="toc-testanforderung" class="nav-link" data-scroll-target="#testanforderung"><span class="header-section-number">2.8.3</span> Testanforderung</a></li>
+  <li><a href="#ergebnisvergleich-mit-anforderung-1" id="toc-ergebnisvergleich-mit-anforderung-1" class="nav-link" data-scroll-target="#ergebnisvergleich-mit-anforderung-1"><span class="header-section-number">2.8.4</span> Ergebnisvergleich mit Anforderung</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/hil/edit/main/projects/01_prj.md" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/hil/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../projects/01_prj.html">Projekte</a></li><li class="breadcrumb-item"><a href="../projects/01_prj.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></h1>
 </div>
 
-              
-                
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="gimbal">
-<h1>Gimbal<a class="headerlink" href="#gimbal" title="Permalink to this heading">#</a></h1>
-<p>In diesem Projekt geht es um die Konzeption und den Bau eines Gimbals, einer selbst stabilisierenden Plattform, die
-mithilfe von Sensoren und Motoren stabilisiert wird, um eine präzise und ruhige Kameraaufnahme zu ermöglichen. Im
-Gegensatz zu anderen Gimbals, die oft als fertige Produkte erhältlich sind, werden wir uns in diesem Projekt nicht nur
-auf die Montage der Bauteile beschränken, sondern uns auch mit der Programmierung und Entwicklung der elektronischen
-Komponenten befassen. Dazu kommen Aspekte der 3D-Modellierung mit CAD, die es ermöglichen ein 3D-Modell zu erstellen, um
-die einzelnen Bauteile im Hause zu drucken. Dadurch werden wir in der Lage sein, den Gimbal nach unseren individuellen
-Anforderungen und Bedürfnissen zu gestalten und anzupassen. Das Projekt basiert auf einem vorherigen Projekt von
-<a class="reference external" href="https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/?utm_content=cmp-true"><em>HowToMechatronics</em></a>,
-das Ziel ist es auf Grundlage dieses Projektes den Gimbal weiterzuentwickeln und eigene Erfahrungen zu sammeln.</p>
-<section id="theoretische-grundlagen">
-<h2>Theoretische Grundlagen<a class="headerlink" href="#theoretische-grundlagen" title="Permalink to this heading">#</a></h2>
-<p>Für die Theorie des Gimbal-Projekts werden wir im Folgenden einen grundlegenden Leitfaden zur Entwicklung der Theorie
-festlegen.</p>
-<ul class="simple">
-<li><p><strong>Verständnis des Gimbalkonzepts</strong>
-Zunächst sollte jeder Projektbeteiligte das Konzept und die Funktionsweise eines Gimbals nachvollziehen und
-verstehen. Was genau macht die Vorrichtung? Welche Bestandteile hat das Gimbal? Wie viele Achsen hat das Gimbal?</p></li>
-<li><p><strong>Festlegung des Ziels</strong>
-Das Ziel des Projekt muss klar definiert sein. Was soll am ende dabei rauskommen? Was für ein Anwendungsszenario ist
-im Sinn? Somit kann der Umfang des Projekts festgelegt werden.</p></li>
-<li><p><strong>Identifizierung der Verwendeten Hardware</strong>
-Es muss eine Auswahl für jede Hardwarekomponente getroffen werden. Welche Hardwarekomponente bietet welche Vorteile?
-z.B. ESP im Vergleich zu Arduino. (Hier befinden wir uns Aktuell)</p></li>
-<li><p><strong>Entwurf der Steuereinheit</strong>
-Entwickelt einen Steuerungsalgorithmus, der die Bewegungen der Motoren basierend auf den Sensordaten steuert.</p></li>
-<li><p><strong>Implementierung der HIL-Simulation</strong>
-HIL ermöglicht uns die Simulation und Überprüfung des Steuerungsalgorithmus in einer realistischen Umgebung, bevor
-wir ihn auf der tatsächlichen Hardware testet.</p></li>
-<li><p><strong>Durchführung von Tests und Optmierung</strong>
-Es sollten umfangreiche Tests durchgeführt werden, um die Leistung eures Gimbal-Systems zu bewerten. Außerdem sollte
-Überprüft werden ob das Gimbal die Plattform stabil hält, unerwünschte Bewegungen minimiert und auf Benutzereingaben
-reagiert. Falls nötig sollte der Steueralgorithmus basierend auf den Testergebnissen optmiert werden.</p></li>
-<li><p><strong>Dokumentation und Präsentation</strong>
-Zuletzt werden die Ergebnisse dokumentiert, zusammengefasst und präsentiert.</p></li>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In diesem Projekt geht es um die Konzeption und den Bau eines Gimbals, einer selbst stabilisierenden Plattform, die mithilfe von Sensoren und Motoren stabilisiert wird, um eine präzise und ruhige Kameraaufnahme zu ermöglichen. Im Gegensatz zu anderen Gimbals, die oft als fertige Produkte erhältlich sind, werden wir uns in diesem Projekt nicht nur auf die Montage der Bauteile beschränken, sondern uns auch mit der Programmierung und Entwicklung der elektronischen Komponenten befassen. Dazu kommen Aspekte der 3D-Modellierung mit CAD, die es ermöglichen ein 3D-Modell zu erstellen, um die einzelnen Bauteile im Hause zu drucken. Dadurch werden wir in der Lage sein, den Gimbal nach unseren individuellen Anforderungen und Bedürfnissen zu gestalten und anzupassen. Das Projekt basiert auf einem vorherigen Projekt von <a href="https://howtomechatronics.com/projects/diy-arduino-gimbal-self-stabilizing-platform/?utm_content=cmp-true"><em>HowToMechatronics</em></a>, das Ziel ist es auf Grundlage dieses Projektes den Gimbal weiterzuentwickeln und eigene Erfahrungen zu sammeln.</p>
+<section id="theoretische-grundlagen" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="theoretische-grundlagen"><span class="header-section-number">2.1</span> Theoretische Grundlagen</h2>
+<p>Für die Theorie des Gimbal-Projekts werden wir im Folgenden einen grundlegenden Leitfaden zur Entwicklung der Theorie festlegen.</p>
+<ul>
+<li><p><strong>Verständnis des Gimbalkonzepts</strong> Zunächst sollte jeder Projektbeteiligte das Konzept und die Funktionsweise eines Gimbals nachvollziehen und verstehen. Was genau macht die Vorrichtung? Welche Bestandteile hat das Gimbal? Wie viele Achsen hat das Gimbal?</p></li>
+<li><p><strong>Festlegung des Ziels</strong> Das Ziel des Projekt muss klar definiert sein. Was soll am ende dabei rauskommen? Was für ein Anwendungsszenario ist im Sinn? Somit kann der Umfang des Projekts festgelegt werden.</p></li>
+<li><p><strong>Identifizierung der Verwendeten Hardware</strong> Es muss eine Auswahl für jede Hardwarekomponente getroffen werden. Welche Hardwarekomponente bietet welche Vorteile? z.B. ESP im Vergleich zu Arduino. (Hier befinden wir uns Aktuell)</p></li>
+<li><p><strong>Entwurf der Steuereinheit</strong> Entwickelt einen Steuerungsalgorithmus, der die Bewegungen der Motoren basierend auf den Sensordaten steuert.</p></li>
+<li><p><strong>Implementierung der HIL-Simulation</strong> HIL ermöglicht uns die Simulation und Überprüfung des Steuerungsalgorithmus in einer realistischen Umgebung, bevor wir ihn auf der tatsächlichen Hardware testet.</p></li>
+<li><p><strong>Durchführung von Tests und Optmierung</strong> Es sollten umfangreiche Tests durchgeführt werden, um die Leistung eures Gimbal-Systems zu bewerten. Außerdem sollte Überprüft werden ob das Gimbal die Plattform stabil hält, unerwünschte Bewegungen minimiert und auf Benutzereingaben reagiert. Falls nötig sollte der Steueralgorithmus basierend auf den Testergebnissen optmiert werden.</p></li>
+<li><p><strong>Dokumentation und Präsentation</strong> Zuletzt werden die Ergebnisse dokumentiert, zusammengefasst und präsentiert.</p></li>
 </ul>
 </section>
-<section id="model-based-systems-engineering">
-<h2>Model-Based Systems Engineering<a class="headerlink" href="#model-based-systems-engineering" title="Permalink to this heading">#</a></h2>
-<p>Das modellbasierte System-Engineering (MBSE) ist eine formalisierte Methodik, die zur Unterstützung der Anforderungen,
-des Entwurfs, der Analyse, der Verifizierung und der Validierung im Zusammenhang mit der Entwicklung komplexer Systeme
-eingesetzt wird. Im Gegensatz zum dokumentenzentrierten Engineering stellt MBSE Modelle in den Mittelpunkt der
-Systementwicklung.</p>
+<section id="model-based-systems-engineering" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="model-based-systems-engineering"><span class="header-section-number">2.2</span> Model-Based Systems Engineering</h2>
+<p>Das modellbasierte System-Engineering (MBSE) ist eine formalisierte Methodik, die zur Unterstützung der Anforderungen, des Entwurfs, der Analyse, der Verifizierung und der Validierung im Zusammenhang mit der Entwicklung komplexer Systeme eingesetzt wird. Im Gegensatz zum dokumentenzentrierten Engineering stellt MBSE Modelle in den Mittelpunkt der Systementwicklung.</p>
 <p>MBSE bringt drei Konzepte zusammen: Modell, Systemdenken und Systemtechnik:</p>
-<p>Ein Modell:  ist eine vereinfachte Version von etwas - eine grafische, mathematische oder physikalische Darstellung, die
-die Realität abstrahiert, um eine gewisse Komplexität zu eliminieren. Diese Definition impliziert Formalität oder Regeln
-bei der Vereinfachung, Darstellung oder Abstraktion. Um ein System zu modellieren, muss ein Systemarchitekt das System
-mit weniger Details darstellen, so dass seine Struktur und sein Verhalten erkennbar und seine Komplexität beherrschbar
-ist. Mit anderen Worten: Modelle sollten das System ausreichend darstellen, und das System sollte die Modelle
-bestätigen.</p>
-<p>Systemdenken:  ist eine Art, ein zu betrachtendes System nicht als autarke Einheit, sondern als Teil eines größeren
-Systems zu sehen. Systemdenken ist nicht dasselbe wie das systematische Befolgen guter Pläne, das Sammeln von
-Statistiken oder methodisches Vorgehen. Der Systemingenieur beobachtet das System aus der Ferne, erforscht seine
-Grenzen, seinen Kontext und seinen Lebenszyklus, notiert sein Verhalten und identifiziert Muster. Diese Methode kann dem
-Ingenieur helfen, Probleme zu erkennen (z. B. fehlende Interaktion, ein fehlender Schritt in einem Prozess, doppelter
-Aufwand, verpasste Möglichkeiten zur Automatisierung) und die Komplexität eines Systems zu bewältigen. Obwohl
-Systemingenieure das System zu Beginn zerlegen und analysieren müssen - Teile identifizieren und Verbindungen zwischen
-ihnen beschreiben -, fügen sie die Teile später wieder zu einem kohärenten Ganzen zusammen. Teile sind nicht nur mit
-anderen Teilen verbunden, sie sind voneinander abhängig, um richtig zu funktionieren. Beim Systemdenken wird diese
-Vernetzung betont. Das Verhalten des Systems ergibt sich aus den Aktivitäten der einzelnen Teile des Systems. Wenn der
-Systemtechniker die Verbindungen des Systems beobachtet, erkennt er Rückkopplungsschleifen und Kausalitätsmuster, die
-auf den ersten Blick vielleicht nicht sichtbar sind. Systemdenken kann dazu beitragen, Probleme deutlicher zu erkennen
-und leichter zu identifizieren, das System ins Gleichgewicht zu bringen und die Komplexität des Systems zu bewältigen.</p>
-<p>Systems Engineering ist ein transdisziplinärer und integrativer Ansatz, der die erfolgreiche Realisierung, Nutzung und
-Ausmusterung von technischen Systemen unter Verwendung von Systemprinzipien und -konzepten sowie wissenschaftlichen,
-technologischen und Managementmethoden ermöglicht. Es vereint eine Reihe von Techniken, um sicherzustellen, dass alle
-Anforderungen durch das entworfene System erfüllt werden. Es konzentriert sich auf die Architektur, Implementierung,
-Integration, Analyse und Verwaltung eines Systems während seines Lebenszyklus. Dabei werden auch Software, Hardware,
-Personal, Prozesse und verfahrenstechnische Aspekte des Systems berücksichtigt.</p>
+<p>Ein Modell: ist eine vereinfachte Version von etwas - eine grafische, mathematische oder physikalische Darstellung, die die Realität abstrahiert, um eine gewisse Komplexität zu eliminieren. Diese Definition impliziert Formalität oder Regeln bei der Vereinfachung, Darstellung oder Abstraktion. Um ein System zu modellieren, muss ein Systemarchitekt das System mit weniger Details darstellen, so dass seine Struktur und sein Verhalten erkennbar und seine Komplexität beherrschbar ist. Mit anderen Worten: Modelle sollten das System ausreichend darstellen, und das System sollte die Modelle bestätigen.</p>
+<p>Systemdenken: ist eine Art, ein zu betrachtendes System nicht als autarke Einheit, sondern als Teil eines größeren Systems zu sehen. Systemdenken ist nicht dasselbe wie das systematische Befolgen guter Pläne, das Sammeln von Statistiken oder methodisches Vorgehen. Der Systemingenieur beobachtet das System aus der Ferne, erforscht seine Grenzen, seinen Kontext und seinen Lebenszyklus, notiert sein Verhalten und identifiziert Muster. Diese Methode kann dem Ingenieur helfen, Probleme zu erkennen (z. B. fehlende Interaktion, ein fehlender Schritt in einem Prozess, doppelter Aufwand, verpasste Möglichkeiten zur Automatisierung) und die Komplexität eines Systems zu bewältigen. Obwohl Systemingenieure das System zu Beginn zerlegen und analysieren müssen - Teile identifizieren und Verbindungen zwischen ihnen beschreiben -, fügen sie die Teile später wieder zu einem kohärenten Ganzen zusammen. Teile sind nicht nur mit anderen Teilen verbunden, sie sind voneinander abhängig, um richtig zu funktionieren. Beim Systemdenken wird diese Vernetzung betont. Das Verhalten des Systems ergibt sich aus den Aktivitäten der einzelnen Teile des Systems. Wenn der Systemtechniker die Verbindungen des Systems beobachtet, erkennt er Rückkopplungsschleifen und Kausalitätsmuster, die auf den ersten Blick vielleicht nicht sichtbar sind. Systemdenken kann dazu beitragen, Probleme deutlicher zu erkennen und leichter zu identifizieren, das System ins Gleichgewicht zu bringen und die Komplexität des Systems zu bewältigen.</p>
+<p>Systems Engineering ist ein transdisziplinärer und integrativer Ansatz, der die erfolgreiche Realisierung, Nutzung und Ausmusterung von technischen Systemen unter Verwendung von Systemprinzipien und -konzepten sowie wissenschaftlichen, technologischen und Managementmethoden ermöglicht. Es vereint eine Reihe von Techniken, um sicherzustellen, dass alle Anforderungen durch das entworfene System erfüllt werden. Es konzentriert sich auf die Architektur, Implementierung, Integration, Analyse und Verwaltung eines Systems während seines Lebenszyklus. Dabei werden auch Software, Hardware, Personal, Prozesse und verfahrenstechnische Aspekte des Systems berücksichtigt.</p>
 <p>Wenn MBSE richtig durchgeführt wird, führt dies zu einer allgemeinen Verringerung der Entwicklungsrisiken.</p>
 </section>
-<section id="cameo-no-magic">
-<h2>Cameo - No Magic<a class="headerlink" href="#cameo-no-magic" title="Permalink to this heading">#</a></h2>
-<p>Das Hauptmodell des SE-Demonstrators besteht aus drei Hauptpaketen, die in verschiedene Unterpakete unterteilt werden
-können. Diese drei Hauptpakete sind die “Functional Architecture” (Funktionale Architektur), die “Mission &amp; Stakeholder
-Analysis” (Analyse der Mission und Interessenvertreter) und die “System Architecture” (Systemarchitektur).</p>
-<p>Die Functionale Architecture lässt sich in zwei Unterpakete unterteilen, nämlich die Funktionale Analyse und die
-Systemfunktionen. Die Funktionale Analyse betrachtet alle erforderlichen funktionalen Schritte, um eine normale
-Operation mit dem Gimbal auszuführen, wie zum Beispiel die Anpassung der Bewegung, das Setzen eines Stabilisierungsmodus
-und die Überprüfung beim Start des Gimbals, ob dieser ordnungsgemäß versorgt wird.</p>
-<p>Die Systemfunktionen lassen sich in High-Level-Verhalten und Sub-Level-Verhalten aufteilen. Das High-Level-Verhalten
-umfasst die normale Operation des Gimbals, bei der er wie in der Funktionalen Architektur beschrieben den
-Stabilisierungsmodus auswählt und anhand der Gimbal-Bewegung eine Anpassung vornimmt, um die Plattform entgegen der
-Bewegung zu stabilisieren. Ein weiteres High-Level-Verhalten ist der Startup Check, der auch in der Funktionalen Analyse
-beschrieben wird.</p>
-<p>Das Sub-Level-Verhalten spiegelt die einzelnen Schritte des High-Level-Verhaltens wider. Im Falle der normalen Operation
-gibt es drei Sub-Level-Verhalten. Eines davon ist das Setzen des Stabilisierungsmodus und die erforderlichen Schritte,
-die beim Auswahl des Stabilisierungsmodus eingeleitet werden. Ein anderes Sub-Level-Verhalten ist beispielsweise die
-Erfassung der Gimbal-Bewegung und die erforderlichen Schritte dafür. Das letzte Sub-Level-Verhalten ist die eigentliche
-Stabilisierung, also die Kompensation der Eingangsbewegung und die darauf basierende Anpassung der Position.</p>
-<p>Beim Startup Check werden vier Sub-Level-Verhalten dargestellt. In einem Verhalten wird der Batteriestatus überprüft, in
-einem anderen wird überprüft, ob eine externe Spannungsquelle angeschlossen ist. Für beide Fälle gibt es ein
-Sub-Level-Verhalten, das den Gimbal mit Strom versorgt, je nachdem, welcher der beiden Fälle vorliegt.</p>
+<section id="cameo---no-magic" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="cameo---no-magic"><span class="header-section-number">2.3</span> Cameo - No Magic</h2>
+<p>Das Hauptmodell des SE-Demonstrators besteht aus drei Hauptpaketen, die in verschiedene Unterpakete unterteilt werden können. Diese drei Hauptpakete sind die “Functional Architecture” (Funktionale Architektur), die “Mission &amp; Stakeholder Analysis” (Analyse der Mission und Interessenvertreter) und die “System Architecture” (Systemarchitektur).</p>
+<p>Die Functionale Architecture lässt sich in zwei Unterpakete unterteilen, nämlich die Funktionale Analyse und die Systemfunktionen. Die Funktionale Analyse betrachtet alle erforderlichen funktionalen Schritte, um eine normale Operation mit dem Gimbal auszuführen, wie zum Beispiel die Anpassung der Bewegung, das Setzen eines Stabilisierungsmodus und die Überprüfung beim Start des Gimbals, ob dieser ordnungsgemäß versorgt wird.</p>
+<p>Die Systemfunktionen lassen sich in High-Level-Verhalten und Sub-Level-Verhalten aufteilen. Das High-Level-Verhalten umfasst die normale Operation des Gimbals, bei der er wie in der Funktionalen Architektur beschrieben den Stabilisierungsmodus auswählt und anhand der Gimbal-Bewegung eine Anpassung vornimmt, um die Plattform entgegen der Bewegung zu stabilisieren. Ein weiteres High-Level-Verhalten ist der Startup Check, der auch in der Funktionalen Analyse beschrieben wird.</p>
+<p>Das Sub-Level-Verhalten spiegelt die einzelnen Schritte des High-Level-Verhaltens wider. Im Falle der normalen Operation gibt es drei Sub-Level-Verhalten. Eines davon ist das Setzen des Stabilisierungsmodus und die erforderlichen Schritte, die beim Auswahl des Stabilisierungsmodus eingeleitet werden. Ein anderes Sub-Level-Verhalten ist beispielsweise die Erfassung der Gimbal-Bewegung und die erforderlichen Schritte dafür. Das letzte Sub-Level-Verhalten ist die eigentliche Stabilisierung, also die Kompensation der Eingangsbewegung und die darauf basierende Anpassung der Position.</p>
+<p>Beim Startup Check werden vier Sub-Level-Verhalten dargestellt. In einem Verhalten wird der Batteriestatus überprüft, in einem anderen wird überprüft, ob eine externe Spannungsquelle angeschlossen ist. Für beide Fälle gibt es ein Sub-Level-Verhalten, das den Gimbal mit Strom versorgt, je nachdem, welcher der beiden Fälle vorliegt.</p>
 </section>
-<section id="d-druck-des-gimbal">
-<h2>3D Druck des Gimbal<a class="headerlink" href="#d-druck-des-gimbal" title="Permalink to this heading">#</a></h2>
-<p>Zur Erstellung der selbst stabilisierenden Platform, werden die verschiedenen Bauteile des Gimbals mittels 3D Druck
-erstellt. Diese umfassen das Gehäuse des Microcontrollers, die Platform für die Kamera, sowie die Halter für die
-Servo-Motoren.</p>
-<p>Um einen erfolgreichen 3D-Druck zu gewährleisten, werden die hierfür vorgesehenen 3D-Druckdateien in fünf
-Grundstrukturen unterteilt. Die Aufteilung basiert auf der Kameraplattform, den drei Servomotoren - die jeweils eine
-Achse der Stabilisierung steuern - und dem Verschlussdeckel für das Gehäuse des Microcontrollers.</p>
-<p>Dadurch erhält man eine STL-Datei als erste Grundstruktur <em>(Base 01)</em> für den Servomotor, der die Yaw-Drehung steuert,
-also die Drehung um die z-Achse als Referenzsystem. Eine weiere Grundstruktur <em>(Base 02)</em> ist für den Servomotor, der
-die Roll-Drehung steuert, was sich auf die x-Achse bezieht. Die dritte Grundstruktur <em>(Base 03)</em> ist für den
-Pitch-Servomotor, der eine Anpassung in Bezug auf die y-Achse vornimmt. Es ist wichtig zu beachten, dass die
-Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller dient.</p>
+<section id="d-druck-des-gimbal" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="d-druck-des-gimbal"><span class="header-section-number">2.4</span> 3D Druck des Gimbal</h2>
+<p>Zur Erstellung der selbst stabilisierenden Platform, werden die verschiedenen Bauteile des Gimbals mittels 3D Druck erstellt. Diese umfassen das Gehäuse des Microcontrollers, die Platform für die Kamera, sowie die Halter für die Servo-Motoren.</p>
+<p>Um einen erfolgreichen 3D-Druck zu gewährleisten, werden die hierfür vorgesehenen 3D-Druckdateien in fünf Grundstrukturen unterteilt. Die Aufteilung basiert auf der Kameraplattform, den drei Servomotoren - die jeweils eine Achse der Stabilisierung steuern - und dem Verschlussdeckel für das Gehäuse des Microcontrollers.</p>
+<p>Dadurch erhält man eine STL-Datei als erste Grundstruktur <em>(Base 01)</em> für den Servomotor, der die Yaw-Drehung steuert, also die Drehung um die z-Achse als Referenzsystem. Eine weiere Grundstruktur <em>(Base 02)</em> ist für den Servomotor, der die Roll-Drehung steuert, was sich auf die x-Achse bezieht. Die dritte Grundstruktur <em>(Base 03)</em> ist für den Pitch-Servomotor, der eine Anpassung in Bezug auf die y-Achse vornimmt. Es ist wichtig zu beachten, dass die Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller dient.</p>
 <p>Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.</p>
-<figure class="align-center" id="gimbal1">
-<img alt="../_images/Gimbal_Platform.png" src="../_images/Gimbal_Platform.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Gimbal Plattform</span><a class="headerlink" href="#gimbal1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="cad-modellierung">
-<h3>CAD Modellierung<a class="headerlink" href="#cad-modellierung" title="Permalink to this heading">#</a></h3>
-<p>Mit Fusion 360 und Inventor kann man diese 3D-Entwürfe erstellen. Die Programme bieten außerdem die möglichkeit in teams
-zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.</p>
-<p>In unserem Projekt verwenden wir Inventor als CAD-Programm, jedoch besteht die Möglichkeit, das bevorzugte CAD-Programm
-zur Bearbeitung zu nutzen. Die entsprechenden Inventor-Dateien befinden sich im Ordner <em>“3d_druck_gimbal”</em> und können
-nach Belieben in andere Formate umgewandelt werden.</p>
-<p><strong>Autodesk Fusion 360</strong>, sowie <strong>Autodesk Inventor</strong> besitzten eine <em>kostenlose</em> “Campus” Version, welche Kostenlos für
-Lehrende und Studenten ist.</p>
+<p><img src="../images/Gimbal_Platform.png" class="img-fluid" alt="Gimbal Plattform">#fig-gimbal1</p>
+<section id="cad-modellierung" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="cad-modellierung"><span class="header-section-number">2.4.1</span> CAD Modellierung</h3>
+<p>Mit Fusion 360 und Inventor kann man diese 3D-Entwürfe erstellen. Die Programme bieten außerdem die möglichkeit in teams zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.</p>
+<p>In unserem Projekt verwenden wir Inventor als CAD-Programm, jedoch besteht die Möglichkeit, das bevorzugte CAD-Programm zur Bearbeitung zu nutzen. Die entsprechenden Inventor-Dateien befinden sich im Ordner <em>“3d_druck_gimbal”</em> und können nach Belieben in andere Formate umgewandelt werden.</p>
+<p><strong>Autodesk Fusion 360</strong>, sowie <strong>Autodesk Inventor</strong> besitzten eine <em>kostenlose</em> “Campus” Version, welche Kostenlos für Lehrende und Studenten ist.</p>
 <p>Sie unterstützen folgende 3D Druck formate:</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p>STL(Binär)</p></th>
-<th class="head text-center"><p>STL(ASCII)</p></th>
+<tr class="header">
+<th style="text-align: center;">STL(Binär)</th>
+<th style="text-align: center;">STL(ASCII)</th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>3MF</p></td>
-<td class="text-center"><p>OBJ</p></td>
+<tr class="odd">
+<td style="text-align: center;">3MF</td>
+<td style="text-align: center;">OBJ</td>
 </tr>
 </tbody>
 </table>
-<p>und sind erhältlich über folgenden link: <a class="reference external" href="https://www.autodesk.de/education/edu-software/overview?sorting=featured&amp;filters=individual"><em>Fusion-Download/Inventor-Download</em></a></p>
+<p>und sind erhältlich über folgenden link: <a href="https://www.autodesk.de/education/edu-software/overview?sorting=featured&amp;filters=individual"><em>Fusion-Download/Inventor-Download</em></a></p>
 </section>
-<section id="erster-druck">
-<h3>Erster Druck<a class="headerlink" href="#erster-druck" title="Permalink to this heading">#</a></h3>
-<p>Vor der CAD-Modellierung wurde zunächst ein initialer Testdruck durchgeführt, um zu überprüfen, ob die vorhandenen
-STL-Dateien für unseren Drucker geeignet sind. Je nach verwendetem Drucker können spezifische Anpassungen erforderlich
-sein.</p>
-<p>Im Folgenden wird der erste Druck basierend auf dem Modell “Base 02” dargestellt. Dieses Beispiel verdeutlicht die
-Bedeutung eines ersten Testdrucks, da die gedruckte Struktur nicht ideal ist. Es traten Probleme mit der Stabilität
-aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, die verwendet wurden, um das Einkrachen des
-Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt
-werden.</p>
-<figure class="align-center" id="id1">
-<img alt="../_images/Erster_Druck.jpg" src="../_images/Erster_Druck.jpg" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Erster 3D-Druck</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Diese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und
-anschließend erneut zu bewerten, welche Anpassungen erforderlich sind.</p>
+<section id="erster-druck" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="erster-druck"><span class="header-section-number">2.4.2</span> Erster Druck</h3>
+<p>Vor der CAD-Modellierung wurde zunächst ein initialer Testdruck durchgeführt, um zu überprüfen, ob die vorhandenen STL-Dateien für unseren Drucker geeignet sind. Je nach verwendetem Drucker können spezifische Anpassungen erforderlich sein.</p>
+<p>Im Folgenden wird der erste Druck basierend auf dem Modell “Base 02” dargestellt. Dieses Beispiel verdeutlicht die Bedeutung eines ersten Testdrucks, da die gedruckte Struktur nicht ideal ist. Es traten Probleme mit der Stabilität aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, die verwendet wurden, um das Einkrachen des Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt werden.</p>
+<p><img src="../images/Erster_Druck.jpg" class="img-fluid" alt="Erster 3D-Druck">#fig-gimbal</p>
+<p>Diese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und anschließend erneut zu bewerten, welche Anpassungen erforderlich sind.</p>
 </section>
-<section id="zweiter-druck">
-<h3>Zweiter Druck<a class="headerlink" href="#zweiter-druck" title="Permalink to this heading">#</a></h3>
-<p>Der zweite Druck war erfolgreich, da verschiedene Faktoren wie das Stützmaterial und die Druckdichte angepasst
-wurden. Zudem wurde der Druck über einen längeren Zeitraum durchgeführt, um die Stabilität sicherzustellen. Es wurden
-stabile Bauteile hergestellt, die verwendet werden können, um den Gimbal vollständig zusammenzubauen.</p>
+<section id="zweiter-druck" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="zweiter-druck"><span class="header-section-number">2.4.3</span> Zweiter Druck</h3>
+<p>Der zweite Druck war erfolgreich, da verschiedene Faktoren wie das Stützmaterial und die Druckdichte angepasst wurden. Zudem wurde der Druck über einen längeren Zeitraum durchgeführt, um die Stabilität sicherzustellen. Es wurden stabile Bauteile hergestellt, die verwendet werden können, um den Gimbal vollständig zusammenzubauen.</p>
 </section>
-<section id="finale-anpassungen">
-<h3>Finale Anpassungen<a class="headerlink" href="#finale-anpassungen" title="Permalink to this heading">#</a></h3>
-<p>Nachdem der Gimbal zusammengebaut war, stellte sich heraus, dass weitere Anpassungen in der CAD-Modellierung
-erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht alle Kabel aufgrund der
-Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden
-mussten, um eine feste Verbindung der Schrauben zu gewährleisten.</p>
-<p><img alt="Gimbal" src="../_images/images" /></p>
-<p>Bevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll
-ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung
-am Gimbal, was es ermöglicht, den Gimbal in Zukunft mit einem HIL-fähigen System zu verbinden und weitere Tests
-durchzuführen.</p>
-<p>Die finalen Anpassungen werden in Autodesk Inventor umgesetzt. Die aktualisierten STL-Dateien sind im Ordner
-“3d_druck_gimbal/Inventor_files/Finaler_Druck” zu finden.</p>
+<section id="finale-anpassungen" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="finale-anpassungen"><span class="header-section-number">2.4.4</span> Finale Anpassungen</h3>
+<p>Nachdem der Gimbal zusammengebaut war, stellte sich heraus, dass weitere Anpassungen in der CAD-Modellierung erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht alle Kabel aufgrund der Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden mussten, um eine feste Verbindung der Schrauben zu gewährleisten.</p>
+<!-- ![Gimbal](../images/) -->
+<p>Bevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung am Gimbal, was es ermöglicht, den Gimbal in Zukunft mit einem HIL-fähigen System zu verbinden und weitere Tests durchzuführen.</p>
+<p>Die finalen Anpassungen werden in Autodesk Inventor umgesetzt. Die aktualisierten STL-Dateien sind im Ordner “3d_druck_gimbal/Inventor_files/Finaler_Druck” zu finden.</p>
 </section>
 </section>
-<section id="zusammengebauter-gimbal">
-<h2>Zusammengebauter Gimbal<a class="headerlink" href="#zusammengebauter-gimbal" title="Permalink to this heading">#</a></h2>
+<section id="zusammengebauter-gimbal" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="zusammengebauter-gimbal"><span class="header-section-number">2.5</span> Zusammengebauter Gimbal</h2>
 </section>
-<section id="elektronik-des-gimbal">
-<h2>Elektronik des Gimbal<a class="headerlink" href="#elektronik-des-gimbal" title="Permalink to this heading">#</a></h2>
-<p>Um die Elektronik des Gimbals zu implementieren, d.h. der Servomotor lenkt in die entgegengesetzte Richtung aus, wenn
-sich die Position des Objekts ändert, um eine Position des Objekts zu erreichen, die sich nicht mit dem Gimbal
-verändert.</p>
-<p>In diesem Abschnitt werden verschiedene Chiptypen (Arduino Nano und ESP8266) und drei-Achsen-Positionssensor (MPU650)
-zur Steuerung der Servomotoren verwendet. Der Steuercode wird in die verschiedenen Chiptypen geschrieben und der Sensor
-wird über Kabel mit den Chips verbunden. Um den ordnungsgemäßen Betrieb des Sensors zu gewährleisten, wird die Spannung
-der Batterie über den Buckconverter so eingestellt, dass an beiden Enden des Sensors die richtige Spannung anliegt.</p>
+<section id="elektronik-des-gimbal" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="elektronik-des-gimbal"><span class="header-section-number">2.6</span> Elektronik des Gimbal</h2>
+<p>Um die Elektronik des Gimbals zu implementieren, d.h. der Servomotor lenkt in die entgegengesetzte Richtung aus, wenn sich die Position des Objekts ändert, um eine Position des Objekts zu erreichen, die sich nicht mit dem Gimbal verändert.</p>
+<p>In diesem Abschnitt werden verschiedene Chiptypen (Arduino Nano und ESP8266) und drei-Achsen-Positionssensor (MPU650) zur Steuerung der Servomotoren verwendet. Der Steuercode wird in die verschiedenen Chiptypen geschrieben und der Sensor wird über Kabel mit den Chips verbunden. Um den ordnungsgemäßen Betrieb des Sensors zu gewährleisten, wird die Spannung der Batterie über den Buckconverter so eingestellt, dass an beiden Enden des Sensors die richtige Spannung anliegt.</p>
 <p>Die wichtigsten Schritte sind wie folgt:</p>
-<ul class="simple">
-<li><p>Auswahl der Chips: Für die Steuerung des Servomotors werden verschiedene Chiptypen verwendet. Zu diesen Chips gehören
-der Arduino Nano und der ESP8266, die beide über zahlreiche Funktionen verfügen und gut kompatibel sind.</p></li>
-<li><p>Sensoranschluss: Der MPU650-Sensor wird über ein Kabel mit dem Chip verbunden. Die Hauptfunktion des Sensors ist es,
-genaue 3-Achsen-Lage- und Bewegungsdaten für die präzise Steuerung des Servomotors zu liefern.</p></li>
-<li><p>Leistungsanpassung: Um den korrekten Betrieb des Sensors sicherzustellen, wird die Batteriespannung mit einem
-Buckconverter angepasst. Dadurch wird sichergestellt, dass der Sensor innerhalb des geeigneten Spannungsbereichs
-arbeitet, um genaue Daten zu liefern.</p></li>
-<li><p>Schreiben des Steuercodes: Der für die Steuerung des Servomotors erforderliche Code wird in die verschiedenen
-Chiptypen geschrieben. Durch das Schreiben des entsprechenden Codes können die Position und die Bewegung des
-Servomotors auf der Grundlage der vom Sensor gelieferten Daten gesteuert werden.</p></li>
-<li><p>Motoranschluss: Schließlich wird der Servomotor über ein Kabel an den Chip angeschlossen. Dadurch kann der Chip
-Steuersignale an den Motor senden, was eine präzise Steuerung des Servomotors ermöglicht.</p></li>
+<ul>
+<li><p>Auswahl der Chips: Für die Steuerung des Servomotors werden verschiedene Chiptypen verwendet. Zu diesen Chips gehören der Arduino Nano und der ESP8266, die beide über zahlreiche Funktionen verfügen und gut kompatibel sind.</p></li>
+<li><p>Sensoranschluss: Der MPU650-Sensor wird über ein Kabel mit dem Chip verbunden. Die Hauptfunktion des Sensors ist es, genaue 3-Achsen-Lage- und Bewegungsdaten für die präzise Steuerung des Servomotors zu liefern.</p></li>
+<li><p>Leistungsanpassung: Um den korrekten Betrieb des Sensors sicherzustellen, wird die Batteriespannung mit einem Buckconverter angepasst. Dadurch wird sichergestellt, dass der Sensor innerhalb des geeigneten Spannungsbereichs arbeitet, um genaue Daten zu liefern.</p></li>
+<li><p>Schreiben des Steuercodes: Der für die Steuerung des Servomotors erforderliche Code wird in die verschiedenen Chiptypen geschrieben. Durch das Schreiben des entsprechenden Codes können die Position und die Bewegung des Servomotors auf der Grundlage der vom Sensor gelieferten Daten gesteuert werden.</p></li>
+<li><p>Motoranschluss: Schließlich wird der Servomotor über ein Kabel an den Chip angeschlossen. Dadurch kann der Chip Steuersignale an den Motor senden, was eine präzise Steuerung des Servomotors ermöglicht.</p></li>
 </ul>
 <p>Der spezifische Schaltplan sieht wie folgt aus:</p>
-<figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="../_images/Schaltungsplan.png"><img alt="../_images/Schaltungsplan.png" src="../_images/Schaltungsplan.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Schaltplan</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/Schaltungsplan.png" class="img-fluid figure-img"></p>
+<figcaption>Schaltplan</figcaption>
 </figure>
-<section id="arduino-nano">
-<h3>Arduino Nano<a class="headerlink" href="#arduino-nano" title="Permalink to this heading">#</a></h3>
-<p>Der Arduino Nano ist ein Open-Source-Breadboard-Mikrocontroller-Board, das auf dem Microchip ATmega328P-Mikrocontroller
-basiert. Der Arduino Nano kann mit der integrierten Entwicklungsumgebung (IDE) der Arduino-Software programmiert werden,
-die für alle Arduino-Boards gleich ist und sowohl online als auch offline läuft.</p>
+</div>
+<section id="arduino-nano" class="level3" data-number="2.6.1">
+<h3 data-number="2.6.1" class="anchored" data-anchor-id="arduino-nano"><span class="header-section-number">2.6.1</span> Arduino Nano</h3>
+<p>Der Arduino Nano ist ein Open-Source-Breadboard-Mikrocontroller-Board, das auf dem Microchip ATmega328P-Mikrocontroller basiert. Der Arduino Nano kann mit der integrierten Entwicklungsumgebung (IDE) der Arduino-Software programmiert werden, die für alle Arduino-Boards gleich ist und sowohl online als auch offline läuft.</p>
 </section>
-<section id="arduino-code-beschreibung">
-<h3>Arduino Code Beschreibung<a class="headerlink" href="#arduino-code-beschreibung" title="Permalink to this heading">#</a></h3>
-<p>Um die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software
-hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es
-wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code
-Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins
-definiert und die Servos an diese Pins angeschlossen.</p>
-<ol class="arabic simple">
+<section id="arduino-code-beschreibung" class="level3" data-number="2.6.2">
+<h3 data-number="2.6.2" class="anchored" data-anchor-id="arduino-code-beschreibung"><span class="header-section-number">2.6.2</span> Arduino Code Beschreibung</h3>
+<p>Um die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins definiert und die Servos an diese Pins angeschlossen.</p>
+<ol type="1">
 <li><p>Der Interrupt-Pin wird auf Pin 2 festgelegt.</p></li>
 <li><p>Der Servo servo0 wird an Pin 10 angeschlossen.</p></li>
 <li><p>Der Servo servo1 wird an Pin 9 angeschlossen.</p></li>
 <li><p>Der Servo servo2 wird an Pin 8 angeschlossen.</p></li>
 </ol>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define OUTPUT_READABLE_YAWPITCHROLL</span>
-<span class="cp">#define INTERRUPT_PIN 2  </span>
-<span class="w">  </span><span class="n">servo0</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<span class="w">  </span><span class="n">servo1</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
-<span class="w">  </span><span class="n">servo2</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Die Aufgabe eines Interrupts ist es, dafür zu sorgen, dass der Prozessor schnell auf wichtige Ereignisse reagiert. Wenn
-ein bestimmtes Signal erkannt wird, unterbricht ein Interrupt die Arbeit des Prozessors und führt einen Code aus, der
-auf den externen Stimulus reagiert, der dem Arduino zugeführt wird. Das bedeutet, der Gimbal kann dann den Interrupt
-behandeln, die entsprechenden Servos steuern und die gewünschte, präzise, schnelle und reaktionsfähige Aktion ausführen.</p>
-<p>Dann werden aus den Sensordaten die Quaternion und der Gravitationsvektor berechnet. Die Yaw-, Pitch- und Roll-Werte
-werden dann in Grad umgerechnet. Diese Werte werden dann zur Steuerung des Servos eingesetzt.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">mpu</span><span class="p">.</span><span class="n">dmpGetQuaternion</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">fifoBuffer</span><span class="p">);</span>
-<span class="n">mpu</span><span class="p">.</span><span class="n">dmpGetGravity</span><span class="p">(</span><span class="o">&amp;</span><span class="n">gravity</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">q</span><span class="p">);</span>
-<span class="n">mpu</span><span class="p">.</span><span class="n">dmpGetYawPitchRoll</span><span class="p">(</span><span class="n">ypr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">gravity</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Wenn j kleiner oder gleich 300 ist, wird der aktuelle Wert der Yaw-Achse (ypr[0]) in der Variable correct
-gespeichert. Dadurch wird der aktuelle Yaw-Wert erfasst, solange j kleiner oder gleich 300 ist. Dieser Wert beginnt
-nicht bei 0 wie die Werte für Pitch und Roll, sondern ist immer ein Zufallswert.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">correct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ypr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="w">      </span><span class="n">j</span><span class="o">++</span><span class="p">;</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span>
-</pre></div>
-</div>
-<p>Nach 300 Messungen wird der Yaw-Wert (ypr[0]) durch Subtraktion des zuvor gespeicherten Referenzwerts
-angepasst. Dadurch wird der Yaw-winkel auf 0 Grad gesetzt. Die Werte für Yaw, Pitch und Roll von -90 bis +90 Grad werden
-dann auf Werte von 0 bis 180 für das Antriebsservo abgebildet. Mit der Schreibfunktion werden diese Werte schließlich
-als Steuersignale an das Servo gesendet.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">ypr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ypr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">correct</span><span class="p">;</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">servo0Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">ypr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">-90</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">servo1Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">ypr</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">-90</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">servo2Value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">ypr</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="mi">-90</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">servo0</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">servo0Value</span><span class="p">);</span>
-<span class="w">    </span><span class="n">servo1</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">servo1Value</span><span class="p">);</span>
-<span class="w">    </span><span class="n">servo2</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">servo2Value</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#define OUTPUT_READABLE_YAWPITCHROLL</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#define INTERRUPT_PIN </span><span class="dv">2</span><span class="pp">  </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  servo0<span class="op">.</span>attach<span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  servo1<span class="op">.</span>attach<span class="op">(</span><span class="dv">9</span><span class="op">);</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  servo2<span class="op">.</span>attach<span class="op">(</span><span class="dv">8</span><span class="op">);</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Die Aufgabe eines Interrupts ist es, dafür zu sorgen, dass der Prozessor schnell auf wichtige Ereignisse reagiert. Wenn ein bestimmtes Signal erkannt wird, unterbricht ein Interrupt die Arbeit des Prozessors und führt einen Code aus, der auf den externen Stimulus reagiert, der dem Arduino zugeführt wird. Das bedeutet, der Gimbal kann dann den Interrupt behandeln, die entsprechenden Servos steuern und die gewünschte, präzise, schnelle und reaktionsfähige Aktion ausführen.</p>
+<p>Dann werden aus den Sensordaten die Quaternion und der Gravitationsvektor berechnet. Die Yaw-, Pitch- und Roll-Werte werden dann in Grad umgerechnet. Diese Werte werden dann zur Steuerung des Servos eingesetzt.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mpu<span class="op">.</span>dmpGetQuaternion<span class="op">(&amp;</span>q<span class="op">,</span> fifoBuffer<span class="op">);</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mpu<span class="op">.</span>dmpGetGravity<span class="op">(&amp;</span>gravity<span class="op">,</span> <span class="op">&amp;</span>q<span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>mpu<span class="op">.</span>dmpGetYawPitchRoll<span class="op">(</span>ypr<span class="op">,</span> <span class="op">&amp;</span>q<span class="op">,</span> <span class="op">&amp;</span>gravity<span class="op">);</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wenn j kleiner oder gleich 300 ist, wird der aktuelle Wert der Yaw-Achse (ypr[0]) in der Variable correct gespeichert. Dadurch wird der aktuelle Yaw-Wert erfasst, solange j kleiner oder gleich 300 ist. Dieser Wert beginnt nicht bei 0 wie die Werte für Pitch und Roll, sondern ist immer ein Zufallswert.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>j <span class="op">&lt;=</span> <span class="dv">300</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      correct <span class="op">=</span> ypr<span class="op">[</span><span class="dv">0</span><span class="op">];</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>      j<span class="op">++;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nach 300 Messungen wird der Yaw-Wert (ypr[0]) durch Subtraktion des zuvor gespeicherten Referenzwerts angepasst. Dadurch wird der Yaw-winkel auf 0 Grad gesetzt. Die Werte für Yaw, Pitch und Roll von -90 bis +90 Grad werden dann auf Werte von 0 bis 180 für das Antriebsservo abgebildet. Mit der Schreibfunktion werden diese Werte schließlich als Steuersignale an das Servo gesendet.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      ypr<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> ypr<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">-</span> correct<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> servo0Value <span class="op">=</span> map<span class="op">(</span>ypr<span class="op">[</span><span class="dv">0</span><span class="op">],</span> <span class="op">-</span><span class="dv">90</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">180</span><span class="op">);</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> servo1Value <span class="op">=</span> map<span class="op">(</span>ypr<span class="op">[</span><span class="dv">1</span><span class="op">],</span> <span class="op">-</span><span class="dv">90</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">180</span><span class="op">);</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> servo2Value <span class="op">=</span> map<span class="op">(</span>ypr<span class="op">[</span><span class="dv">2</span><span class="op">],</span> <span class="op">-</span><span class="dv">90</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="dv">180</span><span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    servo0<span class="op">.</span>write<span class="op">(</span>servo0Value<span class="op">);</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    servo1<span class="op">.</span>write<span class="op">(</span>servo1Value<span class="op">);</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    servo2<span class="op">.</span>write<span class="op">(</span>servo2Value<span class="op">);</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="aufgetretene-probleme-und-losungen-in-nano">
-<h3>Aufgetretene Probleme und Lösungen in Nano<a class="headerlink" href="#aufgetretene-probleme-und-losungen-in-nano" title="Permalink to this heading">#</a></h3>
-<section id="problem-1">
-<h4>Problem 1:<a class="headerlink" href="#problem-1" title="Permalink to this heading">#</a></h4>
-<p>Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert,
-müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.</p>
+<section id="aufgetretene-probleme-und-lösungen-in-nano" class="level3" data-number="2.6.3">
+<h3 data-number="2.6.3" class="anchored" data-anchor-id="aufgetretene-probleme-und-lösungen-in-nano"><span class="header-section-number">2.6.3</span> Aufgetretene Probleme und Lösungen in Nano</h3>
+<section id="problem-1" class="level4" data-number="2.6.3.1">
+<h4 data-number="2.6.3.1" class="anchored" data-anchor-id="problem-1"><span class="header-section-number">2.6.3.1</span> Problem 1:</h4>
+<p>Beim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.</p>
 </section>
-<section id="losung-1">
-<h4>Lösung 1:<a class="headerlink" href="#losung-1" title="Permalink to this heading">#</a></h4>
+<section id="lösung-1" class="level4" data-number="2.6.3.2">
+<h4 data-number="2.6.3.2" class="anchored" data-anchor-id="lösung-1"><span class="header-section-number">2.6.3.2</span> Lösung 1:</h4>
 <p>Um das Problem zu beheben, werden folgende Schritte durchgeführt:</p>
-<p>Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken
-installiert sind. Der Pfad wurde unter C:\Users\cxp\AppData\Local\Arduino15\libraries gefunden.</p>
+<p>Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken installiert sind. Der Pfad wurde unter <code>C:\Users\cxp\AppData\Local\Arduino15\libraries</code> gefunden.</p>
 <p>Die erforderlichen Bibliotheken werden heruntergeladen:</p>
-<p>Die “I2Cdev.h”-Bibliothek kann von folgendem Link heruntergeladen werden:
-<a class="github reference external" href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev">jrowberg/i2cdevlib</a></p>
-<p>Die “MPU6050_6Axis_MotionApps20.h”-Bibliothek kann von folgendem Link heruntergeladen werden:
-<a class="github reference external" href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050">jrowberg/i2cdevlib</a>
-Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner
-in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner “I2Cdev” und “MPU6050” verwendet werden.</p>
-<p>Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem
-MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund
-fehlender Bibliotheken anzeigt.</p>
+<p>Die “I2Cdev.h”-Bibliothek kann von folgendem Link heruntergeladen werden: <a href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev"></a></p>
+<p>Die “MPU6050_6Axis_MotionApps20.h”-Bibliothek kann von folgendem Link heruntergeladen werden: <a href="https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050"></a> Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner “I2Cdev” und “MPU6050” verwendet werden.</p>
+<p>Die Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.</p>
 </section>
-<section id="problem-2">
-<h4>Problem 2:<a class="headerlink" href="#problem-2" title="Permalink to this heading">#</a></h4>
-<p>Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann
-verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig
-einzustellen.</p>
+<section id="problem-2" class="level4" data-number="2.6.3.3">
+<h4 data-number="2.6.3.3" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">2.6.3.3</span> Problem 2:</h4>
+<p>Das Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.</p>
 </section>
-<section id="losung-2">
-<h4>Lösung 2:<a class="headerlink" href="#losung-2" title="Permalink to this heading">#</a></h4>
-<ol class="arabic simple">
+<section id="lösung-2" class="level4" data-number="2.6.3.4">
+<h4 data-number="2.6.3.4" class="anchored" data-anchor-id="lösung-2"><span class="header-section-number">2.6.3.4</span> Lösung 2:</h4>
+<ol type="1">
 <li><p>Öffne die Arduino-Software auf deinem Computer.</p></li>
 <li><p>Gehe zum Menü “Tools” (Werkzeuge) und wähle “Board” (Platine) aus.</p></li>
-<li><p>Wähle aus der Liste der verfügbaren Boards die Option “Arduino Uno” oder das entsprechende Board aus, das den
-ATmega328p-Chip verwendet.</p></li>
+<li><p>Wähle aus der Liste der verfügbaren Boards die Option “Arduino Uno” oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.</p></li>
 <li><p>Gehe erneut zum Menü “Tools” (Werkzeuge) und wähle “Processor” (Prozessor) aus.</p></li>
 <li><p>Wähle im Dropdown-Menü die Option “ATmega328p (old Bootloader)” aus.</p></li>
-<li><p>Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board
-herzustellen.</p></li>
+<li><p>Stelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.</p></li>
 <li><p>Klicke auf die Schaltfläche “Upload” (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.</p></li>
 </ol>
-<p>Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem
-Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den
-ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.</p>
+<p>Durch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.</p>
 <p>Hoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfolgreich auf den ATmega328p-Chip hochladen.</p>
 </section>
 </section>
-<section id="esp8266-nodemcu">
-<h3>ESP8266 NodeMCU<a class="headerlink" href="#esp8266-nodemcu" title="Permalink to this heading">#</a></h3>
-<p>Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde
-für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine
-Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen
-Geräten über das Internet kommunizieren kann.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/esp8266.jpg"><img alt="../_images/esp8266.jpg" src="../_images/esp8266.jpg" style="width: 300px;" /></a>
-</figure>
+<section id="esp8266-nodemcu" class="level3" data-number="2.6.4">
+<h3 data-number="2.6.4" class="anchored" data-anchor-id="esp8266-nodemcu"><span class="header-section-number">2.6.4</span> ESP8266 NodeMCU</h3>
+<p>Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.</p>
+<p><img src="../images/esp8266.jpg" class="img-fluid"></p>
 <p>Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:</p>
-<p>1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich
-mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle,
-einschließlich WEP, WPA und WPA2.</p>
-<p>2-Mikrocontroller-Einheit (MCU): Das Modul enthält eine 32-Bit-MCU vom Typ Tensilica Xtensa LX106, die mit einer
-Taktrate von 80 MHz arbeitet. Sie verfügt über GPIO-Pins (General Purpose Input/Output) zur Steuerung externer Geräte
-und unterstützt verschiedene Schnittstellen wie I2C, SPI, UART und andere.</p>
-<p>3-Programmierung: Der ESP8266 kann mit verschiedenen Programmiersprachen und Entwicklungsumgebungen programmiert
-werden. Die beliebteste Wahl ist die Arduino IDE, die eine einfache und einsteigerfreundliche Umgebung zum Schreiben und
-Hochladen von Code auf das Modul bietet. Darüber hinaus gibt es alternative Frameworks und Sprachen wie Micropython und
-Espressifs natives ESP-IDF (ESP8266 IoT Development Framework).</p>
-<p>4-Geringer Stromverbrauch: Das Modul ist so konzipiert, dass es mit geringem Stromverbrauch arbeitet und sich daher für
-batteriebetriebene Anwendungen eignet. Es unterstützt Schlafmodi und kann so konfiguriert werden, dass es regelmäßig
-oder als Reaktion auf externe Auslöser aufwacht.</p>
-<p>5-Speicher: Das ESP8266-Modul ist in der Regel mit verschiedenen Speicheroptionen erhältlich, darunter 512 KB oder 4 MB
-Flash-Speicher für die Speicherung von Programmcode und Daten.</p>
-<p>6-Gemeinschaft und Ökosystem: Der ESP8266 hat aufgrund seiner geringen Kosten, der einfachen Handhabung und der
-umfangreichen Unterstützung durch die Community eine große Popularität erlangt. Es gibt eine große Online-Community, die
-Ressourcen, Tutorials, Bibliotheken und Beispiele zur Verfügung stellt, um Anwendern den Einstieg in ihre Projekte zu
-erleichtern.</p>
-<p>7-Anwendungen: Der ESP8266 wird häufig in verschiedenen IoT-Anwendungen eingesetzt, z. B. in der Heimautomatisierung, in
-Sensornetzwerken, intelligenten Geräten und industriellen Überwachungssystemen. Seine Erschwinglichkeit, Vielseitigkeit
-und einfache Integration machen ihn zu einer beliebten Wahl für Bastler, Macher und Profis gleichermaßen.</p>
+<p>1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle, einschließlich WEP, WPA und WPA2.</p>
+<p>2-Mikrocontroller-Einheit (MCU): Das Modul enthält eine 32-Bit-MCU vom Typ Tensilica Xtensa LX106, die mit einer Taktrate von 80 MHz arbeitet. Sie verfügt über GPIO-Pins (General Purpose Input/Output) zur Steuerung externer Geräte und unterstützt verschiedene Schnittstellen wie I2C, SPI, UART und andere.</p>
+<p>3-Programmierung: Der ESP8266 kann mit verschiedenen Programmiersprachen und Entwicklungsumgebungen programmiert werden. Die beliebteste Wahl ist die Arduino IDE, die eine einfache und einsteigerfreundliche Umgebung zum Schreiben und Hochladen von Code auf das Modul bietet. Darüber hinaus gibt es alternative Frameworks und Sprachen wie Micropython und Espressifs natives ESP-IDF (ESP8266 IoT Development Framework).</p>
+<p>4-Geringer Stromverbrauch: Das Modul ist so konzipiert, dass es mit geringem Stromverbrauch arbeitet und sich daher für batteriebetriebene Anwendungen eignet. Es unterstützt Schlafmodi und kann so konfiguriert werden, dass es regelmäßig oder als Reaktion auf externe Auslöser aufwacht.</p>
+<p>5-Speicher: Das ESP8266-Modul ist in der Regel mit verschiedenen Speicheroptionen erhältlich, darunter 512 KB oder 4 MB Flash-Speicher für die Speicherung von Programmcode und Daten.</p>
+<p>6-Gemeinschaft und Ökosystem: Der ESP8266 hat aufgrund seiner geringen Kosten, der einfachen Handhabung und der umfangreichen Unterstützung durch die Community eine große Popularität erlangt. Es gibt eine große Online-Community, die Ressourcen, Tutorials, Bibliotheken und Beispiele zur Verfügung stellt, um Anwendern den Einstieg in ihre Projekte zu erleichtern.</p>
+<p>7-Anwendungen: Der ESP8266 wird häufig in verschiedenen IoT-Anwendungen eingesetzt, z. B. in der Heimautomatisierung, in Sensornetzwerken, intelligenten Geräten und industriellen Überwachungssystemen. Seine Erschwinglichkeit, Vielseitigkeit und einfache Integration machen ihn zu einer beliebten Wahl für Bastler, Macher und Profis gleichermaßen.</p>
 </section>
-<section id="der-funktionierte-teil">
-<h3>Der Funktionierte Teil<a class="headerlink" href="#der-funktionierte-teil" title="Permalink to this heading">#</a></h3>
-<p>Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu
-überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es
-ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen
-und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und
-dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese
-Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.</p>
+<section id="der-funktionierte-teil" class="level3" data-number="2.6.5">
+<h3 data-number="2.6.5" class="anchored" data-anchor-id="der-funktionierte-teil"><span class="header-section-number">2.6.5</span> Der Funktionierte Teil</h3>
+<p>Wir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.</p>
 </section>
-<section id="esp8266-steuerung-des-servos">
-<h3>ESP8266 Steuerung des Servos<a class="headerlink" href="#esp8266-steuerung-des-servos" title="Permalink to this heading">#</a></h3>
-<p>Die Bibliothek <code class="docutils literal notranslate"><span class="pre">&quot;Servo.h&quot;</span></code> wird eingebunden, um die Servo-Funktionalität nutzen zu können.
-In der <code class="docutils literal notranslate"><span class="pre">Setup()</span></code> werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards
-zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.</p>
-<p>In <code class="docutils literal notranslate"><span class="pre">loop()</span></code> wird wiederholt ausgeführt und steuert die Servos.
-Es werden das loop verwendet, um die Servos in eine Richtung zu drehen und dann wieder zurückzudrehen.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">position</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo0</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo1</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo2</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">waitTime</span><span class="p">);</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
-</pre></div>
-</div>
+<section id="esp8266-steuerung-des-servos" class="level3" data-number="2.6.6">
+<h3 data-number="2.6.6" class="anchored" data-anchor-id="esp8266-steuerung-des-servos"><span class="header-section-number">2.6.6</span> ESP8266 Steuerung des Servos</h3>
+<p>Die Bibliothek <code>Servo.h</code> wird eingebunden, um die Servo-Funktionalität nutzen zu können. In der <code>Setup()</code> werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.</p>
+<p>In <code>loop()</code> wird wiederholt ausgeführt und steuert die Servos. Es werden das loop verwendet, um die Servos in eine Richtung zu drehen und dann wieder zurückzudrehen.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span>position <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> position <span class="op">&lt;</span> <span class="dv">180</span><span class="op">;</span> position<span class="op">++)</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    servo0<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    servo1<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    servo2<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span>waitTime<span class="op">);</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Es werden das loop verwendet, um die Servos wieder zurückzudrehen.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">180</span><span class="p">;</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">position</span><span class="o">--</span><span class="p">)</span><span class="w"> </span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo0</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo1</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">servo2</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">position</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">waitTime</span><span class="p">);</span><span class="w"> </span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
-</pre></div>
-</div>
-<p>Finden Sie Code hier:<a class="reference external" href="https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino"><em>Servo-Code</em></a></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span>position <span class="op">=</span> <span class="dv">180</span><span class="op">;</span> position <span class="op">&gt;=</span> <span class="dv">1</span><span class="op">;</span> position<span class="op">--)</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">{</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    servo0<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    servo1<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    servo2<span class="op">.</span>write<span class="op">(</span>position<span class="op">);</span> </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span>waitTime<span class="op">);</span> </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finden Sie Code hier:<a href="https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/Servo.ino"><em>Servo-Code</em></a></p>
 </section>
-<section id="esp8266-daten-von-der-mpu6050-lesen">
-<h3>ESP8266 Daten von der MPU6050 lesen<a class="headerlink" href="#esp8266-daten-von-der-mpu6050-lesen" title="Permalink to this heading">#</a></h3>
-<p>Der entsprechende Code wurde in unsere Dateien
-hochgeladen. Link:<a class="reference external" href="https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/MPU6050_Display.ino"><em>MPU6050_Display-Code</em></a>.
-Dieser Code ist eine einfache OLED-Demonstration für die Beschleunigungsmesserwerte des Adafruit MPU6050-Sensors. Es
-werden die Bibliotheken <code class="docutils literal notranslate"><span class="pre">&quot;Adafruit_MPU6050.h&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Adafruit_SSD1306.h&quot;</span></code> und <code class="docutils literal notranslate"><span class="pre">&quot;Adafruit_Sensor.h&quot;</span></code> verwendet.</p>
-<p>Zu Beginn des Codes werden die benötigten Bibliotheken und Objekte initialisiert. Der MPU6050 und das Display werden
-konfiguriert. Die Verbindung mit dem MPU6050 wird überprüft und das Display initialisiert.</p>
-<p>Die <code class="docutils literal notranslate"><span class="pre">setup()</span></code> initialisiert die serielle Kommunikation, überprüft die Initialisierung des MPU6050 und initialisiert das
-Display. Es wird außerdem die Textgröße, die Textfarbe und die Displayrotation festgelegt.</p>
-<p>Die <code class="docutils literal notranslate"><span class="pre">loop()</span></code> wird wiederholt ausgeführt. In jeder Schleife werden die Beschleunigungsmesser- und Gyroskopdaten vom
-MPU6050 gelesen. Diese Daten werden sowohl über die serielle Schnittstelle als auch auf dem Display angezeigt. Die
-Anzeige auf dem Display wird gelöscht und die Beschleunigungsmesser- und Gyroskopwerte werden aktualisiert. Danach
-werden sie auf dem Display angezeigt. Es gibt auch eine kurze Verzögerung am Ende jeder Schleife.</p>
-<p>Das Tutorial finden Sie hier:
-<a class="reference external" href="https://randomnerdtutorials.com/esp8266-nodemcu-mpu-6050-accelerometer-gyroscope-arduino/"><em>MPU6050_Display-Code</em></a></p>
+<section id="esp8266-daten-von-der-mpu6050-lesen" class="level3" data-number="2.6.7">
+<h3 data-number="2.6.7" class="anchored" data-anchor-id="esp8266-daten-von-der-mpu6050-lesen"><span class="header-section-number">2.6.7</span> ESP8266 Daten von der MPU6050 lesen</h3>
+<p>Der entsprechende Code wurde in unsere Dateien hochgeladen. Link:<a href="https://gitlab.fk4.hs-bremen.de/soclab/hil/gimbal/-/blob/main/arduino_gimbal/MPU6050_Display.ino"><em>MPU6050_Display-Code</em></a>. Dieser Code ist eine einfache OLED-Demonstration für die Beschleunigungsmesserwerte des Adafruit MPU6050-Sensors. Es werden die Bibliotheken <code>"Adafruit_MPU6050.h"</code>, <code>"Adafruit_SSD1306.h"</code> und <code>"Adafruit_Sensor.h"</code> verwendet.</p>
+<p>Zu Beginn des Codes werden die benötigten Bibliotheken und Objekte initialisiert. Der MPU6050 und das Display werden konfiguriert. Die Verbindung mit dem MPU6050 wird überprüft und das Display initialisiert.</p>
+<p>Die <code>setup()</code> initialisiert die serielle Kommunikation, überprüft die Initialisierung des MPU6050 und initialisiert das Display. Es wird außerdem die Textgröße, die Textfarbe und die Displayrotation festgelegt.</p>
+<p>Die <code>loop()</code> wird wiederholt ausgeführt. In jeder Schleife werden die Beschleunigungsmesser- und Gyroskopdaten vom MPU6050 gelesen. Diese Daten werden sowohl über die serielle Schnittstelle als auch auf dem Display angezeigt. Die Anzeige auf dem Display wird gelöscht und die Beschleunigungsmesser- und Gyroskopwerte werden aktualisiert. Danach werden sie auf dem Display angezeigt. Es gibt auch eine kurze Verzögerung am Ende jeder Schleife.</p>
+<p>Das Tutorial finden Sie hier: <a href="https://randomnerdtutorials.com/esp8266-nodemcu-mpu-6050-accelerometer-gyroscope-arduino/"><em>MPU6050_Display-Code</em></a></p>
 </section>
-<section id="der-nicht-funktionierte-teil">
-<h3>Der nicht Funktionierte Teil<a class="headerlink" href="#der-nicht-funktionierte-teil" title="Permalink to this heading">#</a></h3>
-<p>DIY Arduino Gimbal - Self-Stabilizing Plaftorm Code von Arduino IDE kompiliert, kann erfolgreich in die ESP8266 Chip zu
-schreiben, aber das Servo nicht mit der Drehung des MPU6050 zu bewegen, und nicht die Funktion des Gimbal erreichen.</p>
-<p>Es kann mehrere Gründe geben, warum die Funktion des Gimbals nicht erreicht wird.
-Der Code basiert auf den Bibliotheken “I2Cdev” und “MPU6050_6Axis_MotionApps20”, die möglicherweise nicht mit dem
-ESP8266 kompatibel sind. Es müssen Bibliotheken verwendet werden, die mit dem ESP8266 kompatibel sind und den Code
-entsprechend anpassen.Der ESP8266 kann im Vergleich zu Arduino-Boards begrenzte Ressourcen haben. Daher muss es
-sichergestellt, dass der Code und die Bibliotheken, die die verwendet werden, für die ESP8266-Plattform optimiert sind.</p>
+<section id="der-nicht-funktionierte-teil" class="level3" data-number="2.6.8">
+<h3 data-number="2.6.8" class="anchored" data-anchor-id="der-nicht-funktionierte-teil"><span class="header-section-number">2.6.8</span> Der nicht Funktionierte Teil</h3>
+<p>DIY Arduino Gimbal - Self-Stabilizing Plaftorm Code von Arduino IDE kompiliert, kann erfolgreich in die ESP8266 Chip zu schreiben, aber das Servo nicht mit der Drehung des MPU6050 zu bewegen, und nicht die Funktion des Gimbal erreichen.</p>
+<p>Es kann mehrere Gründe geben, warum die Funktion des Gimbals nicht erreicht wird. Der Code basiert auf den Bibliotheken “I2Cdev” und “MPU6050_6Axis_MotionApps20”, die möglicherweise nicht mit dem ESP8266 kompatibel sind. Es müssen Bibliotheken verwendet werden, die mit dem ESP8266 kompatibel sind und den Code entsprechend anpassen.Der ESP8266 kann im Vergleich zu Arduino-Boards begrenzte Ressourcen haben. Daher muss es sichergestellt, dass der Code und die Bibliotheken, die die verwendet werden, für die ESP8266-Plattform optimiert sind.</p>
 </section>
-<section id="bibliotheks-kompatibilitat">
-<h3>Bibliotheks-Kompatibilität<a class="headerlink" href="#bibliotheks-kompatibilitat" title="Permalink to this heading">#</a></h3>
-<p>Die MPU6050-Bibliothek, die speziell für den ESP8266 entwickelt wurde, zu suchen und zu verwenden. Dadurch wird
-sichergestellt, dass die Bibliothek mit dem ESP8266 kompatibel ist.</p>
-<p>Zum Beispiel erhältlich über folgenden link: <a class="reference external" href="https://github.com/emanbuc/ESP8266_MPU6050"><em>ESP8266 MPU6050 library</em></a></p>
-<p>Einige der darin enthaltenen Beispiele können als Referenz verwendet werden, um die darin enthaltenen Funktionen und
-Funktionen entsprechend zu modifizieren, damit sie mit dem MPU6050-Sensor kommunizieren und Daten verarbeiten können.</p>
-<p>Der ESP8266 liest Daten, indem er über das I2C-Protokoll Befehle an den MPU6050 sendet. Der MPU6050 speichert seine
-internen Beschleunigungs- und Gyroskopdaten in seinen FIFO-Puffern, die der ESP8266 dann über I2C auslesen kann. Diese
-Daten können vom ESP8266 verarbeitet und zur Steuerung der Bewegung des Gimbals verwendet werden. Daher ist eine
-I2C-Bibliothek, die für den ESP8266 angepasst werden kann, sehr wichtig. Eine solche Bibliothek ist beispielsweise die
-&lt;Adafruit_MPU6050.h&gt;, die im [<em>MPU6050_Display-Code</em>] verwendet wird.</p>
+<section id="bibliotheks-kompatibilität" class="level3" data-number="2.6.9">
+<h3 data-number="2.6.9" class="anchored" data-anchor-id="bibliotheks-kompatibilität"><span class="header-section-number">2.6.9</span> Bibliotheks-Kompatibilität</h3>
+<p>Die MPU6050-Bibliothek, die speziell für den ESP8266 entwickelt wurde, zu suchen und zu verwenden. Dadurch wird sichergestellt, dass die Bibliothek mit dem ESP8266 kompatibel ist.</p>
+<p>Zum Beispiel erhältlich über folgenden link: <a href="https://github.com/emanbuc/ESP8266_MPU6050"><em>ESP8266 MPU6050 library</em></a></p>
+<p>Einige der darin enthaltenen Beispiele können als Referenz verwendet werden, um die darin enthaltenen Funktionen und Funktionen entsprechend zu modifizieren, damit sie mit dem MPU6050-Sensor kommunizieren und Daten verarbeiten können.</p>
+<p>Der ESP8266 liest Daten, indem er über das I2C-Protokoll Befehle an den MPU6050 sendet. Der MPU6050 speichert seine internen Beschleunigungs- und Gyroskopdaten in seinen FIFO-Puffern, die der ESP8266 dann über I2C auslesen kann. Diese Daten können vom ESP8266 verarbeitet und zur Steuerung der Bewegung des Gimbals verwendet werden. Daher ist eine I2C-Bibliothek, die für den ESP8266 angepasst werden kann, sehr wichtig. Eine solche Bibliothek ist beispielsweise die &lt;Adafruit_MPU6050.h&gt;, die im [<em>MPU6050_Display-Code</em>] verwendet wird.</p>
 </section>
-<section id="entwicklung-des-interruppt-pins">
-<h3>Entwicklung des Interruppt PINs<a class="headerlink" href="#entwicklung-des-interruppt-pins" title="Permalink to this heading">#</a></h3>
+<section id="entwicklung-des-interruppt-pins" class="level3" data-number="2.6.10">
+<h3 data-number="2.6.10" class="anchored" data-anchor-id="entwicklung-des-interruppt-pins"><span class="header-section-number">2.6.10</span> Entwicklung des Interruppt PINs</h3>
 <p>Das Design des Interrupt-Pins und die Verwendung der Interrupt-Handler-Funktion ermöglichen es dem ESP8266, die Verfügbarkeit der MPU6050-Daten rechtzeitig zu erfassen und sie sofort zu verarbeiten, wenn sie bereit sind. Dadurch wird eine effizientere und Echtzeit-Datenverarbeitung ermöglicht.</p>
 <p>Aber Einstellung Interrupt-Pins für die ESP8266 ist nicht das gleiche wie für den Arduino Nano.</p>
-<p>In  <code class="docutils literal notranslate"><span class="pre">setup()</span></code> kann der Interrupt-Pin mit der Funktion <code class="docutils literal notranslate"><span class="pre">pinMode()</span></code> auf den Eingangsmodus konfiguriert werden.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">pinMode</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
-</pre></div>
-</div>
+<p>In <code>setup()</code> kann der Interrupt-Pin mit der Funktion <code>pinMode()</code> auf den Eingangsmodus konfiguriert werden.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pinMode<span class="op">(</span><span class="dv">2</span><span class="op">,</span> INPUT<span class="op">);</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Eine Interrupt-Callback-Funktion.</p>
-<p>Diese Funktion wird aufgerufen, wenn eine Interrupt ausgelöst wird, und wird für die Behandlung von
-Unterbrechungsereignissen <a class="reference external" href="http://verwendet.In">verwendet.In</a> diesem Code wird zum Beispiel eine Funktion <code class="docutils literal notranslate"><span class="pre">dmpDataReady()</span></code> definiert.Diese
-Funktion erkennt, ob neue Daten für den MPU6050 verfügbar sind.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">volatile</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">mpuInterrupt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w">     </span><span class="c1">// indicates whether MPU interrupt pin has gone high</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">dmpDataReady</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">	</span><span class="n">mpuInterrupt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>In <code class="docutils literal notranslate"><span class="pre">setup()</span></code> wird die Funktion <code class="docutils literal notranslate"><span class="pre">attachInterrupt()</span></code> benutzt, um die Interrupt-Callback-Funktion(<code class="docutils literal notranslate"><span class="pre">dmpDataReady()</span></code>) mit
-einem Interrupt-Pin zu verknüpfen.Zum Beispiel wird der Interrupt-Pin GPIO2 (entspricht dem Digital Pin 2 des Arduino)
-mit der Callback-Funktion handleInterrupt() verknüpft, ausgelöst durch eine steigende Flanke.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">attachInterrupt</span><span class="p">(</span><span class="n">digitalPinToInterrupt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">dmpDataReady</span><span class="p">,</span><span class="w"> </span><span class="n">RISING</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Wenn die steigende Flanke des InterruptPins der MPU6050 ausgelöst wird, wird die Funktion <code class="docutils literal notranslate"><span class="pre">dmpDataReady()</span></code>
-aufgerufen. In dieser Funktion wird die Variable <code class="docutils literal notranslate"><span class="pre">mpuInterrupt</span></code> auf true gesetzt, was anzeigt, dass neue Daten verfügbar
-sind.</p>
-<p>Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.
-Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und
-fast nicht mehr vorhanden. Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und
-übersichtlicher geworden.</p>
+<p>Diese Funktion wird aufgerufen, wenn eine Interrupt ausgelöst wird, und wird für die Behandlung von Unterbrechungsereignissen verwendet.In diesem Code wird zum Beispiel eine Funktion <code>dmpDataReady()</code> definiert.Diese Funktion erkennt, ob neue Daten für den MPU6050 verfügbar sind.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="at">volatile</span> <span class="dt">bool</span> mpuInterrupt <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>     <span class="co">// indicates whether MPU interrupt pin has gone high</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> dmpDataReady<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    mpuInterrupt <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In <code>setup()</code> wird die Funktion <code>attachInterrupt()</code> benutzt, um die Interrupt-Callback-Funktion(<code>dmpDataReady()</code>) mit einem Interrupt-Pin zu verknüpfen.Zum Beispiel wird der Interrupt-Pin GPIO2 (entspricht dem Digital Pin 2 des Arduino) mit der Callback-Funktion handleInterrupt() verknüpft, ausgelöst durch eine steigende Flanke.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>attachInterrupt<span class="op">(</span>digitalPinToInterrupt<span class="op">(</span><span class="dv">2</span><span class="op">),</span> dmpDataReady<span class="op">,</span> RISING<span class="op">);</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wenn die steigende Flanke des InterruptPins der MPU6050 ausgelöst wird, wird die Funktion <code>dmpDataReady()</code> aufgerufen. In dieser Funktion wird die Variable <code>mpuInterrupt</code> auf true gesetzt, was anzeigt, dass neue Daten verfügbar sind.</p>
+<p>Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat. Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und fast nicht mehr vorhanden. Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und übersichtlicher geworden.</p>
 </section>
-<section id="verbesserung-der-schaltung">
-<h3>Verbesserung der Schaltung:<a class="headerlink" href="#verbesserung-der-schaltung" title="Permalink to this heading">#</a></h3>
-<p>Am Anfang haben wir die traditionelle Arbeit gemacht, wie sie in dem uns vorgelegten Geschäftsmodell und der Referenz
-für das Projekt angegeben war.</p>
-<p>Aber nach einigen Experimenten an der elektrischen Schaltung fanden wir mehrere Probleme, die wir lösen mussten
-Diese Probleme bestehen aus mehreren Punkten:</p>
-<ol class="arabic simple">
-<li><p>die Instabilität der elektrischen Spannung, die von dem im Stromkreis vorgesehenen Tiefsetzsteller kommt, wie in
-der Referenz angegeben, was zu einer Schwäche des zu den Motoren fließenden Stroms und damit zu einer Schwäche der
-Motoren führte, was zu einer Verzögerung des Stroms führte Reaktion der Motoren und damit eine Verzögerung der
-Reaktionsgeschwindigkeit, was zu einem Mangel am gesamten Projektziel, nämlich der Aufrechterhaltung von Stabilität und
-Gleichgewicht, und der Reaktionsgeschwindigkeit führte</p></li>
-<li><p>hat uns die große Anzahl von sich überlappenden Kabeln bei der Durchführung von Leistungstests und deren
-Modifizierung sehr gestört. Die vielen sich überlappenden Kabeln mit ähnlichen Farben verursachten Fehler in der
-Verbindung. Oft musste man die Kabeln von vorne bis hinten demontieren und wieder einbauen, um den richtigen Anschluss
-zu erreichen, außerdem waren die Kabeln teilweise zu kurz, was dazu führte, dass sie bei der Bewegung des Motors
-abgeschnitten wurden.</p></li>
-<li><p>die Schwäche des Stromkreises, die sich aus der häufigen Trennung der Kabeln ergibt, weil sie schwach und
-oberflächlich verbunden waren, was zu wiederholten Dislokationen führte und damit zur Schwäche des Stromkreises und der
-Notwendigkeit, die dislozierten Drähte zu demontieren und erneut zu installieren.</p></li>
-<li><p>war die Anordnung der Kabeln und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der
-Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt
-waren.</p></li>
+<section id="verbesserung-der-schaltung" class="level3" data-number="2.6.11">
+<h3 data-number="2.6.11" class="anchored" data-anchor-id="verbesserung-der-schaltung"><span class="header-section-number">2.6.11</span> Verbesserung der Schaltung:</h3>
+<p>Am Anfang haben wir die traditionelle Arbeit gemacht, wie sie in dem uns vorgelegten Geschäftsmodell und der Referenz für das Projekt angegeben war.</p>
+<p>Aber nach einigen Experimenten an der elektrischen Schaltung fanden wir mehrere Probleme, die wir lösen mussten Diese Probleme bestehen aus mehreren Punkten:</p>
+<ol type="1">
+<li><p>die Instabilität der elektrischen Spannung, die von dem im Stromkreis vorgesehenen Tiefsetzsteller kommt, wie in der Referenz angegeben, was zu einer Schwäche des zu den Motoren fließenden Stroms und damit zu einer Schwäche der Motoren führte, was zu einer Verzögerung des Stroms führte Reaktion der Motoren und damit eine Verzögerung der Reaktionsgeschwindigkeit, was zu einem Mangel am gesamten Projektziel, nämlich der Aufrechterhaltung von Stabilität und Gleichgewicht, und der Reaktionsgeschwindigkeit führte</p></li>
+<li><p>hat uns die große Anzahl von sich überlappenden Kabeln bei der Durchführung von Leistungstests und deren Modifizierung sehr gestört. Die vielen sich überlappenden Kabeln mit ähnlichen Farben verursachten Fehler in der Verbindung. Oft musste man die Kabeln von vorne bis hinten demontieren und wieder einbauen, um den richtigen Anschluss zu erreichen, außerdem waren die Kabeln teilweise zu kurz, was dazu führte, dass sie bei der Bewegung des Motors abgeschnitten wurden.</p></li>
+<li><p>die Schwäche des Stromkreises, die sich aus der häufigen Trennung der Kabeln ergibt, weil sie schwach und oberflächlich verbunden waren, was zu wiederholten Dislokationen führte und damit zur Schwäche des Stromkreises und der Notwendigkeit, die dislozierten Drähte zu demontieren und erneut zu installieren.</p></li>
+<li><p>war die Anordnung der Kabeln und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt waren.</p></li>
 </ol>
 <p>Deshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen, um die Effizienz der Schaltung zu erhöhen und so diese Probleme und Fehler zu vermeiden, die beim Testen und Experimentieren zu Fehlfunktionen führen.</p>
 </section>
-<section id="die-losungen-waren-wie-folgt">
-<h3>Die Lösungen waren wie folgt:<a class="headerlink" href="#die-losungen-waren-wie-folgt" title="Permalink to this heading">#</a></h3>
-<p>Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für
-den 5-Volt-Stromkreis erforderliche Spannung liefert.</p>
-<p>Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei
-Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und
-nicht zu verwechseln.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/bennenteversorgerungen.png"><img alt="../_images/bennenteversorgerungen.png" src="../_images/bennenteversorgerungen.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/bennenteversorgerungen2.png"><img alt="../_images/bennenteversorgerungen2.png" src="../_images/bennenteversorgerungen2.png" style="width: 400px;" /></a>
-</figure>
-<p>Die andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden
-Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf
-installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/platine-min.png"><img alt="../_images/platine-min.png" src="../_images/platine-min.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/loetten-min.png"><img alt="../_images/loetten-min.png" src="../_images/loetten-min.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/loettetschaltung-min.png"><img alt="../_images/loettetschaltung-min.png" src="../_images/loettetschaltung-min.png" style="width: 400px;" /></a>
-</figure>
-<p>indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die
-Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt.
-Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form
-des Stromkreises geändert hatten.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/shaltung.png"><img alt="../_images/shaltung.png" src="../_images/shaltung.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/shaltungsplatine2.png"><img alt="../_images/shaltungsplatine2.png" src="../_images/shaltungsplatine2.png" style="width: 400px;" /></a>
-</figure>
-<p>Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und
-die Groundseingänge</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/shaltungsplatine.png"><img alt="../_images/shaltungsplatine.png" src="../_images/shaltungsplatine.png" style="width: 400px;" /></a>
-</figure>
-<p>Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu
-hoch und nicht ausreichend angeordnet ist</p>
-<p>Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle SpannungsKabeln zu sammeln und
-sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.</p>
-<p>Wir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu
-erleichtern.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/klebedraht.png"><img alt="../_images/klebedraht.png" src="../_images/klebedraht.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/organisiertekabel.png"><img alt="../_images/organisiertekabel.png" src="../_images/organisiertekabel.png" style="width: 400px;" /></a>
-</figure>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/organisiertekabel2.png"><img alt="../_images/organisiertekabel2.png" src="../_images/organisiertekabel2.png" style="width: 400px;" /></a>
-</figure>
-<p>Wir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten
-oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/letzte.png"><img alt="../_images/letzte.png" src="../_images/letzte.png" style="width: 400px;" /></a>
-</figure>
+<section id="die-lösungen-waren-wie-folgt" class="level3" data-number="2.6.12">
+<h3 data-number="2.6.12" class="anchored" data-anchor-id="die-lösungen-waren-wie-folgt"><span class="header-section-number">2.6.12</span> Die Lösungen waren wie folgt:</h3>
+<p>Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.</p>
+<p>Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln.</p>
+<p><img src="../images/bennenteversorgerungen.png" class="img-fluid"></p>
+<p><img src="../images/bennenteversorgerungen2.png" class="img-fluid"></p>
+<p>Die andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,</p>
+<p><img src="../images/platine-min.png" class="img-fluid"></p>
+<p><img src="../images/loetten-min.png" class="img-fluid"></p>
+<p><img src="../images/loettetschaltung-min.png" class="img-fluid"></p>
+<p>indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt. Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten.</p>
+<p><img src="../images/shaltung.png" class="img-fluid"></p>
+<p><img src="../images/shaltungsplatine2.png" class="img-fluid"></p>
+<p>Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und die Groundseingänge</p>
+<p><img src="../images/shaltungsplatine.png" class="img-fluid"></p>
+<p>Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu hoch und nicht ausreichend angeordnet ist</p>
+<p>Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle SpannungsKabeln zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.</p>
+<p>Wir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.</p>
+<p><img src="../images/klebedraht.png" class="img-fluid"></p>
+<p><img src="../images/organisiertekabel.png" class="img-fluid"></p>
+<p><img src="../images/organisiertekabel2.png" class="img-fluid"></p>
+<p>Wir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten.</p>
+<p><img src="../images/letzte.png" class="img-fluid"></p>
 <p>Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.</p>
-<p>Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und
-fast nicht mehr vorhanden.</p>
+<p>Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und fast nicht mehr vorhanden.</p>
 <p>Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und übersichtlicher geworden.,</p>
 </section>
 </section>
-<section id="uberprufung-der-spannungskonstanz-und-stabilitat-eines-buck-konverters">
-<h2>Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters<a class="headerlink" href="#uberprufung-der-spannungskonstanz-und-stabilitat-eines-buck-konverters" title="Permalink to this heading">#</a></h2>
-<p>In diesem Test wird das Konzept eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten
-Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des
-Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder
-ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von ±5% wird als akzeptabel
-angesehen.</p>
-<section id="testkonzept">
-<h3>Testkonzept<a class="headerlink" href="#testkonzept" title="Permalink to this heading">#</a></h3>
-<p>Das Testkonzept besteht darin, die Spannungsquelle an den Eingang des Buck-Konverters anzuschließen und den Eingangs-
-sowie den Ausgangsspannungspegel mit einem Oszilloskop zu überwachen. Dabei wird die Konstanz der Spannungsquelle
-überprüft und gemessen, ob die Ausgangsspannung des Buck-Konverters über einen Zeitraum von 5 Minuten konstant bei 5V
-bleibt.</p>
+<section id="überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters"><span class="header-section-number">2.7</span> Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters</h2>
+<p>In diesem Test wird das Konzept eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.</p>
+<section id="testkonzept" class="level3" data-number="2.7.1">
+<h3 data-number="2.7.1" class="anchored" data-anchor-id="testkonzept"><span class="header-section-number">2.7.1</span> Testkonzept</h3>
+<p>Das Testkonzept besteht darin, die Spannungsquelle an den Eingang des Buck-Konverters anzuschließen und den Eingangs- sowie den Ausgangsspannungspegel mit einem Oszilloskop zu überwachen. Dabei wird die Konstanz der Spannungsquelle überprüft und gemessen, ob die Ausgangsspannung des Buck-Konverters über einen Zeitraum von 5 Minuten konstant bei 5V bleibt.</p>
 </section>
-<section id="zustand-des-gerats">
-<h3>Zustand des Geräts<a class="headerlink" href="#zustand-des-gerats" title="Permalink to this heading">#</a></h3>
+<section id="zustand-des-geräts" class="level3" data-number="2.7.2">
+<h3 data-number="2.7.2" class="anchored" data-anchor-id="zustand-des-geräts"><span class="header-section-number">2.7.2</span> Zustand des Geräts</h3>
 <p>Es liegt Versorgungsspannung mit 5V an, Anschalter ist gedrückt.</p>
 </section>
-<section id="durchfuhrung">
-<h3>Durchführung<a class="headerlink" href="#durchfuhrung" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
+<section id="durchführung" class="level3" data-number="2.7.3">
+<h3 data-number="2.7.3" class="anchored" data-anchor-id="durchführung"><span class="header-section-number">2.7.3</span> Durchführung</h3>
+<ol type="1">
 <li><p>Verbinden Sie die Spannungsquelle mit dem Eingang des Buck-Konverters.</p></li>
 <li><p>Schließen Sie den Eingangs- und Ausgangsanschluss des Buck-Konverters an ein Oszilloskop an.</p></li>
 <li><p>Überprüfen Sie, ob die Spannungsquelle eine konstante Spannung liefert.</p></li>
 <li><p>Nehmen Sie Messungen der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung vor.</p></li>
-<li><p>Überwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei
-5V bleibt.</p></li>
-<li><p>Berücksichtigen Sie eine Toleranz von ±5% und dokumentieren Sie jegliche Abweichungen von diesem Wert</p></li>
+<li><p>Überwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei 5V bleibt.</p></li>
+<li><p>Berücksichtigen Sie eine Toleranz von +-5% und dokumentieren Sie jegliche Abweichungen von diesem Wert</p></li>
 </ol>
 </section>
-<section id="testanforderungen">
-<h3>Testanforderungen<a class="headerlink" href="#testanforderungen" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
+<section id="testanforderungen" class="level3" data-number="2.7.4">
+<h3 data-number="2.7.4" class="anchored" data-anchor-id="testanforderungen"><span class="header-section-number">2.7.4</span> Testanforderungen</h3>
+<ol type="1">
 <li><p>Überprüfung, ob die Spannungsquelle konstant bleibt.</p></li>
 <li><p>Messung der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung.</p></li>
-<li><p>Überprüfung, ob die Ausgangsspannung über einen Zeitraum von 5 Minuten konstant bei 5V bleibt, unter Berücksichtigung
-einer Toleranz von ±5%.</p></li>
+<li><p>Überprüfung, ob die Ausgangsspannung über einen Zeitraum von 5 Minuten konstant bei 5V bleibt, unter Berücksichtigung einer Toleranz von +-5%.</p></li>
 </ol>
 </section>
-<section id="zustand-des-konzepts">
-<h3>Zustand des Konzepts<a class="headerlink" href="#zustand-des-konzepts" title="Permalink to this heading">#</a></h3>
+<section id="zustand-des-konzepts" class="level3" data-number="2.7.5">
+<h3 data-number="2.7.5" class="anchored" data-anchor-id="zustand-des-konzepts"><span class="header-section-number">2.7.5</span> Zustand des Konzepts</h3>
 <p>Das System ist an.</p>
 <p>Durchführung:</p>
-<ol class="arabic simple">
+<ol type="1">
 <li><p>Verbinden Sie die Spannungsquelle mit dem Eingang des Buck-Konverters.</p></li>
 <li><p>Schließen Sie den Eingangs- und Ausgangsanschluss des Buck-Konverters an ein Oszilloskop an.</p></li>
 <li><p>Überprüfen Sie, ob die Spannungsquelle eine konstante Spannung liefert.</p></li>
 <li><p>Nehmen Sie Messungen der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung vor.</p></li>
-<li><p>Überwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei
-5V bleibt.</p></li>
-<li><p>Berücksichtigen Sie eine Toleranz von ±5% und dokumentieren Sie jegliche Abweichungen von diesem Wert.</p></li>
+<li><p>Überwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei 5V bleibt.</p></li>
+<li><p>Berücksichtigen Sie eine Toleranz von +-5% und dokumentieren Sie jegliche Abweichungen von diesem Wert.</p></li>
 </ol>
 </section>
-<section id="ergebnisvergleich-mit-anforderung">
-<h3>Ergebnisvergleich mit Anforderung<a class="headerlink" href="#ergebnisvergleich-mit-anforderung" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Wenn die Spannungsquelle eine konstante Spannung liefert und die Ausgangsspannung des Buck-Konverters bei 5V bleibt,
-liegt das Ergebnis im Einklang mit den Anforderungen.</p></li>
-<li><p>Falls die Ausgangsspannung des Buck-Konverters innerhalb der Toleranz von
-±5% schwankt, ist das Ergebnis ebenfalls akzeptabel.</p></li>
-<li><p>Jegliche Abweichungen außerhalb der definierten Toleranz würden bedeuten, dass das beschriebene Testkonzept des
-Buck-Konverters die Testanforderungen nicht erfüllt.</p></li>
+<section id="ergebnisvergleich-mit-anforderung" class="level3" data-number="2.7.6">
+<h3 data-number="2.7.6" class="anchored" data-anchor-id="ergebnisvergleich-mit-anforderung"><span class="header-section-number">2.7.6</span> Ergebnisvergleich mit Anforderung</h3>
+<ol type="1">
+<li><p>Wenn die Spannungsquelle eine konstante Spannung liefert und die Ausgangsspannung des Buck-Konverters bei 5V bleibt, liegt das Ergebnis im Einklang mit den Anforderungen.</p></li>
+<li><p>Falls die Ausgangsspannung des Buck-Konverters innerhalb der Toleranz von +-5% schwankt, ist das Ergebnis ebenfalls akzeptabel.</p></li>
+<li><p>Jegliche Abweichungen außerhalb der definierten Toleranz würden bedeuten, dass das beschriebene Testkonzept des Buck-Konverters die Testanforderungen nicht erfüllt.</p></li>
 </ol>
 </section>
 </section>
-<section id="uberprufung-der-ausgangsspannungserzeugung-des-buck-konverters">
-<h2>Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters<a class="headerlink" href="#uberprufung-der-ausgangsspannungserzeugung-des-buck-konverters" title="Permalink to this heading">#</a></h2>
-<p>In diesem Test wird das Konzept 1 eines Buck-Konverters durchgeführt, um die Fähigkeit zur Erzeugung einer
-Ausgangsspannung zu bestimmen. Das Hauptziel des Tests  besteht darin zu überprüfen, ob der Buck-Konverter eine
-Ausgangsspannung erzeugt.</p>
-<section id="id2">
-<h3>Testkonzept<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p>Das Testkonzept besteht darin, eine Konstantspannungsquelle (Batterie und Laboratory DC power supply) am Eingang des
-Buck-Konverters anzuschließen und mithilfe eines Multimeters den Ausgangsspannung zu messen. Es wird überprüft, ob der
-Buck-Konverter bei verschiedenen Eingangsspannungen eine Ausgangsspannung liefert. Die Messergebnisse des Multimeters
-werden analysiert, um sicherzustellen, dass der Buck-Konverter unabhängig von den variierenden Eingangsspannungen eine
-Ausgangsspannung aufweist.</p>
+<section id="überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters"><span class="header-section-number">2.8</span> Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters</h2>
+<p>In diesem Test wird das Konzept 1 eines Buck-Konverters durchgeführt, um die Fähigkeit zur Erzeugung einer Ausgangsspannung zu bestimmen. Das Hauptziel des Tests &nbsp;besteht darin zu überprüfen, ob der Buck-Konverter eine Ausgangsspannung erzeugt.</p>
+<section id="testkonzept-1" class="level3" data-number="2.8.1">
+<h3 data-number="2.8.1" class="anchored" data-anchor-id="testkonzept-1"><span class="header-section-number">2.8.1</span> Testkonzept</h3>
+<p>Das Testkonzept besteht darin, eine Konstantspannungsquelle (Batterie und Laboratory DC power supply) am Eingang des Buck-Konverters anzuschließen und mithilfe eines Multimeters den Ausgangsspannung zu messen. Es wird überprüft, ob der Buck-Konverter bei verschiedenen Eingangsspannungen eine Ausgangsspannung liefert. Die Messergebnisse des Multimeters werden analysiert, um sicherzustellen, dass der Buck-Konverter unabhängig von den variierenden Eingangsspannungen eine Ausgangsspannung aufweist.</p>
 </section>
-<section id="id3">
-<h3>Zustand des Geräts<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="zustand-des-geräts-1" class="level3" data-number="2.8.2">
+<h3 data-number="2.8.2" class="anchored" data-anchor-id="zustand-des-geräts-1"><span class="header-section-number">2.8.2</span> Zustand des Geräts</h3>
 <p>es liegt versorgungsspannung mit 5V an, Anschalter ist gedrückt.</p>
 </section>
-<section id="testanforderung">
-<h3>Testanforderung<a class="headerlink" href="#testanforderung" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
+<section id="testanforderung" class="level3" data-number="2.8.3">
+<h3 data-number="2.8.3" class="anchored" data-anchor-id="testanforderung"><span class="header-section-number">2.8.3</span> Testanforderung</h3>
+<ol type="1">
 <li><p>Überprüfung der Ausgangsspannung des Buck-Konverters bei Erhalt einer Eingangsspannung</p></li>
 <li><p>Stellen Sie sicher, dass der Buck-Konverter ordnungsgemäß angeschlossen und betriebsbereit ist.</p></li>
-<li><p>Legen Sie eine bestimmte Eingangsspannung fest. Schalten Sie die Eingangsspannungsquelle ein, um die festgelegte
-Eingangsspannung bereitzustellen.</p></li>
+<li><p>Legen Sie eine bestimmte Eingangsspannung fest. Schalten Sie die Eingangsspannungsquelle ein, um die festgelegte Eingangsspannung bereitzustellen.</p></li>
 <li><p>Überprüfen Sie visuell, ob eine Ausgangsspannung an den Ausgangsanschlüssen des Buck-Konverters vorhanden ist.</p></li>
-<li><p>Verwenden Sie ein Messinstrument zur Spannungsüberwachung, um die genaue Ausgangsspannung zu messen und
-sicherzustellen, dass sie den erwarteten Werten entspricht.</p></li>
-<li><p>Wiederholen Sie den Test mit verschiedenen Eingangsspannungen, um sicherzustellen, dass der Buck-Konverter bei
-verschiedenen Eingangsspannungspegeln eine Ausgangsspannungen liefert.</p></li>
+<li><p>Verwenden Sie ein Messinstrument zur Spannungsüberwachung, um die genaue Ausgangsspannung zu messen und sicherzustellen, dass sie den erwarteten Werten entspricht.</p></li>
+<li><p>Wiederholen Sie den Test mit verschiedenen Eingangsspannungen, um sicherzustellen, dass der Buck-Konverter bei verschiedenen Eingangsspannungspegeln eine Ausgangsspannungen liefert.</p></li>
 </ol>
 </section>
-<section id="id4">
-<h3>Ergebnisvergleich mit Anforderung<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
+<section id="ergebnisvergleich-mit-anforderung-1" class="level3" data-number="2.8.4">
+<h3 data-number="2.8.4" class="anchored" data-anchor-id="ergebnisvergleich-mit-anforderung-1"><span class="header-section-number">2.8.4</span> Ergebnisvergleich mit Anforderung</h3>
+<ol type="1">
 <li><p>Wenn das Multimeter eine Spannung anzeigt (einige Volt), entspricht das Ergebnis den Anforderungen.</p></li>
-<li><p>Wenn das Multimeter keine Spannung anzeigt oder die Spannung sehr gering ist (einige Millivolt oder weniger),
-entspricht das Ergebnis nicht den Anforderungen.</p></li>
+<li><p>Wenn das Multimeter keine Spannung anzeigt oder die Spannung sehr gering ist (einige Millivolt oder weniger), entspricht das Ergebnis nicht den Anforderungen.</p></li>
 </ol>
-</section>
+
+
 </section>
 </section>
 
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "mimeiners/hil",
-            ref: "master",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            name: "python3",
-            path: "./projects"
-        },
-        predefinedOutput: true
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    </script>
-    <script>kernelName = 'python3'</script>
-
-                </article>
-              
-
-              
-              
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../class/02_lec.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Literaturverzeichnis</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../appendix/01_app.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">No Magic MBSE Software</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
-</div></div>
-  
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mimeiners\.github\.io\/hil\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../class/01_lec.html" class="pagination-link" aria-label="Einleitung">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendix/01_app.html" class="pagination-link" aria-label="No Magic MBSE Software">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">No Magic MBSE Software</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>M 2.7 HiL-Verfahren (HILV)</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mimeiners/hil/edit/main/projects/01_prj.md" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/hil/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
-
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
   </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretische-grundlagen">Theoretische Grundlagen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-based-systems-engineering">Model-Based Systems Engineering</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cameo-no-magic">Cameo - No Magic</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-druck-des-gimbal">3D Druck des Gimbal</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cad-modellierung">CAD Modellierung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#erster-druck">Erster Druck</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zweiter-druck">Zweiter Druck</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finale-anpassungen">Finale Anpassungen</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zusammengebauter-gimbal">Zusammengebauter Gimbal</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elektronik-des-gimbal">Elektronik des Gimbal</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arduino-nano">Arduino Nano</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arduino-code-beschreibung">Arduino Code Beschreibung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aufgetretene-probleme-und-losungen-in-nano">Aufgetretene Probleme und Lösungen in Nano</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1">Problem 1:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-1">Lösung 1:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2">Problem 2:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#losung-2">Lösung 2:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-nodemcu">ESP8266 NodeMCU</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-funktionierte-teil">Der Funktionierte Teil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-steuerung-des-servos">ESP8266 Steuerung des Servos</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esp8266-daten-von-der-mpu6050-lesen">ESP8266 Daten von der MPU6050 lesen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#der-nicht-funktionierte-teil">Der nicht Funktionierte Teil</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotheks-kompatibilitat">Bibliotheks-Kompatibilität</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entwicklung-des-interruppt-pins">Entwicklung des Interruppt PINs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verbesserung-der-schaltung">Verbesserung der Schaltung:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#die-losungen-waren-wie-folgt">Die Lösungen waren wie folgt:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberprufung-der-spannungskonstanz-und-stabilitat-eines-buck-konverters">Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testkonzept">Testkonzept</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zustand-des-gerats">Zustand des Geräts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#durchfuhrung">Durchführung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testanforderungen">Testanforderungen</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zustand-des-konzepts">Zustand des Konzepts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ergebnisvergleich-mit-anforderung">Ergebnisvergleich mit Anforderung</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uberprufung-der-ausgangsspannungserzeugung-des-buck-konverters">Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Testkonzept</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Zustand des Geräts</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testanforderung">Testanforderung</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ergebnisvergleich mit Anforderung</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
+</footer>
 
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By M. Meiners et. al.
-</p>
 
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
 
-</div>
-  </div>
-  
-</div>
-          </footer>
-        
 
-      </main>
-    </div>
-  </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
-
-  <footer class="bd-footer">
-  </footer>
-  </body>
-</html>
+</body></html>

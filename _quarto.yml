@@ -1,0 +1,71 @@
+project:
+  type: book
+  output-dir: _book
+
+lang: de
+  
+book:
+  title: "M 2.7 HiL-Verfahren (HILV)"
+  author: "C. Stubbemann, M. Meiners"
+  date: "11.08.2024"
+
+  reader-mode: true
+
+  page-footer:
+    left: |
+      M 2.7 HiL-Verfahren (HILV)
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+#  cover-image: images/hsb-logo.png
+#  favicon: images/hsb-logo.png
+  site-url: https://mimeiners.github.io/hil/
+  repo-url: https://github.com/mimeiners/hil/
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  chapters:
+    - index.qmd
+    - class/01_lec.md
+    # - class/references.qmd
+
+    - part: Projekte
+      chapters:
+        - file: projects/01_prj.md
+
+    - part: Anhang
+      chapters:
+        - file: appendix/01_app.md
+     
+    
+bibliography: _bibliography/references.bib
+
+format:
+  html:
+    theme: flatly
+  pdf:
+    documentclass: scrbook
+    lof: true
+    lot: true
+    toc: true    
+    geometry:
+      - top=30mm
+      - left=20mm
+      - heightrounded
+    hyperrefoptions:
+      - linktoc=all
+    colorlinks: true
+    linkcolor: "blue"
+    biblio-style: apalike
+    #    keep-tex: true
+    output-file: hilv
+  epub:
+    theme: flatly
+    output-file: hilv
+
+    
+latex-auto-install: true
+
+execute:
+  freeze: auto
+
+editor: visual

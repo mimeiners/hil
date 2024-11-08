@@ -128,12 +128,7 @@ Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller 
 Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.
 
 
-```{figure} ../images/Gimbal_Platform.png
-:name: Gimbal1
-:align: center
-
-Gimbal Plattform
-```
+![Gimbal Plattform](../images/Gimbal_Platform.png)#fig-gimbal1
 
 
 ### CAD Modellierung
@@ -169,12 +164,7 @@ aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, d
 Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt
 werden.
 
-```{figure} ../images/Erster_Druck.jpg
-:name: Gimbal
-:align: center
-
-Erster 3D-Druck
-```
+![Erster 3D-Druck](../images/Erster_Druck.jpg)#fig-gimbal
 
 Diese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und
 anschließend erneut zu bewerten, welche Anpassungen erforderlich sind. 
@@ -192,7 +182,7 @@ erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht a
 Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden
 mussten, um eine feste Verbindung der Schrauben zu gewährleisten.
 
-![Gimbal](../images/)
+<!-- ![Gimbal](../images/) -->
 
 Bevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll
 ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung
@@ -239,12 +229,7 @@ Die wichtigsten Schritte sind wie folgt:
 
 Der spezifische Schaltplan sieht wie folgt aus:
 
-```{figure} ../images/Schaltungsplan.png
-:width: 400px 
-:align: center
-
-Schaltplan
-```
+![Schaltplan](../images/Schaltungsplan.png)
 
 
 ### Arduino Nano
@@ -342,15 +327,15 @@ müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden instal
 Um das Problem zu beheben, werden folgende Schritte durchgeführt:
 
 Der Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken
-installiert sind. Der Pfad wurde unter C:\Users\cxp\AppData\Local\Arduino15\libraries gefunden.
+installiert sind. Der Pfad wurde unter `C:\Users\cxp\AppData\Local\Arduino15\libraries` gefunden.
 
 Die erforderlichen Bibliotheken werden heruntergeladen:
 
 Die "I2Cdev.h"-Bibliothek kann von folgendem Link heruntergeladen werden:
-https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev 
+[](https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/I2Cdev)
 
 Die "MPU6050_6Axis_MotionApps20.h"-Bibliothek kann von folgendem Link heruntergeladen werden:
-https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050 
+[](https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050)
 Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner
 in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner "I2Cdev" und "MPU6050" verwendet werden. 
 
@@ -396,10 +381,7 @@ für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das 
 Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen
 Geräten über das Internet kommunizieren kann.
 
-```{figure} ../images/esp8266.jpg
-:width: 300px 
-:align: center
-```
+![](../images/esp8266.jpg)
 
 Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
 
@@ -444,7 +426,7 @@ Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.
 
 
 ### ESP8266 Steuerung des Servos
-Die Bibliothek `"Servo.h"` wird eingebunden, um die Servo-Funktionalität nutzen zu können. 
+Die Bibliothek `Servo.h` wird eingebunden, um die Servo-Funktionalität nutzen zu können. 
 In der `Setup()` werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards
 zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen. 
 
@@ -623,36 +605,24 @@ Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung dir
 Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und
 nicht zu verwechseln. 
 
-```{figure} ../images/bennenteversorgerungen.png
-:width: 400px 
-:align: center
-```
+![](../images/bennenteversorgerungen.png)
 
 
-```{figure} ../images/bennenteversorgerungen2.png
-:width: 400px
-:align: center
-```
+![](../images/bennenteversorgerungen2.png)
 
 
 Die andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden 
 Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf
 installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,
 
-```{figure} ../images/platine-min.png
-:width: 400px
-:align: center
-```
+![](../images/platine-min.png)
 
-```{figure} ../images/loetten-min.png
-:width: 400px
-:align: center
-```
 
-```{figure} ../images/loettetschaltung-min.png
-:width: 400px
-:align: center
-```
+![](../images/loetten-min.png)
+
+
+![](../images/loettetschaltung-min.png)
+
 
 
 indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die
@@ -660,24 +630,14 @@ Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground betr�
 Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form
 des Stromkreises geändert hatten.
 
-```{figure} ../images/shaltung.png
-:width: 400px
-:align: center
-```
+![](../images/shaltung.png)
 
-```{figure} ../images/shaltungsplatine2.png
-:width: 400px
-:align: center
-```
-
+![](../images/shaltungsplatine2.png)
 
 Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und
 die Groundseingänge 
 
-```{figure} ../images/shaltungsplatine.png
-:width: 400px
-:align: center
-```
+![](../images/shaltungsplatine.png)
 
 Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu
 hoch und nicht ausreichend angeordnet ist 
@@ -688,29 +648,18 @@ sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderu
 Wir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu
 erleichtern. 
 
-```{figure} ../images/klebedraht.png
-:width: 400px
-:align: center
-```
+![](../images/klebedraht.png)
 
-```{figure} ../images/organisiertekabel.png
-:width: 400px
-:align: center
-```
+![](../images/organisiertekabel.png)
 
-```{figure} ../images/organisiertekabel2.png
-:width: 400px
-:align: center
-```
+![](../images/organisiertekabel2.png)
 
 
 Wir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten
 oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten. 
 
-```{figure} ../images/letzte.png
-:width: 400px
-:align: center
-```
+![](../images/letzte.png)
+
 
 Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.
 

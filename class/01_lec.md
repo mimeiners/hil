@@ -1,9 +1,6 @@
-<!-- !split -->
-<!-- jupyter-book 01_lec.md -->
 # Einleitung
 
-<div id="sec:intro"></div>
-### Systems Engineering
+## Systems Engineering
 
 * Validierung oder Validation (von lateinisch validus "kräftig, wirksam, fest")
     * Validierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation
@@ -12,10 +9,9 @@
 * Verifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) 
     ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist
 
-#### Requirements Based Engineering
+### Requirements Based Engineering
 
-#### Model-Based Systems Engineering
+### Model-Based Systems Engineering
 
-#### In-the-Loop Methodik (MBAT)
+### In-the-Loop Methodik (MBAT)
 
-<!-- !split -->

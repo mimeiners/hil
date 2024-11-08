@@ -1,0 +1,10 @@
+# Unsyllabus {.unnumbered}
+
+| Name     | Beschreibung                                                  |
+|----------|---------------------------------------------------------------|
+| Kursus   | M 2.7 HiL-Verfahren (HILV)                                    |
+| Semester | WiSe2024/25                                                   |
+| Dozent   | B.Eng. C. Stubbemann (SCOPE), Prof. Dr.-Ing. M. Meiners (HSB) |
+| Seminar  | Fr., 13:30 Uhr - 15:00 Uhr                                    |
+| Raum     | E 509                                                         |
+|          |                                                               |

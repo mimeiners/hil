@@ -11,7 +11,7 @@ parts:
       title: Literaturverzeichnis
 - caption: Projekte
   chapters:
-    - file: projects/01_prj
+    - file: projects/gimbal/01_prj
       title: Gimbal
 - caption: Anhang
   chapters:

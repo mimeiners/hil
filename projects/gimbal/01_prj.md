@@ -128,7 +128,7 @@ Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller 
 Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.
 
 
-![Gimbal Plattform](../images/Gimbal_Platform.png)#fig-gimbal1
+![Gimbal Plattform](../../images/Gimbal_Platform.png)#fig-gimbal1
 
 
 ### CAD Modellierung
@@ -164,7 +164,7 @@ aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, d
 Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt
 werden.
 
-![Erster 3D-Druck](../images/Erster_Druck.jpg)#fig-gimbal
+![Erster 3D-Druck](../../images/Erster_Druck.jpg)#fig-gimbal
 
 Diese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und
 anschließend erneut zu bewerten, welche Anpassungen erforderlich sind. 
@@ -182,7 +182,7 @@ erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht a
 Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden
 mussten, um eine feste Verbindung der Schrauben zu gewährleisten.
 
-<!-- ![Gimbal](../images/) -->
+<!-- ![Gimbal](../../images/) -->
 
 Bevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll
 ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung
@@ -229,7 +229,7 @@ Die wichtigsten Schritte sind wie folgt:
 
 Der spezifische Schaltplan sieht wie folgt aus:
 
-![Schaltplan](../images/Schaltungsplan.png)
+![Schaltplan](../../images/Schaltungsplan.png)
 
 
 ### Arduino Nano
@@ -381,7 +381,7 @@ für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das 
 Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen
 Geräten über das Internet kommunizieren kann.
 
-![](../images/esp8266.jpg)
+![](../../images/esp8266.jpg)
 
 Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:
 
@@ -605,23 +605,23 @@ Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung dir
 Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und
 nicht zu verwechseln. 
 
-![](../images/bennenteversorgerungen.png)
+![](../../images/bennenteversorgerungen.png)
 
 
-![](../images/bennenteversorgerungen2.png)
+![](../../images/bennenteversorgerungen2.png)
 
 
 Die andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden 
 Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf
 installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,
 
-![](../images/platine-min.png)
+![](../../images/platine-min.png)
 
 
-![](../images/loetten-min.png)
+![](../../images/loetten-min.png)
 
 
-![](../images/loettetschaltung-min.png)
+![](../../images/loettetschaltung-min.png)
 
 
 
@@ -630,14 +630,14 @@ Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground betr�
 Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form
 des Stromkreises geändert hatten.
 
-![](../images/shaltung.png)
+![](../../images/shaltung.png)
 
-![](../images/shaltungsplatine2.png)
+![](../../images/shaltungsplatine2.png)
 
 Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und
 die Groundseingänge 
 
-![](../images/shaltungsplatine.png)
+![](../../images/shaltungsplatine.png)
 
 Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu
 hoch und nicht ausreichend angeordnet ist 
@@ -648,17 +648,17 @@ sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderu
 Wir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu
 erleichtern. 
 
-![](../images/klebedraht.png)
+![](../../images/klebedraht.png)
 
-![](../images/organisiertekabel.png)
+![](../../images/organisiertekabel.png)
 
-![](../images/organisiertekabel2.png)
+![](../../images/organisiertekabel2.png)
 
 
 Wir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten
 oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten. 
 
-![](../images/letzte.png)
+![](../../images/letzte.png)
 
 
 Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.

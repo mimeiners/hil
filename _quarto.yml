@@ -30,12 +30,8 @@ book:
 
     - part: Projekte
       chapters:
-        - file: projects/01_prj.md
+        - file: projects/gimbal/01_prj.md
 
-    - part: Anhang
-      chapters:
-        - file: appendix/01_app.md
-     
     
 bibliography: _bibliography/references.bib
 

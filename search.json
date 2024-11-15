@@ -12,26 +12,176 @@
   {
     "objectID": "class/01_lec.html",
     "href": "class/01_lec.html",
-    "title": "1  Einleitung",
+    "title": "1  Systems Engineering (SE)",
     "section": "",
-    "text": "1.1 Systems Engineering",
+    "text": "2 Requirements Based Engineering (RE)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#systems-engineering",
-    "href": "class/01_lec.html#systems-engineering",
-    "title": "1  Einleitung",
-    "section": "",
-    "text": "Validierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)\n\nValidierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation\nValidierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt\n\nVerifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist\n\n\n1.1.1 Requirements Based Engineering\n\n\n1.1.2 Model-Based Systems Engineering\n\n\n1.1.3 In-the-Loop Methodik (MBAT)",
+    "objectID": "class/01_lec.html#grundlegende-prinzipien",
+    "href": "class/01_lec.html#grundlegende-prinzipien",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.1 Grundlegende Prinzipien",
+    "text": "2.1 Grundlegende Prinzipien",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
     ]
   },
   {
-    "objectID": "projects/01_prj.html",
-    "href": "projects/01_prj.html",
+    "objectID": "class/01_lec.html#stakeholder-requirements",
+    "href": "class/01_lec.html#stakeholder-requirements",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.2 Stakeholder Requirements",
+    "text": "2.2 Stakeholder Requirements",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#system-requirements",
+    "href": "class/01_lec.html#system-requirements",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.3 System Requirements",
+    "text": "2.3 System Requirements",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#requirements-compliance",
+    "href": "class/01_lec.html#requirements-compliance",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.4 Requirements Compliance",
+    "text": "2.4 Requirements Compliance",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#requirements-schreiben",
+    "href": "class/01_lec.html#requirements-schreiben",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.5 Requirements schreiben",
+    "text": "2.5 Requirements schreiben",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#verlinken-attributieren-von-requirements",
+    "href": "class/01_lec.html#verlinken-attributieren-von-requirements",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.6 Verlinken & attributieren von Requirements",
+    "text": "2.6 Verlinken & attributieren von Requirements",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#verifikation-validierung-von-requirements",
+    "href": "class/01_lec.html#verifikation-validierung-von-requirements",
+    "title": "1  Systems Engineering (SE)",
+    "section": "2.7 Verifikation & Validierung von Requirements",
+    "text": "2.7 Verifikation & Validierung von Requirements\n\nVerifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist.\n\n\nValidierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)\n\nValidierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation\nValidierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#sysml-als-basis-für-mbse",
+    "href": "class/01_lec.html#sysml-als-basis-für-mbse",
+    "title": "1  Systems Engineering (SE)",
+    "section": "3.1 SysML als Basis für MBSE",
+    "text": "3.1 SysML als Basis für MBSE",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#diagramme-der-sysml",
+    "href": "class/01_lec.html#diagramme-der-sysml",
+    "title": "1  Systems Engineering (SE)",
+    "section": "3.2 Diagramme der SysML",
+    "text": "3.2 Diagramme der SysML",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#alternative-mbse-sprachen",
+    "href": "class/01_lec.html#alternative-mbse-sprachen",
+    "title": "1  Systems Engineering (SE)",
+    "section": "3.3 Alternative MBSE-Sprachen",
+    "text": "3.3 Alternative MBSE-Sprachen",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#tooling",
+    "href": "class/01_lec.html#tooling",
+    "title": "1  Systems Engineering (SE)",
+    "section": "3.4 Tooling",
+    "text": "3.4 Tooling",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#mbse-assessment",
+    "href": "class/01_lec.html#mbse-assessment",
+    "title": "1  Systems Engineering (SE)",
+    "section": "4.1 MBSE Assessment",
+    "text": "4.1 MBSE Assessment",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#mbse-prozess",
+    "href": "class/01_lec.html#mbse-prozess",
+    "title": "1  Systems Engineering (SE)",
+    "section": "4.2 MBSE Prozess",
+    "text": "4.2 MBSE Prozess",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#mbsa---model-based-safety-analysis",
+    "href": "class/01_lec.html#mbsa---model-based-safety-analysis",
+    "title": "1  Systems Engineering (SE)",
+    "section": "4.3 MBSA - Model Based Safety Analysis",
+    "text": "4.3 MBSA - Model Based Safety Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#mbat---model-based-analysis-and-testing",
+    "href": "class/01_lec.html#mbat---model-based-analysis-and-testing",
+    "title": "1  Systems Engineering (SE)",
+    "section": "4.4 MBAT - Model Based Analysis and Testing",
+    "text": "4.4 MBAT - Model Based Analysis and Testing",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "class/01_lec.html#mbsec---model-based-security",
+    "href": "class/01_lec.html#mbsec---model-based-security",
+    "title": "1  Systems Engineering (SE)",
+    "section": "4.5 MBSec - Model Based Security",
+    "text": "4.5 MBSec - Model Based Security",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+    ]
+  },
+  {
+    "objectID": "projects/gimbal/01_prj.html",
+    "href": "projects/gimbal/01_prj.html",
     "title": "2  Gimbal",
     "section": "",
     "text": "2.1 Theoretische Grundlagen\nIn diesem Projekt geht es um die Konzeption und den Bau eines Gimbals, einer selbst stabilisierenden Plattform, die mithilfe von Sensoren und Motoren stabilisiert wird, um eine präzise und ruhige Kameraaufnahme zu ermöglichen. Im Gegensatz zu anderen Gimbals, die oft als fertige Produkte erhältlich sind, werden wir uns in diesem Projekt nicht nur auf die Montage der Bauteile beschränken, sondern uns auch mit der Programmierung und Entwicklung der elektronischen Komponenten befassen. Dazu kommen Aspekte der 3D-Modellierung mit CAD, die es ermöglichen ein 3D-Modell zu erstellen, um die einzelnen Bauteile im Hause zu drucken. Dadurch werden wir in der Lage sein, den Gimbal nach unseren individuellen Anforderungen und Bedürfnissen zu gestalten und anzupassen. Das Projekt basiert auf einem vorherigen Projekt von HowToMechatronics, das Ziel ist es auf Grundlage dieses Projektes den Gimbal weiterzuentwickeln und eigene Erfahrungen zu sammeln.\nFür die Theorie des Gimbal-Projekts werden wir im Folgenden einen grundlegenden Leitfaden zur Entwicklung der Theorie festlegen.",
@@ -41,8 +191,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#theoretische-grundlagen",
-    "href": "projects/01_prj.html#theoretische-grundlagen",
+    "objectID": "projects/gimbal/01_prj.html#theoretische-grundlagen",
+    "href": "projects/gimbal/01_prj.html#theoretische-grundlagen",
     "title": "2  Gimbal",
     "section": "",
     "text": "Verständnis des Gimbalkonzepts Zunächst sollte jeder Projektbeteiligte das Konzept und die Funktionsweise eines Gimbals nachvollziehen und verstehen. Was genau macht die Vorrichtung? Welche Bestandteile hat das Gimbal? Wie viele Achsen hat das Gimbal?\nFestlegung des Ziels Das Ziel des Projekt muss klar definiert sein. Was soll am ende dabei rauskommen? Was für ein Anwendungsszenario ist im Sinn? Somit kann der Umfang des Projekts festgelegt werden.\nIdentifizierung der Verwendeten Hardware Es muss eine Auswahl für jede Hardwarekomponente getroffen werden. Welche Hardwarekomponente bietet welche Vorteile? z.B. ESP im Vergleich zu Arduino. (Hier befinden wir uns Aktuell)\nEntwurf der Steuereinheit Entwickelt einen Steuerungsalgorithmus, der die Bewegungen der Motoren basierend auf den Sensordaten steuert.\nImplementierung der HIL-Simulation HIL ermöglicht uns die Simulation und Überprüfung des Steuerungsalgorithmus in einer realistischen Umgebung, bevor wir ihn auf der tatsächlichen Hardware testet.\nDurchführung von Tests und Optmierung Es sollten umfangreiche Tests durchgeführt werden, um die Leistung eures Gimbal-Systems zu bewerten. Außerdem sollte Überprüft werden ob das Gimbal die Plattform stabil hält, unerwünschte Bewegungen minimiert und auf Benutzereingaben reagiert. Falls nötig sollte der Steueralgorithmus basierend auf den Testergebnissen optmiert werden.\nDokumentation und Präsentation Zuletzt werden die Ergebnisse dokumentiert, zusammengefasst und präsentiert.",
@@ -52,8 +202,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#model-based-systems-engineering",
-    "href": "projects/01_prj.html#model-based-systems-engineering",
+    "objectID": "projects/gimbal/01_prj.html#model-based-systems-engineering",
+    "href": "projects/gimbal/01_prj.html#model-based-systems-engineering",
     "title": "2  Gimbal",
     "section": "2.2 Model-Based Systems Engineering",
     "text": "2.2 Model-Based Systems Engineering\nDas modellbasierte System-Engineering (MBSE) ist eine formalisierte Methodik, die zur Unterstützung der Anforderungen, des Entwurfs, der Analyse, der Verifizierung und der Validierung im Zusammenhang mit der Entwicklung komplexer Systeme eingesetzt wird. Im Gegensatz zum dokumentenzentrierten Engineering stellt MBSE Modelle in den Mittelpunkt der Systementwicklung.\nMBSE bringt drei Konzepte zusammen: Modell, Systemdenken und Systemtechnik:\nEin Modell: ist eine vereinfachte Version von etwas - eine grafische, mathematische oder physikalische Darstellung, die die Realität abstrahiert, um eine gewisse Komplexität zu eliminieren. Diese Definition impliziert Formalität oder Regeln bei der Vereinfachung, Darstellung oder Abstraktion. Um ein System zu modellieren, muss ein Systemarchitekt das System mit weniger Details darstellen, so dass seine Struktur und sein Verhalten erkennbar und seine Komplexität beherrschbar ist. Mit anderen Worten: Modelle sollten das System ausreichend darstellen, und das System sollte die Modelle bestätigen.\nSystemdenken: ist eine Art, ein zu betrachtendes System nicht als autarke Einheit, sondern als Teil eines größeren Systems zu sehen. Systemdenken ist nicht dasselbe wie das systematische Befolgen guter Pläne, das Sammeln von Statistiken oder methodisches Vorgehen. Der Systemingenieur beobachtet das System aus der Ferne, erforscht seine Grenzen, seinen Kontext und seinen Lebenszyklus, notiert sein Verhalten und identifiziert Muster. Diese Methode kann dem Ingenieur helfen, Probleme zu erkennen (z. B. fehlende Interaktion, ein fehlender Schritt in einem Prozess, doppelter Aufwand, verpasste Möglichkeiten zur Automatisierung) und die Komplexität eines Systems zu bewältigen. Obwohl Systemingenieure das System zu Beginn zerlegen und analysieren müssen - Teile identifizieren und Verbindungen zwischen ihnen beschreiben -, fügen sie die Teile später wieder zu einem kohärenten Ganzen zusammen. Teile sind nicht nur mit anderen Teilen verbunden, sie sind voneinander abhängig, um richtig zu funktionieren. Beim Systemdenken wird diese Vernetzung betont. Das Verhalten des Systems ergibt sich aus den Aktivitäten der einzelnen Teile des Systems. Wenn der Systemtechniker die Verbindungen des Systems beobachtet, erkennt er Rückkopplungsschleifen und Kausalitätsmuster, die auf den ersten Blick vielleicht nicht sichtbar sind. Systemdenken kann dazu beitragen, Probleme deutlicher zu erkennen und leichter zu identifizieren, das System ins Gleichgewicht zu bringen und die Komplexität des Systems zu bewältigen.\nSystems Engineering ist ein transdisziplinärer und integrativer Ansatz, der die erfolgreiche Realisierung, Nutzung und Ausmusterung von technischen Systemen unter Verwendung von Systemprinzipien und -konzepten sowie wissenschaftlichen, technologischen und Managementmethoden ermöglicht. Es vereint eine Reihe von Techniken, um sicherzustellen, dass alle Anforderungen durch das entworfene System erfüllt werden. Es konzentriert sich auf die Architektur, Implementierung, Integration, Analyse und Verwaltung eines Systems während seines Lebenszyklus. Dabei werden auch Software, Hardware, Personal, Prozesse und verfahrenstechnische Aspekte des Systems berücksichtigt.\nWenn MBSE richtig durchgeführt wird, führt dies zu einer allgemeinen Verringerung der Entwicklungsrisiken.",
@@ -63,8 +213,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#cameo---no-magic",
-    "href": "projects/01_prj.html#cameo---no-magic",
+    "objectID": "projects/gimbal/01_prj.html#cameo---no-magic",
+    "href": "projects/gimbal/01_prj.html#cameo---no-magic",
     "title": "2  Gimbal",
     "section": "2.3 Cameo - No Magic",
     "text": "2.3 Cameo - No Magic\nDas Hauptmodell des SE-Demonstrators besteht aus drei Hauptpaketen, die in verschiedene Unterpakete unterteilt werden können. Diese drei Hauptpakete sind die “Functional Architecture” (Funktionale Architektur), die “Mission & Stakeholder Analysis” (Analyse der Mission und Interessenvertreter) und die “System Architecture” (Systemarchitektur).\nDie Functionale Architecture lässt sich in zwei Unterpakete unterteilen, nämlich die Funktionale Analyse und die Systemfunktionen. Die Funktionale Analyse betrachtet alle erforderlichen funktionalen Schritte, um eine normale Operation mit dem Gimbal auszuführen, wie zum Beispiel die Anpassung der Bewegung, das Setzen eines Stabilisierungsmodus und die Überprüfung beim Start des Gimbals, ob dieser ordnungsgemäß versorgt wird.\nDie Systemfunktionen lassen sich in High-Level-Verhalten und Sub-Level-Verhalten aufteilen. Das High-Level-Verhalten umfasst die normale Operation des Gimbals, bei der er wie in der Funktionalen Architektur beschrieben den Stabilisierungsmodus auswählt und anhand der Gimbal-Bewegung eine Anpassung vornimmt, um die Plattform entgegen der Bewegung zu stabilisieren. Ein weiteres High-Level-Verhalten ist der Startup Check, der auch in der Funktionalen Analyse beschrieben wird.\nDas Sub-Level-Verhalten spiegelt die einzelnen Schritte des High-Level-Verhaltens wider. Im Falle der normalen Operation gibt es drei Sub-Level-Verhalten. Eines davon ist das Setzen des Stabilisierungsmodus und die erforderlichen Schritte, die beim Auswahl des Stabilisierungsmodus eingeleitet werden. Ein anderes Sub-Level-Verhalten ist beispielsweise die Erfassung der Gimbal-Bewegung und die erforderlichen Schritte dafür. Das letzte Sub-Level-Verhalten ist die eigentliche Stabilisierung, also die Kompensation der Eingangsbewegung und die darauf basierende Anpassung der Position.\nBeim Startup Check werden vier Sub-Level-Verhalten dargestellt. In einem Verhalten wird der Batteriestatus überprüft, in einem anderen wird überprüft, ob eine externe Spannungsquelle angeschlossen ist. Für beide Fälle gibt es ein Sub-Level-Verhalten, das den Gimbal mit Strom versorgt, je nachdem, welcher der beiden Fälle vorliegt.",
@@ -74,8 +224,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#d-druck-des-gimbal",
-    "href": "projects/01_prj.html#d-druck-des-gimbal",
+    "objectID": "projects/gimbal/01_prj.html#d-druck-des-gimbal",
+    "href": "projects/gimbal/01_prj.html#d-druck-des-gimbal",
     "title": "2  Gimbal",
     "section": "2.4 3D Druck des Gimbal",
     "text": "2.4 3D Druck des Gimbal\nZur Erstellung der selbst stabilisierenden Platform, werden die verschiedenen Bauteile des Gimbals mittels 3D Druck erstellt. Diese umfassen das Gehäuse des Microcontrollers, die Platform für die Kamera, sowie die Halter für die Servo-Motoren.\nUm einen erfolgreichen 3D-Druck zu gewährleisten, werden die hierfür vorgesehenen 3D-Druckdateien in fünf Grundstrukturen unterteilt. Die Aufteilung basiert auf der Kameraplattform, den drei Servomotoren - die jeweils eine Achse der Stabilisierung steuern - und dem Verschlussdeckel für das Gehäuse des Microcontrollers.\nDadurch erhält man eine STL-Datei als erste Grundstruktur (Base 01) für den Servomotor, der die Yaw-Drehung steuert, also die Drehung um die z-Achse als Referenzsystem. Eine weiere Grundstruktur (Base 02) ist für den Servomotor, der die Roll-Drehung steuert, was sich auf die x-Achse bezieht. Die dritte Grundstruktur (Base 03) ist für den Pitch-Servomotor, der eine Anpassung in Bezug auf die y-Achse vornimmt. Es ist wichtig zu beachten, dass die Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller dient.\nDie folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.\n#fig-gimbal1\n\n2.4.1 CAD Modellierung\nMit Fusion 360 und Inventor kann man diese 3D-Entwürfe erstellen. Die Programme bieten außerdem die möglichkeit in teams zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.\nIn unserem Projekt verwenden wir Inventor als CAD-Programm, jedoch besteht die Möglichkeit, das bevorzugte CAD-Programm zur Bearbeitung zu nutzen. Die entsprechenden Inventor-Dateien befinden sich im Ordner “3d_druck_gimbal” und können nach Belieben in andere Formate umgewandelt werden.\nAutodesk Fusion 360, sowie Autodesk Inventor besitzten eine kostenlose “Campus” Version, welche Kostenlos für Lehrende und Studenten ist.\nSie unterstützen folgende 3D Druck formate:\n\n\n\nSTL(Binär)\nSTL(ASCII)\n\n\n\n\n3MF\nOBJ\n\n\n\nund sind erhältlich über folgenden link: Fusion-Download/Inventor-Download\n\n\n2.4.2 Erster Druck\nVor der CAD-Modellierung wurde zunächst ein initialer Testdruck durchgeführt, um zu überprüfen, ob die vorhandenen STL-Dateien für unseren Drucker geeignet sind. Je nach verwendetem Drucker können spezifische Anpassungen erforderlich sein.\nIm Folgenden wird der erste Druck basierend auf dem Modell “Base 02” dargestellt. Dieses Beispiel verdeutlicht die Bedeutung eines ersten Testdrucks, da die gedruckte Struktur nicht ideal ist. Es traten Probleme mit der Stabilität aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, die verwendet wurden, um das Einkrachen des Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt werden.\n#fig-gimbal\nDiese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und anschließend erneut zu bewerten, welche Anpassungen erforderlich sind.\n\n\n2.4.3 Zweiter Druck\nDer zweite Druck war erfolgreich, da verschiedene Faktoren wie das Stützmaterial und die Druckdichte angepasst wurden. Zudem wurde der Druck über einen längeren Zeitraum durchgeführt, um die Stabilität sicherzustellen. Es wurden stabile Bauteile hergestellt, die verwendet werden können, um den Gimbal vollständig zusammenzubauen.\n\n\n2.4.4 Finale Anpassungen\nNachdem der Gimbal zusammengebaut war, stellte sich heraus, dass weitere Anpassungen in der CAD-Modellierung erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht alle Kabel aufgrund der Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden mussten, um eine feste Verbindung der Schrauben zu gewährleisten.\n\nBevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung am Gimbal, was es ermöglicht, den Gimbal in Zukunft mit einem HIL-fähigen System zu verbinden und weitere Tests durchzuführen.\nDie finalen Anpassungen werden in Autodesk Inventor umgesetzt. Die aktualisierten STL-Dateien sind im Ordner “3d_druck_gimbal/Inventor_files/Finaler_Druck” zu finden.",
@@ -85,8 +235,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#zusammengebauter-gimbal",
-    "href": "projects/01_prj.html#zusammengebauter-gimbal",
+    "objectID": "projects/gimbal/01_prj.html#zusammengebauter-gimbal",
+    "href": "projects/gimbal/01_prj.html#zusammengebauter-gimbal",
     "title": "2  Gimbal",
     "section": "2.5 Zusammengebauter Gimbal",
     "text": "2.5 Zusammengebauter Gimbal",
@@ -96,8 +246,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#elektronik-des-gimbal",
-    "href": "projects/01_prj.html#elektronik-des-gimbal",
+    "objectID": "projects/gimbal/01_prj.html#elektronik-des-gimbal",
+    "href": "projects/gimbal/01_prj.html#elektronik-des-gimbal",
     "title": "2  Gimbal",
     "section": "2.6 Elektronik des Gimbal",
     "text": "2.6 Elektronik des Gimbal\nUm die Elektronik des Gimbals zu implementieren, d.h. der Servomotor lenkt in die entgegengesetzte Richtung aus, wenn sich die Position des Objekts ändert, um eine Position des Objekts zu erreichen, die sich nicht mit dem Gimbal verändert.\nIn diesem Abschnitt werden verschiedene Chiptypen (Arduino Nano und ESP8266) und drei-Achsen-Positionssensor (MPU650) zur Steuerung der Servomotoren verwendet. Der Steuercode wird in die verschiedenen Chiptypen geschrieben und der Sensor wird über Kabel mit den Chips verbunden. Um den ordnungsgemäßen Betrieb des Sensors zu gewährleisten, wird die Spannung der Batterie über den Buckconverter so eingestellt, dass an beiden Enden des Sensors die richtige Spannung anliegt.\nDie wichtigsten Schritte sind wie folgt:\n\nAuswahl der Chips: Für die Steuerung des Servomotors werden verschiedene Chiptypen verwendet. Zu diesen Chips gehören der Arduino Nano und der ESP8266, die beide über zahlreiche Funktionen verfügen und gut kompatibel sind.\nSensoranschluss: Der MPU650-Sensor wird über ein Kabel mit dem Chip verbunden. Die Hauptfunktion des Sensors ist es, genaue 3-Achsen-Lage- und Bewegungsdaten für die präzise Steuerung des Servomotors zu liefern.\nLeistungsanpassung: Um den korrekten Betrieb des Sensors sicherzustellen, wird die Batteriespannung mit einem Buckconverter angepasst. Dadurch wird sichergestellt, dass der Sensor innerhalb des geeigneten Spannungsbereichs arbeitet, um genaue Daten zu liefern.\nSchreiben des Steuercodes: Der für die Steuerung des Servomotors erforderliche Code wird in die verschiedenen Chiptypen geschrieben. Durch das Schreiben des entsprechenden Codes können die Position und die Bewegung des Servomotors auf der Grundlage der vom Sensor gelieferten Daten gesteuert werden.\nMotoranschluss: Schließlich wird der Servomotor über ein Kabel an den Chip angeschlossen. Dadurch kann der Chip Steuersignale an den Motor senden, was eine präzise Steuerung des Servomotors ermöglicht.\n\nDer spezifische Schaltplan sieht wie folgt aus:\n\n\n\nSchaltplan\n\n\n\n2.6.1 Arduino Nano\nDer Arduino Nano ist ein Open-Source-Breadboard-Mikrocontroller-Board, das auf dem Microchip ATmega328P-Mikrocontroller basiert. Der Arduino Nano kann mit der integrierten Entwicklungsumgebung (IDE) der Arduino-Software programmiert werden, die für alle Arduino-Boards gleich ist und sowohl online als auch offline läuft.\n\n\n2.6.2 Arduino Code Beschreibung\nUm die Gimbal-Funktionalität mit dem Nano-Chip zu implementieren, muss der Code kompiliert und in die Arduino-Software hochgeladen werden. Der Code ist im Ordner arduino_gimbal zu finden. Bevor dieser Code verwendet werden kann, ist es wichtig, die grundlegende Funktionalität des Codes zu verstehen. Während des gesamten Prozesses muss der Code Sensordaten vom MPU6050-Sensor lesen und diese Daten zur Steuerung des Servos verwenden. Es werden bestimmte Pins definiert und die Servos an diese Pins angeschlossen.\n\nDer Interrupt-Pin wird auf Pin 2 festgelegt.\nDer Servo servo0 wird an Pin 10 angeschlossen.\nDer Servo servo1 wird an Pin 9 angeschlossen.\nDer Servo servo2 wird an Pin 8 angeschlossen.\n\n#define OUTPUT_READABLE_YAWPITCHROLL\n#define INTERRUPT_PIN 2  \n  servo0.attach(10);\n  servo1.attach(9);\n  servo2.attach(8);\nDie Aufgabe eines Interrupts ist es, dafür zu sorgen, dass der Prozessor schnell auf wichtige Ereignisse reagiert. Wenn ein bestimmtes Signal erkannt wird, unterbricht ein Interrupt die Arbeit des Prozessors und führt einen Code aus, der auf den externen Stimulus reagiert, der dem Arduino zugeführt wird. Das bedeutet, der Gimbal kann dann den Interrupt behandeln, die entsprechenden Servos steuern und die gewünschte, präzise, schnelle und reaktionsfähige Aktion ausführen.\nDann werden aus den Sensordaten die Quaternion und der Gravitationsvektor berechnet. Die Yaw-, Pitch- und Roll-Werte werden dann in Grad umgerechnet. Diese Werte werden dann zur Steuerung des Servos eingesetzt.\nmpu.dmpGetQuaternion(&q, fifoBuffer);\nmpu.dmpGetGravity(&gravity, &q);\nmpu.dmpGetYawPitchRoll(ypr, &q, &gravity);\nWenn j kleiner oder gleich 300 ist, wird der aktuelle Wert der Yaw-Achse (ypr[0]) in der Variable correct gespeichert. Dadurch wird der aktuelle Yaw-Wert erfasst, solange j kleiner oder gleich 300 ist. Dieser Wert beginnt nicht bei 0 wie die Werte für Pitch und Roll, sondern ist immer ein Zufallswert.\n    if (j &lt;= 300) {\n      correct = ypr[0];\n      j++; \n    }\nNach 300 Messungen wird der Yaw-Wert (ypr[0]) durch Subtraktion des zuvor gespeicherten Referenzwerts angepasst. Dadurch wird der Yaw-winkel auf 0 Grad gesetzt. Die Werte für Yaw, Pitch und Roll von -90 bis +90 Grad werden dann auf Werte von 0 bis 180 für das Antriebsservo abgebildet. Mit der Schreibfunktion werden diese Werte schließlich als Steuersignale an das Servo gesendet.\nelse {\n      ypr[0] = ypr[0] - correct;\n    \n    int servo0Value = map(ypr[0], -90, 90, 0, 180);\n    int servo1Value = map(ypr[1], -90, 90, 0, 180);\n    int servo2Value = map(ypr[2], -90, 90, 180, 0);\n\n    servo0.write(servo0Value);\n    servo1.write(servo1Value);\n    servo2.write(servo2Value);\n}\n\n\n2.6.3 Aufgetretene Probleme und Lösungen in Nano\n\n2.6.3.1 Problem 1:\nBeim Kompilieren des Codes für Arduino, der auf dem MPU6050_DMP6-Beispiel in Jeff Rowbergs i2cdevlib-Bibliothek basiert, müssen die I2Cdev- und MPU6050-Bibliotheken in den entsprechenden Pfaden installiert werden.\n\n\n2.6.3.2 Lösung 1:\nUm das Problem zu beheben, werden folgende Schritte durchgeführt:\nDer Datei-Explorer wird auf Ihrem Computer geöffnet und zum Ordner navigiert, in dem die Arduino-Bibliotheken installiert sind. Der Pfad wurde unter C:\\Users\\cxp\\AppData\\Local\\Arduino15\\libraries gefunden.\nDie erforderlichen Bibliotheken werden heruntergeladen:\nDie “I2Cdev.h”-Bibliothek kann von folgendem Link heruntergeladen werden: \nDie “MPU6050_6Axis_MotionApps20.h”-Bibliothek kann von folgendem Link heruntergeladen werden:  Die heruntergeladenen ZIP-Archive werden extrahiert und der Inhalt jeder Bibliothek wird in einen separaten Unterordner in Ihrem Arduino-Bibliotheksverzeichnis kopiert. Dabei können die Unterordner “I2Cdev” und “MPU6050” verwendet werden.\nDie Arduino-IDE wird gestartet (sofern bereits geöffnet) oder erneut geöffnet. Nun kann der Code, der auf dem MPU6050_DMP6-Beispiel basiert, kompiliert und ausgeführt werden, ohne dass der Compiler Fehlermeldungen aufgrund fehlender Bibliotheken anzeigt.\n\n\n2.6.3.3 Problem 2:\nDas Problem besteht darin, dass der Arduino-Code nicht auf den ATmega328p-Chip hochgeladen werden kann. Dies kann verschiedene Ursachen haben, aber eine mögliche Lösung besteht darin, den Bootloader-Typ in der Arduino-Software richtig einzustellen.\n\n\n2.6.3.4 Lösung 2:\n\nÖffne die Arduino-Software auf deinem Computer.\nGehe zum Menü “Tools” (Werkzeuge) und wähle “Board” (Platine) aus.\nWähle aus der Liste der verfügbaren Boards die Option “Arduino Uno” oder das entsprechende Board aus, das den ATmega328p-Chip verwendet.\nGehe erneut zum Menü “Tools” (Werkzeuge) und wähle “Processor” (Prozessor) aus.\nWähle im Dropdown-Menü die Option “ATmega328p (old Bootloader)” aus.\nStelle sicher, dass auch die richtige Porteinstellung ausgewählt ist, um eine Verbindung zum Arduino-Board herzustellen.\nKlicke auf die Schaltfläche “Upload” (Hochladen), um den Code auf den ATmega328p-Chip hochzuladen.\n\nDurch die Auswahl des ATmega328p-Bootloaders in der Arduino-Software wird sichergestellt, dass der Code korrekt mit dem Chip kommuniziert und erfolgreich hochgeladen wird. Beachte, dass es verschiedene Bootloader-Typen für den ATmega328p-Chip geben kann, daher ist es wichtig, den richtigen auszuwählen.\nHoffentlich löst diese Vorgehensweise dein Problem und du kannst den Code erfolgreich auf den ATmega328p-Chip hochladen.\n\n\n\n2.6.4 ESP8266 NodeMCU\nDer ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.\n\nHier sind einige der wichtigsten Merkmale des ESP8266-Moduls:\n1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle, einschließlich WEP, WPA und WPA2.\n2-Mikrocontroller-Einheit (MCU): Das Modul enthält eine 32-Bit-MCU vom Typ Tensilica Xtensa LX106, die mit einer Taktrate von 80 MHz arbeitet. Sie verfügt über GPIO-Pins (General Purpose Input/Output) zur Steuerung externer Geräte und unterstützt verschiedene Schnittstellen wie I2C, SPI, UART und andere.\n3-Programmierung: Der ESP8266 kann mit verschiedenen Programmiersprachen und Entwicklungsumgebungen programmiert werden. Die beliebteste Wahl ist die Arduino IDE, die eine einfache und einsteigerfreundliche Umgebung zum Schreiben und Hochladen von Code auf das Modul bietet. Darüber hinaus gibt es alternative Frameworks und Sprachen wie Micropython und Espressifs natives ESP-IDF (ESP8266 IoT Development Framework).\n4-Geringer Stromverbrauch: Das Modul ist so konzipiert, dass es mit geringem Stromverbrauch arbeitet und sich daher für batteriebetriebene Anwendungen eignet. Es unterstützt Schlafmodi und kann so konfiguriert werden, dass es regelmäßig oder als Reaktion auf externe Auslöser aufwacht.\n5-Speicher: Das ESP8266-Modul ist in der Regel mit verschiedenen Speicheroptionen erhältlich, darunter 512 KB oder 4 MB Flash-Speicher für die Speicherung von Programmcode und Daten.\n6-Gemeinschaft und Ökosystem: Der ESP8266 hat aufgrund seiner geringen Kosten, der einfachen Handhabung und der umfangreichen Unterstützung durch die Community eine große Popularität erlangt. Es gibt eine große Online-Community, die Ressourcen, Tutorials, Bibliotheken und Beispiele zur Verfügung stellt, um Anwendern den Einstieg in ihre Projekte zu erleichtern.\n7-Anwendungen: Der ESP8266 wird häufig in verschiedenen IoT-Anwendungen eingesetzt, z. B. in der Heimautomatisierung, in Sensornetzwerken, intelligenten Geräten und industriellen Überwachungssystemen. Seine Erschwinglichkeit, Vielseitigkeit und einfache Integration machen ihn zu einer beliebten Wahl für Bastler, Macher und Profis gleichermaßen.\n\n\n2.6.5 Der Funktionierte Teil\nWir haben versucht, mit einigen Funktionen dieses Codes zu experimentieren, um die Funktionalität des ESP8266 zu überprüfen. Zum Beispiel haben wir versucht, das Servo direkt über den ESP8266 anzusteuern, um sicherzustellen, dass es ordnungsgemäß funktioniert. Außerdem haben wir versucht, die Daten vom MPU6050 mithilfe des ESP8266 über I2C zu lesen und auf dem Display anzuzeigen, um die Funktionalität des MPU6050 und die Datenkommunikation zwischen dem ESP8266 und dem MPU6050 zu überprüfen. Da dieser Code nicht direkt auf den ESP8266 angewendet werden kann, haben wir diese Anpassungen vorgenommen, um die verschiedenen Komponenten zu testen.\n\n\n2.6.6 ESP8266 Steuerung des Servos\nDie Bibliothek Servo.h wird eingebunden, um die Servo-Funktionalität nutzen zu können. In der Setup() werden die Servomotoren initialisiert und den entsprechenden digitalen Pins des Arduino-Boards zugeordnet. In diesem Fall sind die Servos an den Pins 12, 13 und 14 angeschlossen.\nIn loop() wird wiederholt ausgeführt und steuert die Servos. Es werden das loop verwendet, um die Servos in eine Richtung zu drehen und dann wieder zurückzudrehen.\nfor (position = 0; position &lt; 180; position++) \n  { \n    servo0.write(position); \n    servo1.write(position); \n    servo2.write(position); \n    delay(waitTime); \n  } \nEs werden das loop verwendet, um die Servos wieder zurückzudrehen.\n  for (position = 180; position &gt;= 1; position--) \n  { \n    servo0.write(position); \n    servo1.write(position); \n    servo2.write(position); \n    delay(waitTime); \n  } \nFinden Sie Code hier:Servo-Code\n\n\n2.6.7 ESP8266 Daten von der MPU6050 lesen\nDer entsprechende Code wurde in unsere Dateien hochgeladen. Link:MPU6050_Display-Code. Dieser Code ist eine einfache OLED-Demonstration für die Beschleunigungsmesserwerte des Adafruit MPU6050-Sensors. Es werden die Bibliotheken \"Adafruit_MPU6050.h\", \"Adafruit_SSD1306.h\" und \"Adafruit_Sensor.h\" verwendet.\nZu Beginn des Codes werden die benötigten Bibliotheken und Objekte initialisiert. Der MPU6050 und das Display werden konfiguriert. Die Verbindung mit dem MPU6050 wird überprüft und das Display initialisiert.\nDie setup() initialisiert die serielle Kommunikation, überprüft die Initialisierung des MPU6050 und initialisiert das Display. Es wird außerdem die Textgröße, die Textfarbe und die Displayrotation festgelegt.\nDie loop() wird wiederholt ausgeführt. In jeder Schleife werden die Beschleunigungsmesser- und Gyroskopdaten vom MPU6050 gelesen. Diese Daten werden sowohl über die serielle Schnittstelle als auch auf dem Display angezeigt. Die Anzeige auf dem Display wird gelöscht und die Beschleunigungsmesser- und Gyroskopwerte werden aktualisiert. Danach werden sie auf dem Display angezeigt. Es gibt auch eine kurze Verzögerung am Ende jeder Schleife.\nDas Tutorial finden Sie hier: MPU6050_Display-Code\n\n\n2.6.8 Der nicht Funktionierte Teil\nDIY Arduino Gimbal - Self-Stabilizing Plaftorm Code von Arduino IDE kompiliert, kann erfolgreich in die ESP8266 Chip zu schreiben, aber das Servo nicht mit der Drehung des MPU6050 zu bewegen, und nicht die Funktion des Gimbal erreichen.\nEs kann mehrere Gründe geben, warum die Funktion des Gimbals nicht erreicht wird. Der Code basiert auf den Bibliotheken “I2Cdev” und “MPU6050_6Axis_MotionApps20”, die möglicherweise nicht mit dem ESP8266 kompatibel sind. Es müssen Bibliotheken verwendet werden, die mit dem ESP8266 kompatibel sind und den Code entsprechend anpassen.Der ESP8266 kann im Vergleich zu Arduino-Boards begrenzte Ressourcen haben. Daher muss es sichergestellt, dass der Code und die Bibliotheken, die die verwendet werden, für die ESP8266-Plattform optimiert sind.\n\n\n2.6.9 Bibliotheks-Kompatibilität\nDie MPU6050-Bibliothek, die speziell für den ESP8266 entwickelt wurde, zu suchen und zu verwenden. Dadurch wird sichergestellt, dass die Bibliothek mit dem ESP8266 kompatibel ist.\nZum Beispiel erhältlich über folgenden link: ESP8266 MPU6050 library\nEinige der darin enthaltenen Beispiele können als Referenz verwendet werden, um die darin enthaltenen Funktionen und Funktionen entsprechend zu modifizieren, damit sie mit dem MPU6050-Sensor kommunizieren und Daten verarbeiten können.\nDer ESP8266 liest Daten, indem er über das I2C-Protokoll Befehle an den MPU6050 sendet. Der MPU6050 speichert seine internen Beschleunigungs- und Gyroskopdaten in seinen FIFO-Puffern, die der ESP8266 dann über I2C auslesen kann. Diese Daten können vom ESP8266 verarbeitet und zur Steuerung der Bewegung des Gimbals verwendet werden. Daher ist eine I2C-Bibliothek, die für den ESP8266 angepasst werden kann, sehr wichtig. Eine solche Bibliothek ist beispielsweise die &lt;Adafruit_MPU6050.h&gt;, die im [MPU6050_Display-Code] verwendet wird.\n\n\n2.6.10 Entwicklung des Interruppt PINs\nDas Design des Interrupt-Pins und die Verwendung der Interrupt-Handler-Funktion ermöglichen es dem ESP8266, die Verfügbarkeit der MPU6050-Daten rechtzeitig zu erfassen und sie sofort zu verarbeiten, wenn sie bereit sind. Dadurch wird eine effizientere und Echtzeit-Datenverarbeitung ermöglicht.\nAber Einstellung Interrupt-Pins für die ESP8266 ist nicht das gleiche wie für den Arduino Nano.\nIn setup() kann der Interrupt-Pin mit der Funktion pinMode() auf den Eingangsmodus konfiguriert werden.\npinMode(2, INPUT);\nEine Interrupt-Callback-Funktion.\nDiese Funktion wird aufgerufen, wenn eine Interrupt ausgelöst wird, und wird für die Behandlung von Unterbrechungsereignissen verwendet.In diesem Code wird zum Beispiel eine Funktion dmpDataReady() definiert.Diese Funktion erkennt, ob neue Daten für den MPU6050 verfügbar sind.\nvolatile bool mpuInterrupt = false;     // indicates whether MPU interrupt pin has gone high\nvoid dmpDataReady() {\n    mpuInterrupt = true;\n}\nIn setup() wird die Funktion attachInterrupt() benutzt, um die Interrupt-Callback-Funktion(dmpDataReady()) mit einem Interrupt-Pin zu verknüpfen.Zum Beispiel wird der Interrupt-Pin GPIO2 (entspricht dem Digital Pin 2 des Arduino) mit der Callback-Funktion handleInterrupt() verknüpft, ausgelöst durch eine steigende Flanke.\nattachInterrupt(digitalPinToInterrupt(2), dmpDataReady, RISING);\nWenn die steigende Flanke des InterruptPins der MPU6050 ausgelöst wird, wird die Funktion dmpDataReady() aufgerufen. In dieser Funktion wird die Variable mpuInterrupt auf true gesetzt, was anzeigt, dass neue Daten verfügbar sind.\nDas Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat. Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und fast nicht mehr vorhanden. Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und übersichtlicher geworden.\n\n\n2.6.11 Verbesserung der Schaltung:\nAm Anfang haben wir die traditionelle Arbeit gemacht, wie sie in dem uns vorgelegten Geschäftsmodell und der Referenz für das Projekt angegeben war.\nAber nach einigen Experimenten an der elektrischen Schaltung fanden wir mehrere Probleme, die wir lösen mussten Diese Probleme bestehen aus mehreren Punkten:\n\ndie Instabilität der elektrischen Spannung, die von dem im Stromkreis vorgesehenen Tiefsetzsteller kommt, wie in der Referenz angegeben, was zu einer Schwäche des zu den Motoren fließenden Stroms und damit zu einer Schwäche der Motoren führte, was zu einer Verzögerung des Stroms führte Reaktion der Motoren und damit eine Verzögerung der Reaktionsgeschwindigkeit, was zu einem Mangel am gesamten Projektziel, nämlich der Aufrechterhaltung von Stabilität und Gleichgewicht, und der Reaktionsgeschwindigkeit führte\nhat uns die große Anzahl von sich überlappenden Kabeln bei der Durchführung von Leistungstests und deren Modifizierung sehr gestört. Die vielen sich überlappenden Kabeln mit ähnlichen Farben verursachten Fehler in der Verbindung. Oft musste man die Kabeln von vorne bis hinten demontieren und wieder einbauen, um den richtigen Anschluss zu erreichen, außerdem waren die Kabeln teilweise zu kurz, was dazu führte, dass sie bei der Bewegung des Motors abgeschnitten wurden.\ndie Schwäche des Stromkreises, die sich aus der häufigen Trennung der Kabeln ergibt, weil sie schwach und oberflächlich verbunden waren, was zu wiederholten Dislokationen führte und damit zur Schwäche des Stromkreises und der Notwendigkeit, die dislozierten Drähte zu demontieren und erneut zu installieren.\nwar die Anordnung der Kabeln und die Reihenfolge ihres Anschlusses an den Arduino unklar, weil die Drähte oder der Anschlussstift an den Mechanismus nicht benannt wurden und der Spannungseingang und der Masseeingang nicht bekannt waren.\n\nDeshalb mussten wir mehrere Änderungen an der elektrischen Schaltung vornehmen, um die Effizienz der Schaltung zu erhöhen und so diese Probleme und Fehler zu vermeiden, die beim Testen und Experimentieren zu Fehlfunktionen führen.\n\n\n2.6.12 Die Lösungen waren wie folgt:\nWir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.\nAlso haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln.\n\n\nDie andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,\n\n\n\nindem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt. Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten.\n\n\nAnschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und die Groundseingänge\n\nDie Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu hoch und nicht ausreichend angeordnet ist\nAlso nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle SpannungsKabeln zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.\nWir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.\n\n\n\nWir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten.\n\nDas Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.\nNach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und fast nicht mehr vorhanden.\nDarüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und übersichtlicher geworden.,",
@@ -107,8 +257,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters",
-    "href": "projects/01_prj.html#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters",
+    "objectID": "projects/gimbal/01_prj.html#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters",
+    "href": "projects/gimbal/01_prj.html#überprüfung-der-spannungskonstanz-und-stabilität-eines-buck-konverters",
     "title": "2  Gimbal",
     "section": "2.7 Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters",
     "text": "2.7 Überprüfung der Spannungskonstanz und Stabilität eines Buck-Konverters\nIn diesem Test wird das Konzept eines Buck-Konverters auf seine Fähigkeit zur Aufrechterhaltung einer konstanten Ausgangsspannung überprüft. Insbesondere wird untersucht, ob die Spannungsquelle konstant bleibt und ob am Ausgang des Buck-Konverters das Eingangssignal im weiteren Verlauf auf 5V über eine bestimmte Zeit (5 Minuten) konstant bleibt oder ob sich die Spannung aufgrund von Temperatureinflüssen stark verändert. Eine Toleranz von +-5% wird als akzeptabel angesehen.\n\n2.7.1 Testkonzept\nDas Testkonzept besteht darin, die Spannungsquelle an den Eingang des Buck-Konverters anzuschließen und den Eingangs- sowie den Ausgangsspannungspegel mit einem Oszilloskop zu überwachen. Dabei wird die Konstanz der Spannungsquelle überprüft und gemessen, ob die Ausgangsspannung des Buck-Konverters über einen Zeitraum von 5 Minuten konstant bei 5V bleibt.\n\n\n2.7.2 Zustand des Geräts\nEs liegt Versorgungsspannung mit 5V an, Anschalter ist gedrückt.\n\n\n2.7.3 Durchführung\n\nVerbinden Sie die Spannungsquelle mit dem Eingang des Buck-Konverters.\nSchließen Sie den Eingangs- und Ausgangsanschluss des Buck-Konverters an ein Oszilloskop an.\nÜberprüfen Sie, ob die Spannungsquelle eine konstante Spannung liefert.\nNehmen Sie Messungen der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung vor.\nÜberwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei 5V bleibt.\nBerücksichtigen Sie eine Toleranz von +-5% und dokumentieren Sie jegliche Abweichungen von diesem Wert\n\n\n\n2.7.4 Testanforderungen\n\nÜberprüfung, ob die Spannungsquelle konstant bleibt.\nMessung der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung.\nÜberprüfung, ob die Ausgangsspannung über einen Zeitraum von 5 Minuten konstant bei 5V bleibt, unter Berücksichtigung einer Toleranz von +-5%.\n\n\n\n2.7.5 Zustand des Konzepts\nDas System ist an.\nDurchführung:\n\nVerbinden Sie die Spannungsquelle mit dem Eingang des Buck-Konverters.\nSchließen Sie den Eingangs- und Ausgangsanschluss des Buck-Konverters an ein Oszilloskop an.\nÜberprüfen Sie, ob die Spannungsquelle eine konstante Spannung liefert.\nNehmen Sie Messungen der Ausgangsspannung des Buck-Konverters bei einer bestimmten Eingangsspannung vor.\nÜberwachen Sie die Ausgangsspannung über einen Zeitraum von 5 Minuten und stellen Sie sicher, dass sie konstant bei 5V bleibt.\nBerücksichtigen Sie eine Toleranz von +-5% und dokumentieren Sie jegliche Abweichungen von diesem Wert.\n\n\n\n2.7.6 Ergebnisvergleich mit Anforderung\n\nWenn die Spannungsquelle eine konstante Spannung liefert und die Ausgangsspannung des Buck-Konverters bei 5V bleibt, liegt das Ergebnis im Einklang mit den Anforderungen.\nFalls die Ausgangsspannung des Buck-Konverters innerhalb der Toleranz von +-5% schwankt, ist das Ergebnis ebenfalls akzeptabel.\nJegliche Abweichungen außerhalb der definierten Toleranz würden bedeuten, dass das beschriebene Testkonzept des Buck-Konverters die Testanforderungen nicht erfüllt.",
@@ -118,8 +268,8 @@
     ]
   },
   {
-    "objectID": "projects/01_prj.html#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters",
-    "href": "projects/01_prj.html#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters",
+    "objectID": "projects/gimbal/01_prj.html#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters",
+    "href": "projects/gimbal/01_prj.html#überprüfung-der-ausgangsspannungserzeugung-des-buck-konverters",
     "title": "2  Gimbal",
     "section": "2.8 Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters",
     "text": "2.8 Überprüfung der Ausgangsspannungserzeugung des Buck-Konverters\nIn diesem Test wird das Konzept 1 eines Buck-Konverters durchgeführt, um die Fähigkeit zur Erzeugung einer Ausgangsspannung zu bestimmen. Das Hauptziel des Tests  besteht darin zu überprüfen, ob der Buck-Konverter eine Ausgangsspannung erzeugt.\n\n2.8.1 Testkonzept\nDas Testkonzept besteht darin, eine Konstantspannungsquelle (Batterie und Laboratory DC power supply) am Eingang des Buck-Konverters anzuschließen und mithilfe eines Multimeters den Ausgangsspannung zu messen. Es wird überprüft, ob der Buck-Konverter bei verschiedenen Eingangsspannungen eine Ausgangsspannung liefert. Die Messergebnisse des Multimeters werden analysiert, um sicherzustellen, dass der Buck-Konverter unabhängig von den variierenden Eingangsspannungen eine Ausgangsspannung aufweist.\n\n\n2.8.2 Zustand des Geräts\nes liegt versorgungsspannung mit 5V an, Anschalter ist gedrückt.\n\n\n2.8.3 Testanforderung\n\nÜberprüfung der Ausgangsspannung des Buck-Konverters bei Erhalt einer Eingangsspannung\nStellen Sie sicher, dass der Buck-Konverter ordnungsgemäß angeschlossen und betriebsbereit ist.\nLegen Sie eine bestimmte Eingangsspannung fest. Schalten Sie die Eingangsspannungsquelle ein, um die festgelegte Eingangsspannung bereitzustellen.\nÜberprüfen Sie visuell, ob eine Ausgangsspannung an den Ausgangsanschlüssen des Buck-Konverters vorhanden ist.\nVerwenden Sie ein Messinstrument zur Spannungsüberwachung, um die genaue Ausgangsspannung zu messen und sicherzustellen, dass sie den erwarteten Werten entspricht.\nWiederholen Sie den Test mit verschiedenen Eingangsspannungen, um sicherzustellen, dass der Buck-Konverter bei verschiedenen Eingangsspannungspegeln eine Ausgangsspannungen liefert.\n\n\n\n2.8.4 Ergebnisvergleich mit Anforderung\n\nWenn das Multimeter eine Spannung anzeigt (einige Volt), entspricht das Ergebnis den Anforderungen.\nWenn das Multimeter keine Spannung anzeigt oder die Spannung sehr gering ist (einige Millivolt oder weniger), entspricht das Ergebnis nicht den Anforderungen.",

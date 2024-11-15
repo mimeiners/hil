@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Einleitung – M 2.7 HiL-Verfahren (HILV)</title>
+<title>1&nbsp; Systems Engineering (SE) – M 2.7 HiL-Verfahren (HILV)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../projects/01_prj.html" rel="next">
+<link href="../projects/gimbal/01_prj.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../class/01_lec.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems Engineering (SE)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../class/01_lec.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems Engineering (SE)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -137,25 +137,8 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../projects/01_prj.html" class="sidebar-item-text sidebar-link">
+  <a href="../projects/gimbal/01_prj.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Anhang</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appendix/01_app.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">No Magic MBSE Software</span></span></a>
   </div>
 </li>
       </ul>
@@ -170,11 +153,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#systems-engineering" id="toc-systems-engineering" class="nav-link active" data-scroll-target="#systems-engineering"><span class="header-section-number">1.1</span> Systems Engineering</a>
+  <li><a href="#requirements-based-engineering-re" id="toc-requirements-based-engineering-re" class="nav-link active" data-scroll-target="#requirements-based-engineering-re"><span class="header-section-number">2</span> Requirements Based Engineering (RE)</a>
   <ul class="collapse">
-  <li><a href="#requirements-based-engineering" id="toc-requirements-based-engineering" class="nav-link" data-scroll-target="#requirements-based-engineering"><span class="header-section-number">1.1.1</span> Requirements Based Engineering</a></li>
-  <li><a href="#model-based-systems-engineering" id="toc-model-based-systems-engineering" class="nav-link" data-scroll-target="#model-based-systems-engineering"><span class="header-section-number">1.1.2</span> Model-Based Systems Engineering</a></li>
-  <li><a href="#in-the-loop-methodik-mbat" id="toc-in-the-loop-methodik-mbat" class="nav-link" data-scroll-target="#in-the-loop-methodik-mbat"><span class="header-section-number">1.1.3</span> In-the-Loop Methodik (MBAT)</a></li>
+  <li><a href="#grundlegende-prinzipien" id="toc-grundlegende-prinzipien" class="nav-link" data-scroll-target="#grundlegende-prinzipien"><span class="header-section-number">2.1</span> Grundlegende Prinzipien</a></li>
+  <li><a href="#stakeholder-requirements" id="toc-stakeholder-requirements" class="nav-link" data-scroll-target="#stakeholder-requirements"><span class="header-section-number">2.2</span> Stakeholder Requirements</a></li>
+  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements"><span class="header-section-number">2.3</span> System Requirements</a></li>
+  <li><a href="#requirements-compliance" id="toc-requirements-compliance" class="nav-link" data-scroll-target="#requirements-compliance"><span class="header-section-number">2.4</span> Requirements Compliance</a></li>
+  <li><a href="#requirements-schreiben" id="toc-requirements-schreiben" class="nav-link" data-scroll-target="#requirements-schreiben"><span class="header-section-number">2.5</span> Requirements schreiben</a></li>
+  <li><a href="#verlinken-attributieren-von-requirements" id="toc-verlinken-attributieren-von-requirements" class="nav-link" data-scroll-target="#verlinken-attributieren-von-requirements"><span class="header-section-number">2.6</span> Verlinken &amp; attributieren von Requirements</a></li>
+  <li><a href="#verifikation-validierung-von-requirements" id="toc-verifikation-validierung-von-requirements" class="nav-link" data-scroll-target="#verifikation-validierung-von-requirements"><span class="header-section-number">2.7</span> Verifikation &amp; Validierung von Requirements</a></li>
+  </ul></li>
+  <li><a href="#model-based-systems-engineering-mbse" id="toc-model-based-systems-engineering-mbse" class="nav-link" data-scroll-target="#model-based-systems-engineering-mbse"><span class="header-section-number">3</span> Model-Based Systems Engineering (MBSE)</a>
+  <ul class="collapse">
+  <li><a href="#sysml-als-basis-für-mbse" id="toc-sysml-als-basis-für-mbse" class="nav-link" data-scroll-target="#sysml-als-basis-für-mbse"><span class="header-section-number">3.1</span> SysML als Basis für MBSE</a></li>
+  <li><a href="#diagramme-der-sysml" id="toc-diagramme-der-sysml" class="nav-link" data-scroll-target="#diagramme-der-sysml"><span class="header-section-number">3.2</span> Diagramme der SysML</a></li>
+  <li><a href="#alternative-mbse-sprachen" id="toc-alternative-mbse-sprachen" class="nav-link" data-scroll-target="#alternative-mbse-sprachen"><span class="header-section-number">3.3</span> Alternative MBSE-Sprachen</a></li>
+  <li><a href="#tooling" id="toc-tooling" class="nav-link" data-scroll-target="#tooling"><span class="header-section-number">3.4</span> Tooling</a></li>
+  </ul></li>
+  <li><a href="#methodiken-und-prozesse" id="toc-methodiken-und-prozesse" class="nav-link" data-scroll-target="#methodiken-und-prozesse"><span class="header-section-number">4</span> Methodiken und Prozesse</a>
+  <ul class="collapse">
+  <li><a href="#mbse-assessment" id="toc-mbse-assessment" class="nav-link" data-scroll-target="#mbse-assessment"><span class="header-section-number">4.1</span> MBSE Assessment</a></li>
+  <li><a href="#mbse-prozess" id="toc-mbse-prozess" class="nav-link" data-scroll-target="#mbse-prozess"><span class="header-section-number">4.2</span> MBSE Prozess</a></li>
+  <li><a href="#mbsa---model-based-safety-analysis" id="toc-mbsa---model-based-safety-analysis" class="nav-link" data-scroll-target="#mbsa---model-based-safety-analysis"><span class="header-section-number">4.3</span> MBSA - Model Based Safety Analysis</a></li>
+  <li><a href="#mbat---model-based-analysis-and-testing" id="toc-mbat---model-based-analysis-and-testing" class="nav-link" data-scroll-target="#mbat---model-based-analysis-and-testing"><span class="header-section-number">4.4</span> MBAT - Model Based Analysis and Testing</a></li>
+  <li><a href="#mbsec---model-based-security" id="toc-mbsec---model-based-security" class="nav-link" data-scroll-target="#mbsec---model-based-security"><span class="header-section-number">4.5</span> MBSec - Model Based Security</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/mimeiners/hil/edit/main/class/01_lec.md" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/mimeiners/hil/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -184,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einleitung</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Systems Engineering (SE)</span></h1>
 </div>
 
 
@@ -201,24 +203,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="systems-engineering" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="systems-engineering"><span class="header-section-number">1.1</span> Systems Engineering</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/Overview_SE.png" class="img-fluid figure-img"></p>
+<figcaption>Übersicht Systems Engineering</figcaption>
+</figure>
+</div>
+<section id="requirements-based-engineering-re" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Requirements Based Engineering (RE)</h1>
+<section id="grundlegende-prinzipien" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="grundlegende-prinzipien"><span class="header-section-number">2.1</span> Grundlegende Prinzipien</h2>
+</section>
+<section id="stakeholder-requirements" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="stakeholder-requirements"><span class="header-section-number">2.2</span> Stakeholder Requirements</h2>
+</section>
+<section id="system-requirements" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="system-requirements"><span class="header-section-number">2.3</span> System Requirements</h2>
+</section>
+<section id="requirements-compliance" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="requirements-compliance"><span class="header-section-number">2.4</span> Requirements Compliance</h2>
+</section>
+<section id="requirements-schreiben" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="requirements-schreiben"><span class="header-section-number">2.5</span> Requirements schreiben</h2>
+</section>
+<section id="verlinken-attributieren-von-requirements" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="verlinken-attributieren-von-requirements"><span class="header-section-number">2.6</span> Verlinken &amp; attributieren von Requirements</h2>
+</section>
+<section id="verifikation-validierung-von-requirements" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="verifikation-validierung-von-requirements"><span class="header-section-number">2.7</span> Verifikation &amp; Validierung von Requirements</h2>
+<div class="{callout-note}">
+<p>Verifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist.</p>
+</div>
+<div class="{callout-note}">
+<p>Validierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)</p>
 <ul>
-<li>Validierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)
-<ul>
-<li>Validierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation</li>
-<li>Validierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt</li>
-</ul></li>
-<li>Verifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist</li>
+<li><p>Validierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation</p></li>
+<li><p>Validierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt</p></li>
 </ul>
-<section id="requirements-based-engineering" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="requirements-based-engineering"><span class="header-section-number">1.1.1</span> Requirements Based Engineering</h3>
+</div>
 </section>
-<section id="model-based-systems-engineering" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="model-based-systems-engineering"><span class="header-section-number">1.1.2</span> Model-Based Systems Engineering</h3>
 </section>
-<section id="in-the-loop-methodik-mbat" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="in-the-loop-methodik-mbat"><span class="header-section-number">1.1.3</span> In-the-Loop Methodik (MBAT)</h3>
+<section id="model-based-systems-engineering-mbse" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Model-Based Systems Engineering (MBSE)</h1>
+<section id="sysml-als-basis-für-mbse" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sysml-als-basis-für-mbse"><span class="header-section-number">3.1</span> SysML als Basis für MBSE</h2>
+</section>
+<section id="diagramme-der-sysml" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="diagramme-der-sysml"><span class="header-section-number">3.2</span> Diagramme der SysML</h2>
+<p><img src="../images/Overview_SysML_FhG.png" class="img-fluid"></p>
+</section>
+<section id="alternative-mbse-sprachen" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="alternative-mbse-sprachen"><span class="header-section-number">3.3</span> Alternative MBSE-Sprachen</h2>
+</section>
+<section id="tooling" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="tooling"><span class="header-section-number">3.4</span> Tooling</h2>
+</section>
+</section>
+<section id="methodiken-und-prozesse" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Methodiken und Prozesse</h1>
+<section id="mbse-assessment" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="mbse-assessment"><span class="header-section-number">4.1</span> MBSE Assessment</h2>
+</section>
+<section id="mbse-prozess" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="mbse-prozess"><span class="header-section-number">4.2</span> MBSE Prozess</h2>
+</section>
+<section id="mbsa---model-based-safety-analysis" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="mbsa---model-based-safety-analysis"><span class="header-section-number">4.3</span> MBSA - Model Based Safety Analysis</h2>
+</section>
+<section id="mbat---model-based-analysis-and-testing" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="mbat---model-based-analysis-and-testing"><span class="header-section-number">4.4</span> MBAT - Model Based Analysis and Testing</h2>
+</section>
+<section id="mbsec---model-based-security" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="mbsec---model-based-security"><span class="header-section-number">4.5</span> MBSec - Model Based Security</h2>
 
 
 </section>
@@ -652,7 +708,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../projects/01_prj.html" class="pagination-link" aria-label="Gimbal">
+      <a href="../projects/gimbal/01_prj.html" class="pagination-link" aria-label="Gimbal">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Gimbal</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

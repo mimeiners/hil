@@ -290,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Um einen erfolgreichen 3D-Druck zu gewährleisten, werden die hierfür vorgesehenen 3D-Druckdateien in fünf Grundstrukturen unterteilt. Die Aufteilung basiert auf der Kameraplattform, den drei Servomotoren - die jeweils eine Achse der Stabilisierung steuern - und dem Verschlussdeckel für das Gehäuse des Microcontrollers.</p>
 <p>Dadurch erhält man eine STL-Datei als erste Grundstruktur <em>(Base 01)</em> für den Servomotor, der die Yaw-Drehung steuert, also die Drehung um die z-Achse als Referenzsystem. Eine weiere Grundstruktur <em>(Base 02)</em> ist für den Servomotor, der die Roll-Drehung steuert, was sich auf die x-Achse bezieht. Die dritte Grundstruktur <em>(Base 03)</em> ist für den Pitch-Servomotor, der eine Anpassung in Bezug auf die y-Achse vornimmt. Es ist wichtig zu beachten, dass die Grundstruktur für die Yaw-Anpassung auch als Gehäuse für den Microcontroller dient.</p>
 <p>Die folgende Abbildung zeigt die zusammengesetzte Grundstruktur des Gimbals, einschließlich der Servomotoren.</p>
-<p><img src="../images/Gimbal_Platform.png" class="img-fluid" alt="Gimbal Plattform">#fig-gimbal1</p>
+<p><img src="../../images/Gimbal_Platform.png" class="img-fluid" alt="Gimbal Plattform">#fig-gimbal1</p>
 <section id="cad-modellierung" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="cad-modellierung"><span class="header-section-number">2.4.1</span> CAD Modellierung</h3>
 <p>Mit Fusion 360 und Inventor kann man diese 3D-Entwürfe erstellen. Die Programme bieten außerdem die möglichkeit in teams zusammenzuarbeiten, Daten zu verwalten und Simulationen auszuführen, um dadurch Konstruktionen im vorfeld zu validieren.</p>
@@ -317,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="2.4.2" class="anchored" data-anchor-id="erster-druck"><span class="header-section-number">2.4.2</span> Erster Druck</h3>
 <p>Vor der CAD-Modellierung wurde zunächst ein initialer Testdruck durchgeführt, um zu überprüfen, ob die vorhandenen STL-Dateien für unseren Drucker geeignet sind. Je nach verwendetem Drucker können spezifische Anpassungen erforderlich sein.</p>
 <p>Im Folgenden wird der erste Druck basierend auf dem Modell “Base 02” dargestellt. Dieses Beispiel verdeutlicht die Bedeutung eines ersten Testdrucks, da die gedruckte Struktur nicht ideal ist. Es traten Probleme mit der Stabilität aufgrund der gewählten Dichteinstellungen sowie mit den Stützstrukturen auf, die verwendet wurden, um das Einkrachen des Drucks in den Löchern zu verhindern. Das verwendete Stützmaterial war zu fest und konnte nicht ordnungsgemäß entfernt werden.</p>
-<p><img src="../images/Erster_Druck.jpg" class="img-fluid" alt="Erster 3D-Druck">#fig-gimbal</p>
+<p><img src="../../images/Erster_Druck.jpg" class="img-fluid" alt="Erster 3D-Druck">#fig-gimbal</p>
 <p>Diese Probleme wurden dokumentiert, und ein zweiter Druck wurde gestartet, um den Gimbal vollständig zusammenzubauen und anschließend erneut zu bewerten, welche Anpassungen erforderlich sind.</p>
 </section>
 <section id="zweiter-druck" class="level3" data-number="2.4.3">
@@ -327,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="finale-anpassungen" class="level3" data-number="2.4.4">
 <h3 data-number="2.4.4" class="anchored" data-anchor-id="finale-anpassungen"><span class="header-section-number">2.4.4</span> Finale Anpassungen</h3>
 <p>Nachdem der Gimbal zusammengebaut war, stellte sich heraus, dass weitere Anpassungen in der CAD-Modellierung erforderlich sind. Wie auf der folgenden Abbildung zu sehen ist, passten nicht alle Kabel aufgrund der Kabelführung. Darüber hinaus traten geringfügige Abweichungen bei den Schraubenlöchern auf, die angepasst werden mussten, um eine feste Verbindung der Schrauben zu gewährleisten.</p>
-<!-- ![Gimbal](../images/) -->
+<!-- ![Gimbal](../../images/) -->
 <p>Bevor diese Anpassungen gedruckt wurden, wurde der erste Prototyp evaluiert. Dabei wurde festgestellt, dass es sinnvoll ist, eine Bananenbuchse in den Gimbal zu integrieren. Diese Buchsen ermöglichen die Anwendung einer konstanten Spannung am Gimbal, was es ermöglicht, den Gimbal in Zukunft mit einem HIL-fähigen System zu verbinden und weitere Tests durchzuführen.</p>
 <p>Die finalen Anpassungen werden in Autodesk Inventor umgesetzt. Die aktualisierten STL-Dateien sind im Ordner “3d_druck_gimbal/Inventor_files/Finaler_Druck” zu finden.</p>
 </section>
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Der spezifische Schaltplan sieht wie folgt aus:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/Schaltungsplan.png" class="img-fluid figure-img"></p>
+<p><img src="../../images/Schaltungsplan.png" class="img-fluid figure-img"></p>
 <figcaption>Schaltplan</figcaption>
 </figure>
 </div>
@@ -432,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="esp8266-nodemcu" class="level3" data-number="2.6.4">
 <h3 data-number="2.6.4" class="anchored" data-anchor-id="esp8266-nodemcu"><span class="header-section-number">2.6.4</span> ESP8266 NodeMCU</h3>
 <p>Der ESP8266 ist ein beliebtes und weit verbreitetes Wi-Fi-Modul, das von Espressif Systems entwickelt wurde. Es wurde für Embedded-Anwendungen und Internet of Things (IoT)-Projekte entwickelt. Das Modul integriert eine Mikrocontroller-Einheit (MCU) mit Wi-Fi-Fähigkeit, so dass es sich mit Wi-Fi-Netzwerken verbinden und mit anderen Geräten über das Internet kommunizieren kann.</p>
-<p><img src="../images/esp8266.jpg" class="img-fluid"></p>
+<p><img src="../../images/esp8266.jpg" class="img-fluid"></p>
 <p>Hier sind einige der wichtigsten Merkmale des ESP8266-Moduls:</p>
 <p>1-Wi-Fi-Konnektivität: Das ESP8266-Modul verfügt über eine integrierte Wi-Fi-Konnektivität, die es ihm ermöglicht, sich mit Wi-Fi-Netzwerken zu verbinden und auf das Internet zuzugreifen. Es unterstützt verschiedene Sicherheitsprotokolle, einschließlich WEP, WPA und WPA2.</p>
 <p>2-Mikrocontroller-Einheit (MCU): Das Modul enthält eine 32-Bit-MCU vom Typ Tensilica Xtensa LX106, die mit einer Taktrate von 80 MHz arbeitet. Sie verfügt über GPIO-Pins (General Purpose Input/Output) zur Steuerung externer Geräte und unterstützt verschiedene Schnittstellen wie I2C, SPI, UART und andere.</p>
@@ -520,25 +520,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="2.6.12" class="anchored" data-anchor-id="die-lösungen-waren-wie-folgt"><span class="header-section-number">2.6.12</span> Die Lösungen waren wie folgt:</h3>
 <p>Wir haben einen wesentlichen Teil des Stromkreises geändert, nämlich den Verzicht auf den Abwärtswandler, der die für den 5-Volt-Stromkreis erforderliche Spannung liefert.</p>
 <p>Also haben wir ihn ersetzt, indem wir die entsprechende elektrische Spannung direkt von der Stromversorgung über zwei Kabeln bezogen haben, und wir haben die Eingänge benannt. Spannungseingang und Ground ,Um es einfacher zu machen und nicht zu verwechseln.</p>
-<p><img src="../images/bennenteversorgerungen.png" class="img-fluid"></p>
-<p><img src="../images/bennenteversorgerungen2.png" class="img-fluid"></p>
+<p><img src="../../images/bennenteversorgerungen.png" class="img-fluid"></p>
+<p><img src="../../images/bennenteversorgerungen2.png" class="img-fluid"></p>
 <p>Die andere Änderung betraf die Form der Schaltung, anstatt die Kabeln direkt mit dem Arduino zu verbinden Wir zogen es vor, eine elektrische Platine zu erstellen, indem wir eine geeignete Platine auswählten, den Arduino darauf installierten, ihn anlöteten und ihn dann modifizierten, um ihn an die letzte Form anzupassen,</p>
-<p><img src="../images/platine-min.png" class="img-fluid"></p>
-<p><img src="../images/loetten-min.png" class="img-fluid"></p>
-<p><img src="../images/loettetschaltung-min.png" class="img-fluid"></p>
+<p><img src="../../images/platine-min.png" class="img-fluid"></p>
+<p><img src="../../images/loetten-min.png" class="img-fluid"></p>
+<p><img src="../../images/loettetschaltung-min.png" class="img-fluid"></p>
 <p>indem wir externe Pins installierten und anschweißten und gemeinsame Pins für die Spannung und gemeinsame Pins für die Ground herstellten, deren Anzahl fünf für Spannung und fünf für Ground beträgt. Wir haben dann die Kabeln installiert und mehrere Male experimentiert, nachdem wir die Form der Spannung und die Form des Stromkreises geändert hatten.</p>
-<p><img src="../images/shaltung.png" class="img-fluid"></p>
-<p><img src="../images/shaltungsplatine2.png" class="img-fluid"></p>
+<p><img src="../../images/shaltung.png" class="img-fluid"></p>
+<p><img src="../../images/shaltungsplatine2.png" class="img-fluid"></p>
 <p>Anschließend haben wir die Eingänge benannt, um sie leichter identifizieren zu können, nämlich die Spannungseingänge und die Groundseingänge</p>
-<p><img src="../images/shaltungsplatine.png" class="img-fluid"></p>
+<p><img src="../../images/shaltungsplatine.png" class="img-fluid"></p>
 <p>Die Ergebnisse waren gut mit wenigen Fehlern, aber wir haben auch festgestellt, dass die Anzahl der Kabeln immer noch zu hoch und nicht ausreichend angeordnet ist</p>
 <p>Also nahmen wir einige weitere Änderungen vor, von denen die erste darin bestand, alle SpannungsKabeln zu sammeln und sie alle einzukleben und zu benennen, um den Ein- und Ausbau bei Bedarf, Änderungen oder Tests zu erleichtern.</p>
 <p>Wir haben auch die GroundKabeln gesammelt, geklebt und benannt, um die Installation und Demontage bei Bedarf zu erleichtern.</p>
-<p><img src="../images/klebedraht.png" class="img-fluid"></p>
-<p><img src="../images/organisiertekabel.png" class="img-fluid"></p>
-<p><img src="../images/organisiertekabel2.png" class="img-fluid"></p>
+<p><img src="../../images/klebedraht.png" class="img-fluid"></p>
+<p><img src="../../images/organisiertekabel.png" class="img-fluid"></p>
+<p><img src="../../images/organisiertekabel2.png" class="img-fluid"></p>
 <p>Wir klebten die Kabeln, die wir mit anderen Kabeln verlängerten, zusammen, um zu verhindern, dass sie bei Experimenten oder im Betrieb verrutschten oder demontiert wurden, um die Stabilität des Stromkreises zu erhalten.</p>
-<p><img src="../images/letzte.png" class="img-fluid"></p>
+<p><img src="../../images/letzte.png" class="img-fluid"></p>
 <p>Das Endergebnis der Schaltung ist, dass sich ihr Wirkungsgrad um einen sehr großen Prozentsatz verbessert hat.</p>
 <p>Nach mehreren Versuchen in verschiedenen Formaten ist die Zahl der Fehler oder Unterbrechungen völlig zurückgegangen und fast nicht mehr vorhanden.</p>
 <p>Darüber hinaus ist der Aus- und Einbau der Schaltung für die Einstellung einfacher und übersichtlicher geworden.,</p>

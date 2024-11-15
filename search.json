@@ -12,171 +12,71 @@
   {
     "objectID": "class/01_lec.html",
     "href": "class/01_lec.html",
-    "title": "1  Systems Engineering (SE)",
+    "title": "1  Einleitung und Übersicht",
     "section": "",
-    "text": "2 Requirements Based Engineering (RE)",
+    "text": "1.1 Lernziele des Moduls\n“Das modellbasierte System-Engineering (MBSE) ist eine formalisierte Methodik, die zur Unterstützung der Anforderungen, des Entwurfs, der Analyse, der Verifizierung und der Validierung im Zusammenhang mit der Entwicklung komplexer Systeme eingesetzt wird. Im Gegensatz zum dokumentenzentrierten Engineering stellt MBSE die Modelle in den Mittelpunkt des Systementwurfs. Die zunehmende Verbreitung digitaler Modellierungsumgebungen in den letzten Jahren hat zu einer verstärkten Anwendung von MBSE geführt. Im Januar 2020 stellte die NASA diesen Trend fest, indem sie berichtete, dass MBSE sowohl von der Industrie als auch von der Regierung zunehmend als Mittel zur Beherrschung der Systemkomplexität angenommen wird. In diesem Blogbeitrag gebe ich eine kurze Einführung in MBSE.” (Shevchenko 2020)\nÜbersetzt mit www.DeepL.com/Translator (kostenlose Version)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#grundlegende-prinzipien",
-    "href": "class/01_lec.html#grundlegende-prinzipien",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.1 Grundlegende Prinzipien",
-    "text": "2.1 Grundlegende Prinzipien",
+    "objectID": "class/01_lec.html#lernziele-des-moduls",
+    "href": "class/01_lec.html#lernziele-des-moduls",
+    "title": "1  Einleitung und Übersicht",
+    "section": "",
+    "text": "Systems Engineering (SE)\n\n\n\n\nÜbersicht Systems Engineering\n\n\n\nRequirements Based Engineering (RE)\n\nGrundlegende Prinzipien\nStakeholder Requirements\nSystem Requirements\nRequirements Compliance\nRequirements schreiben\nVerlinken & attributieren von Requirements\nVerifikation & Validierung von Requirements\n\n\n\n\n\n\n\n\nHinweis\n\n\n\nVerifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist. (Wikipedia 2024b)\n\n\n\n\n\n\n\n\nHinweis\n\n\n\nValidierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)(Wikipedia 2024a)\n\nValidierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation.\nValidierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt.\n\n\n\n\nModel-Based Systems Engineering (MBSE)\n\nSysML als Basis für MBSE\nDiagramme der SysML\n\n\n\nAlternative MBSE-Sprachen\nTooling\n\nMethodiken und Prozesse\n\nMBSE Assessment\nMBSE Prozess\nMBSA - Model Based Safety Analysis\nMBAT - Model Based Analysis and Testing\nMBSec - Model Based Security",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#stakeholder-requirements",
-    "href": "class/01_lec.html#stakeholder-requirements",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.2 Stakeholder Requirements",
-    "text": "2.2 Stakeholder Requirements",
+    "objectID": "class/01_lec.html#wissenschaftliches-rechnen-modellierung",
+    "href": "class/01_lec.html#wissenschaftliches-rechnen-modellierung",
+    "title": "1  Einleitung und Übersicht",
+    "section": "1.2 Wissenschaftliches Rechnen / Modellierung",
+    "text": "1.2 Wissenschaftliches Rechnen / Modellierung\n\nCATIA | No Magic\nMatlab (Campus Lizenz)\nPython (Anaconda)\nCommand-line tools",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#system-requirements",
-    "href": "class/01_lec.html#system-requirements",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.3 System Requirements",
-    "text": "2.3 System Requirements",
+    "objectID": "class/01_lec.html#betriebssystemwerkzeuge-os-tools",
+    "href": "class/01_lec.html#betriebssystemwerkzeuge-os-tools",
+    "title": "1  Einleitung und Übersicht",
+    "section": "1.3 Betriebssystemwerkzeuge / OS-Tools",
+    "text": "1.3 Betriebssystemwerkzeuge / OS-Tools\n\nMicrosoft-Terminal\nMicrosoft-PowerShell\nMacOS-Terminal\nLinux/MacOS Shell zsh-tools,\ngit (Versionskontrolle)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#requirements-compliance",
-    "href": "class/01_lec.html#requirements-compliance",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.4 Requirements Compliance",
-    "text": "2.4 Requirements Compliance",
+    "objectID": "class/01_lec.html#editoren",
+    "href": "class/01_lec.html#editoren",
+    "title": "1  Einleitung und Übersicht",
+    "section": "1.4 Editoren",
+    "text": "1.4 Editoren\n\nVisual Studio Code\nSpyder IDE\nEmacs\nVim",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#requirements-schreiben",
-    "href": "class/01_lec.html#requirements-schreiben",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.5 Requirements schreiben",
-    "text": "2.5 Requirements schreiben",
+    "objectID": "class/01_lec.html#dokumentation-publish-computational-content",
+    "href": "class/01_lec.html#dokumentation-publish-computational-content",
+    "title": "1  Einleitung und Übersicht",
+    "section": "1.5 Dokumentation / Publish Computational Content",
+    "text": "1.5 Dokumentation / Publish Computational Content\n\nJupyter-Book\nquarto\n\n\n1.5.1 Schreibst Du noch oder TeXst Du schon?\n\nMikTeX (Windows, MacOS, Linux)\nMacTeX (MacOS)\nTeXLive (Linux)\n\n\n\n1.5.2 LaTeX Editoren\n\nIDE’s\n\nTeXStudio\nTeXMaker\n\nKollaborative Frameworks\n\nOverleaf, Online LaTeX\nCoCalc - Online LaTeX\n\n\n\n\n1.5.3 Literaturverwaltung und LaTeX\n\nCitavi im Detail &gt; Titel exportieren &gt; Export nach BibTeX\nRefWorks - Library Guide Univ. Melbourne\nBenutzerdefinierte BibTex-Keys mit Zotero | nerdpause\nJabRef - Library Guide Univ. Melbourne\nEndNote - Library Guide Univ. Melbourne\n\n\n\n\n\nShevchenko, Nataliya. 2020. „An Introduction to Model-Based Systems Engineering (MBSE)“. Carnegie Mellon University, Software Engineering Institute’s Insights (blog); Software Engineering Institute. https://doi.org/10.58012/D464-QF49.\n\n\nWikipedia. 2024a. „Validierung — Wikipedia, die freie Enzyklopädie“. https://de.wikipedia.org/w/index.php?title=Validierung&oldid=249118232.\n\n\n———. 2024b. „Verifizierung — Wikipedia, die freie Enzyklopädie“. https://de.wikipedia.org/w/index.php?title=Verifizierung&oldid=246302640.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung und Übersicht</span>"
     ]
   },
   {
-    "objectID": "class/01_lec.html#verlinken-attributieren-von-requirements",
-    "href": "class/01_lec.html#verlinken-attributieren-von-requirements",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.6 Verlinken & attributieren von Requirements",
-    "text": "2.6 Verlinken & attributieren von Requirements",
+    "objectID": "class/references.html",
+    "href": "class/references.html",
+    "title": "Literaturverzeichnis",
+    "section": "",
+    "text": "Shevchenko, Nataliya. 2020. “An Introduction to Model-Based\nSystems Engineering (MBSE).” Carnegie Mellon University, Software\nEngineering Institute’s Insights (blog); Software Engineering Institute.\nhttps://doi.org/10.58012/D464-QF49.\n\n\nWikipedia. 2024a. “Validierung — Wikipedia, Die Freie\nEnzyklopädie.” https://de.wikipedia.org/w/index.php?title=Validierung&oldid=249118232.\n\n\n———. 2024b. “Verifizierung — Wikipedia, Die Freie\nEnzyklopädie.” https://de.wikipedia.org/w/index.php?title=Verifizierung&oldid=246302640.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#verifikation-validierung-von-requirements",
-    "href": "class/01_lec.html#verifikation-validierung-von-requirements",
-    "title": "1  Systems Engineering (SE)",
-    "section": "2.7 Verifikation & Validierung von Requirements",
-    "text": "2.7 Verifikation & Validierung von Requirements\n\nVerifizierung oder Verifikation (von lateinisch veritas ‚Wahrheit‘ und facere ‚machen‘) ist der Nachweis, dass ein vermuteter oder behaupteter Sachverhalt wahr ist.\n\n\nValidierung oder Validation (von lateinisch validus “kräftig, wirksam, fest”)\n\nValidierung (Chipentwurf), Vergleich des Chipdesigns mit der vorgegebenen Spezifikation\nValidierung (Informatik), Nachweisführung, dass ein System die Praxisanforderungen erfüllt",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#sysml-als-basis-für-mbse",
-    "href": "class/01_lec.html#sysml-als-basis-für-mbse",
-    "title": "1  Systems Engineering (SE)",
-    "section": "3.1 SysML als Basis für MBSE",
-    "text": "3.1 SysML als Basis für MBSE",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#diagramme-der-sysml",
-    "href": "class/01_lec.html#diagramme-der-sysml",
-    "title": "1  Systems Engineering (SE)",
-    "section": "3.2 Diagramme der SysML",
-    "text": "3.2 Diagramme der SysML",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#alternative-mbse-sprachen",
-    "href": "class/01_lec.html#alternative-mbse-sprachen",
-    "title": "1  Systems Engineering (SE)",
-    "section": "3.3 Alternative MBSE-Sprachen",
-    "text": "3.3 Alternative MBSE-Sprachen",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#tooling",
-    "href": "class/01_lec.html#tooling",
-    "title": "1  Systems Engineering (SE)",
-    "section": "3.4 Tooling",
-    "text": "3.4 Tooling",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#mbse-assessment",
-    "href": "class/01_lec.html#mbse-assessment",
-    "title": "1  Systems Engineering (SE)",
-    "section": "4.1 MBSE Assessment",
-    "text": "4.1 MBSE Assessment",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#mbse-prozess",
-    "href": "class/01_lec.html#mbse-prozess",
-    "title": "1  Systems Engineering (SE)",
-    "section": "4.2 MBSE Prozess",
-    "text": "4.2 MBSE Prozess",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#mbsa---model-based-safety-analysis",
-    "href": "class/01_lec.html#mbsa---model-based-safety-analysis",
-    "title": "1  Systems Engineering (SE)",
-    "section": "4.3 MBSA - Model Based Safety Analysis",
-    "text": "4.3 MBSA - Model Based Safety Analysis",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#mbat---model-based-analysis-and-testing",
-    "href": "class/01_lec.html#mbat---model-based-analysis-and-testing",
-    "title": "1  Systems Engineering (SE)",
-    "section": "4.4 MBAT - Model Based Analysis and Testing",
-    "text": "4.4 MBAT - Model Based Analysis and Testing",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
-    ]
-  },
-  {
-    "objectID": "class/01_lec.html#mbsec---model-based-security",
-    "href": "class/01_lec.html#mbsec---model-based-security",
-    "title": "1  Systems Engineering (SE)",
-    "section": "4.5 MBSec - Model Based Security",
-    "text": "4.5 MBSec - Model Based Security",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Systems Engineering (SE)</span>"
+      "Literaturverzeichnis"
     ]
   },
   {
